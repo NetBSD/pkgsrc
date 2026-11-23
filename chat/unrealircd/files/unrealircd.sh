@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: unrealircd.sh,v 1.4 2019/08/07 18:11:05 nia Exp $
+# $NetBSD: unrealircd.sh,v 1.5 2026/11/23 10:58:38 wiz Exp $
 #
 # PROVIDE: unrealircd
 # REQUIRE: DAEMON
@@ -16,7 +16,7 @@ name="unrealircd"
 rcvar=${name}
 command="@PREFIX@/bin/unrealircd"
 required_files="@PKG_SYSCONFDIR@/unrealircd.conf"
-pidfile="@PREFIX@/unrealircd/ircd.pid"
+pidfile="@VARBASE@/run/unrealircd.pid"
 unrealircd_user="@UIRCD_USER@"
 unrealircd_group="@UIRCD_GROUP@"
 extra_commands="rehash"

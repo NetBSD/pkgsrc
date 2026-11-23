@@ -1,12 +1,10 @@
-# $NetBSD: options.mk,v 1.18 2020/01/28 13:03:36 nia Exp $
+# $NetBSD: options.mk,v 1.19 2026/11/23 10:58:38 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
 PKG_SUPPORTED_OPTIONS+=	unrealircd-remoteinc
-PKG_SUPPORTED_OPTIONS+=	unrealircd-showlistmodes
 PKG_SUPPORTED_OPTIONS+=	unrealircd-operoverride-verify
 PKG_SUPPORTED_OPTIONS+=	unrealircd-no-operoverride
-PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,13 +14,6 @@ PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes
 .if !empty(PKG_OPTIONS:Munrealircd-remoteinc)
 CONFIGURE_ARGS+=		--enable-libcurl=${PREFIX}
 .  include "../../www/curl/buildlink3.mk"
-.endif
-
-###
-### Show the modes a channel has set in the /list output.
-###
-.if !empty(PKG_OPTIONS:Munrealircd-showlistmodes)
-CONFIGURE_ARGS+=		--with-showlistmodes
 .endif
 
 ###

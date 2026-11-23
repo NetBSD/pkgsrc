@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2026/11/11 11:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2026/11/23 10:58:38 wiz Exp $
 
-DISTNAME=	unrealircd-5.2.4
-PKGREVISION=	20
+DISTNAME=	unrealircd-6.2.7.1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.unrealircd.org/downloads/
 
@@ -36,22 +35,23 @@ CONFIGURE_ARGS+=	--with-system-cares
 CONFIGURE_ARGS+=	--with-system-pcre2
 
 CONFIGURE_ARGS+=	--with-permissions=0660
-CONFIGURE_ARGS+=	--with-datadir=${PREFIX}/unrealircd/data
-CONFIGURE_ARGS+=	--with-cachedir=${PREFIX}/unrealircd/cache
-CONFIGURE_ARGS+=	--with-logdir=${PREFIX}/unrealircd/logs
-CONFIGURE_ARGS+=	--with-tmpdir=${PREFIX}/unrealircd/tmp
-CONFIGURE_ARGS+=	--with-pidfile=${PREFIX}/unrealircd/ircd.pid
-CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/unrealircd/scripts
+CONFIGURE_ARGS+=	--with-datadir=${VARBASE}/unrealircd
+CONFIGURE_ARGS+=	--with-cachedir=${VARBASE}/cache/unrealircd
+CONFIGURE_ARGS+=	--with-controlfile=${VARBASE}/run/unrealircd.ctl
+CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/unrealircd
+CONFIGURE_ARGS+=	--with-tmpdir=${VARBASE}/tmp/unrealircd
+CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unrealircd.pid
+CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/share/unrealircd/scripts
 CONFIGURE_ARGS+=	--with-bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--with-modulesdir=${PREFIX}/lib/unrealircd/modules
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/unrealircd
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
 
-OWN_DIRS_PERMS+=	${PREFIX}/unrealircd ${UIRCD_USER} ${UIRCD_GROUP} 0755
-OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/data ${UIRCD_USER} ${UIRCD_GROUP} 0700
-OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/cache ${UIRCD_USER} ${UIRCD_GROUP} 0700
-OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/logs ${UIRCD_USER} ${UIRCD_GROUP} 0700
-OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/tmp ${UIRCD_USER} ${UIRCD_GROUP} 0700
+OWN_DIRS_PERMS+=	${VARBASE}/unrealircd ${UIRCD_USER} ${UIRCD_GROUP} 0755
+OWN_DIRS_PERMS+=	${VARBASE}/cache/unrealircd ${UIRCD_USER} ${UIRCD_GROUP} 0700
+OWN_DIRS_PERMS+=	${VARBASE}/log/unrealircd ${UIRCD_USER} ${UIRCD_GROUP} 0700
+OWN_DIRS_PERMS+=	${VARBASE}/run/unrealircd ${UIRCD_USER} ${UIRCD_GROUP} 0700
+OWN_DIRS_PERMS+=	${VARBASE}/tmp/unrealircd ${UIRCD_USER} ${UIRCD_GROUP} 0700
 
 CONFIGURE_ARGS+=	--with-nick-history=${UIRCD_NICKHIST:Q}
 
@@ -91,24 +91,16 @@ CFLAGS.Darwin+=	-DUSE_LOCALE
 CFLAGS.SunOS+=	-DUSE_LOCALE
 
 INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	unrealircd/scripts
 INSTALLATION_DIRS+=	lib/unrealircd/modules
 INSTALLATION_DIRS+=	lib/unrealircd/modules/usermodes
 INSTALLATION_DIRS+=	lib/unrealircd/modules/chanmodes
-INSTALLATION_DIRS+=	lib/unrealircd/modules/snomasks
 INSTALLATION_DIRS+=	lib/unrealircd/modules/extbans
-INSTALLATION_DIRS+=	lib/unrealircd/modules/third
 INSTALLATION_DIRS+=	share/doc/unrealircd
+INSTALLATION_DIRS+=	share/unrealircd/scripts
 INSTALLATION_DIRS+=	${IRCD_EG}
 INSTALLATION_DIRS+=	${IRCD_EG}/aliases
 INSTALLATION_DIRS+=	${IRCD_EG}/help
 INSTALLATION_DIRS+=	${IRCD_EG}/tls
-
-OWN_DIRS_PERMS+=	unrealircd/tmp ${UIRCD_USER} ${UIRCD_GROUP} 0755
-OWN_DIRS_PERMS+=	unrealircd/logs ${UIRCD_USER} ${UIRCD_GROUP} 0755
-OWN_DIRS_PERMS+=	unrealircd/data ${UIRCD_USER} ${UIRCD_GROUP} 0755
-OWN_DIRS_PERMS+=	unrealircd/cache ${UIRCD_USER} ${UIRCD_GROUP} 0755
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${UIRCD_USER} ${UIRCD_GROUP} 0755
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ircd ${DESTDIR}${PREFIX}/bin/unrealircd
@@ -120,18 +112,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/aliases/*.conf ${DESTDIR}${IRCD_EG}/aliases
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/help/*.conf ${DESTDIR}${IRCD_EG}/help
 	${INSTALL_DATA} ${WRKSRC}/doc/conf/tls/curl-ca-bundle.crt ${DESTDIR}${IRCD_EG}/tls
-	${INSTALL_SCRIPT} ${WRKSRC}/unrealircd ${DESTDIR}${PREFIX}/unrealircd/scripts
+	${INSTALL_SCRIPT} ${WRKSRC}/unrealircd ${DESTDIR}${PREFIX}/share/unrealircd/scripts
 	${INSTALL_LIB} ${WRKSRC}/src/modules/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules
 	${INSTALL_LIB} ${WRKSRC}/src/modules/usermodes/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/usermodes
 	${INSTALL_LIB} ${WRKSRC}/src/modules/chanmodes/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/chanmodes
-	${INSTALL_LIB} ${WRKSRC}/src/modules/snomasks/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/snomasks
 	${INSTALL_LIB} ${WRKSRC}/src/modules/extbans/*.so ${DESTDIR}${PREFIX}/lib/unrealircd/modules/extbans
-
-# FIXME: replace by proper LDFLAGS handling
-_WRAP_EXTRA_ARGS.CC+=	${_RELRO_LDFLAGS}
-_WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
-CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../net/libcares/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
@@ -139,4 +124,5 @@ CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 .include "../../security/argon2/buildlink3.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/jansson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
