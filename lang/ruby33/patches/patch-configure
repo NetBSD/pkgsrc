@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
+$NetBSD: patch-configure,v 1.3.10.1 2026/11/23 14:18:08 maya Exp $
 
 * Ignore VCS.
 * Retain _XOPEN_SOURCE, fixes eventmachine.
 * Explictly stop display with color.
 * Remove bogus MJIT disabling on SunOS.
 
---- configure.orig	2023-12-11 07:06:05.000000000 +0000
+--- configure.orig	2026-11-18 21:52:33.000000000 +0000
 +++ configure
-@@ -8639,7 +8639,7 @@ else $as_nop
+@@ -8862,7 +8862,7 @@ else case e in #(
  then :
  
  	case "$target_os" in #(
@@ -16,7 +16,7 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
  
  	    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
  printf %s "checking for real target cpu... " >&6; }
-@@ -10705,6 +10705,7 @@ fi
+@@ -11043,6 +11043,7 @@ fi
  	stack_protector=no
       ;; #(
    *) :
@@ -24,7 +24,7 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
       ;;
  esac
      if test -z "${stack_protector+set}"
-@@ -12604,18 +12605,6 @@ then :
+@@ -13032,18 +13033,6 @@ then :
       CPPFLAGS="$CPPFLAGS ${rb_opt}" ;;
  esac
  	done
@@ -43,7 +43,7 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
  
  fi
  
-@@ -25357,7 +25350,9 @@ else
+@@ -26054,7 +26043,9 @@ then :
  #include <stdlib.h>
  #include <stddef.h>
  #ifndef alloca
@@ -54,7 +54,7 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
  #  define alloca __builtin_alloca
  # elif defined _MSC_VER
  #  include <malloc.h>
-@@ -31805,8 +31802,10 @@ fi
+@@ -32758,8 +32749,10 @@ fi
  	 ;; #(
    freebsd*|dragonfly*) :
  
@@ -66,7 +66,7 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes"
  then :
  
-@@ -31899,9 +31898,10 @@ esac
+@@ -32854,9 +32847,10 @@ esac
  	 ;; #(
    darwin*) :
  
@@ -79,7 +79,7 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
  	if test "$load_relative" = yes
  then :
  
-@@ -32117,7 +32122,7 @@ then :
+@@ -33080,7 +33074,7 @@ then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -88,16 +88,16 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -34246,7 +34251,7 @@ guard=INCLUDE_RUBY_CONFIG_H
+@@ -35228,7 +35222,7 @@ guard=INCLUDE_RUBY_CONFIG_H
  (
    if test "x$CONFIGURE_TTY" = xyes
  then :
 -  color=--color
 +  color=--color=never
- else $as_nop
-   color=
- fi
-@@ -35485,21 +35490,7 @@ which seems to be undefined.  Please mak
+ else case e in #(
+   e) color= ;;
+ esac
+@@ -36477,22 +36471,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
@@ -111,10 +111,11 @@ $NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
 -
 -	    VCS='$(GIT)'
 -
--else $as_nop
--
+-else case e in #(
+-  e)
  	    VCS='echo cannot'
--
+-	 ;;
+-esac
 -fi
  	case "$VCS" in #(
    '$(GIT)'|git) :
