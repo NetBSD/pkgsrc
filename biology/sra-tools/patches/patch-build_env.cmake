@@ -1,10 +1,12 @@
-$NetBSD: patch-build_env.cmake,v 1.3 2025/02/02 14:25:34 bacon Exp $
+$NetBSD: patch-build_env.cmake,v 1.4 2026/11/23 08:07:34 wiz Exp $
 
-# static standard libs are not standard nor easy to install on Alma Linux
+static standard libs are not standard nor easy to install on Alma Linux
 
---- build/env.cmake.orig	2025-01-29 20:24:37.167226512 +0000
+Fix build with cmake 4.5.
+
+--- build/env.cmake.orig	2025-01-15 00:39:17.000000000 +0000
 +++ build/env.cmake
-@@ -574,9 +574,7 @@ include(CheckCXXSourceRuns)
+@@ -574,9 +574,7 @@ if ( "GNU" STREQUAL "${CMAKE_C_COMPILER_ID}" )
  
  if ( "GNU" STREQUAL "${CMAKE_C_COMPILER_ID}" )
      # check for the presence of static C/C++ runtime libraries
@@ -14,7 +16,7 @@ $NetBSD: patch-build_env.cmake,v 1.3 2025/02/02 14:25:34 bacon Exp $
      check_cxx_source_runs("int main(int argc, char *argv[]) { return 0; }" HAVE_STATIC_LIBSTDCXX)
  endif()
  
-@@ -584,10 +582,10 @@ function(MakeLinksExe target install_via
+@@ -584,10 +582,10 @@ function(MakeLinksExe target install_via_driver)
  
      if ( "GNU" STREQUAL "${CMAKE_C_COMPILER_ID}" )
          if ( HAVE_STATIC_LIBGCC )
@@ -27,3 +29,12 @@ $NetBSD: patch-build_env.cmake,v 1.3 2025/02/02 14:25:34 bacon Exp $
          endif()
      endif()
  
+@@ -731,7 +729,7 @@ if ( SINGLE_CONFIG )
+     if ( BUILD_TOOLS_INTERNAL )
+         set( VDB_COPY_DIR ${CMAKE_SOURCE_DIR}/tools/internal/vdb-copy )
+     endif()
+-    install( SCRIPT CODE
++    install( CODE
+         "execute_process( COMMAND /bin/sh -c        \
+             \"${CMAKE_SOURCE_DIR}/build/install.sh  \
+                 ${VDB_INCDIR}/kfg/ncbi              \
