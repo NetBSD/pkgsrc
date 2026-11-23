@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8312 2026/11/23 04:28:34 agc Exp $
+$NetBSD: CHANGES-2026,v 1.8313 2026/11/23 08:39:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12285,3 +12285,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/libdatachannel to 0.24.8 [ktnb 2026-11-23]
 	Updated devel/libagcre to 20261118 [agc 2026-11-22]
 	Updated textproc/agcre to 20261118 [agc 2026-11-22]
+	Updated devel/sccache to 0.20.0 [adam 2026-11-23]
+	Updated textproc/ripgrep to 16.0.0 [adam 2026-11-23]
