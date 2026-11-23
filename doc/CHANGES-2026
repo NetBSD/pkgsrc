@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8323 2026/11/23 12:24:14 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8324 2026/11/23 12:25:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12305,3 +12305,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated print/py-xhtml2pdf to 0.2.29 [adam 2026-11-23]
 	Updated textproc/py-regex to 2026.11.19 [adam 2026-11-23]
 	Updated www/py-pylsqpack to 1.1.2 [adam 2026-11-23]
+	Updated multimedia/moviebox-tui to 0.1.30 [pin 2026-11-23]
