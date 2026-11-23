@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2026/10/24 17:21:09 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2026/11/23 12:42:20 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	accesskit-0.24.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -52,7 +52,7 @@ CARGO_CRATE_DEPENDS+=	clap-4.6.7
 CARGO_CRATE_DEPENDS+=	clap_builder-4.6.7
 CARGO_CRATE_DEPENDS+=	clap_derive-4.6.7
 CARGO_CRATE_DEPENDS+=	clap_lex-1.1.1
-CARGO_CRATE_DEPENDS+=	clipboard-win-5.4.1
+CARGO_CRATE_DEPENDS+=	clipboard-win-5.4.3
 CARGO_CRATE_DEPENDS+=	cmake-0.1.58
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.13.1
 CARGO_CRATE_DEPENDS+=	color-0.3.3
@@ -78,7 +78,7 @@ CARGO_CRATE_DEPENDS+=	crypto-common-0.2.2
 CARGO_CRATE_DEPENDS+=	cssparser-0.38.0
 CARGO_CRATE_DEPENDS+=	cssparser-macros-0.7.1
 CARGO_CRATE_DEPENDS+=	cursor-icon-1.2.0
-CARGO_CRATE_DEPENDS+=	dataurl-0.2.1
+CARGO_CRATE_DEPENDS+=	dataurl-0.3.0
 CARGO_CRATE_DEPENDS+=	difflib-0.4.0
 CARGO_CRATE_DEPENDS+=	digest-0.11.3
 CARGO_CRATE_DEPENDS+=	directories-6.0.0
@@ -308,7 +308,7 @@ CARGO_CRATE_DEPENDS+=	rustls-native-certs-0.8.5
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.15.1
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-0.7.1
 CARGO_CRATE_DEPENDS+=	rustls-platform-verifier-android-0.2.0
-CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.15
+CARGO_CRATE_DEPENDS+=	rustls-webpki-0.103.16
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.23
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	schannel-0.1.30
@@ -410,7 +410,7 @@ CARGO_CRATE_DEPENDS+=	wayland-sys-0.31.11
 CARGO_CRATE_DEPENDS+=	web-sys-0.3.106
 CARGO_CRATE_DEPENDS+=	web-time-1.1.0
 CARGO_CRATE_DEPENDS+=	web_atoms-0.2.6
-CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.9
+CARGO_CRATE_DEPENDS+=	webpki-root-certs-1.0.11
 CARGO_CRATE_DEPENDS+=	weezl-0.1.12
 CARGO_CRATE_DEPENDS+=	wgpu-30.0.1
 CARGO_CRATE_DEPENDS+=	wgpu-core-30.0.1
