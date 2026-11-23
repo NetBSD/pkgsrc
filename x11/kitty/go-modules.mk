@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.26 2026/11/19 00:51:35 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.27 2026/11/23 23:38:52 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.3.0.mod
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.3.0.zip
@@ -22,8 +22,8 @@ GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/hako/durafmt/@v/v0.0.0-20210608085754-5c1018a4e16b.mod
 GO_MODULE_FILES+=	github.com/hako/durafmt/@v/v0.0.0-20210608085754-5c1018a4e16b.zip
 GO_MODULE_FILES+=	github.com/jessevdk/go-flags/@v/v1.4.0.mod
-GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.20.3.mod
-GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.20.3.zip
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.20.4.mod
+GO_MODULE_FILES+=	github.com/klauspost/compress/@v/v1.20.4.zip
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.10.mod
 GO_MODULE_FILES+=	github.com/klauspost/cpuid/v2/@v/v2.2.10.zip
 GO_MODULE_FILES+=	github.com/kovidgoyal/dbus/@v/v0.0.0-20250519011319-e811c41c0bc1.mod

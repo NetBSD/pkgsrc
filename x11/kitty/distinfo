@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2026/11/19 00:51:35 ktnb Exp $
+$NetBSD: distinfo,v 1.53 2026/11/23 23:38:52 ktnb Exp $
 
 BLAKE2s (github.com__a_l_tree_bigfloat_@v_v0.3.0.mod) = ed554d44b1070ae79986f3ff61e6ad4ed12060fb78fe6f2273733f762721d1e0
 SHA512 (github.com__a_l_tree_bigfloat_@v_v0.3.0.mod) = 09bbd28b9ce42a919f22339bdeb2b798a728cf3b7f5f7fd61bec418fa360893c4ebd72f0957be4c855621f96d9a146ef8f0074f5ac4154c04f537ae3ad3592c4
@@ -66,12 +66,12 @@ Size (github.com_hako_durafmt_@v_v0.0.0-20210608085754-5c1018a4e16b.zip) = 13700
 BLAKE2s (github.com_jessevdk_go-flags_@v_v1.4.0.mod) = d0fd3bc9afc8ecdc658c6f85b995efee97fce9f6c594fc55f6340dc8a76119dc
 SHA512 (github.com_jessevdk_go-flags_@v_v1.4.0.mod) = 5db9838fe6a00be9849cb79ad148813a573b652d6f6cf220c55b68bd23636016e6bddd6733f6b29d63e5f02d2750a86c2dcea6b964ceb87d4048d5c5f3cc989b
 Size (github.com_jessevdk_go-flags_@v_v1.4.0.mod) = 36 bytes
-BLAKE2s (github.com_klauspost_compress_@v_v1.20.3.mod) = 610e74e9d37aa27ec4b79772fb3e1ceec423fba8930a80954856805a5032ebfd
-SHA512 (github.com_klauspost_compress_@v_v1.20.3.mod) = daa44321f728a625549812bef1437ca66525ebc942fa666260c562cf3bf3d66d989ab1d0075d3eb92770a95b7af810dedf67994b1c4a392523d87f3eb5181bcc
-Size (github.com_klauspost_compress_@v_v1.20.3.mod) = 201 bytes
-BLAKE2s (github.com_klauspost_compress_@v_v1.20.3.zip) = 501ab3ca1fd1f97a60a290193d7ea3a99156beebe3e56a6b318668abe00444f6
-SHA512 (github.com_klauspost_compress_@v_v1.20.3.zip) = 959a2a1b71e219142c0424b733e5d3663069ea609d961ffec8e0db0f0bbaa2c2ee528d36cd059ac4d67665717ed452ab66b5433a172c48b510d054ccf8c1d890
-Size (github.com_klauspost_compress_@v_v1.20.3.zip) = 40367092 bytes
+BLAKE2s (github.com_klauspost_compress_@v_v1.20.4.mod) = 610e74e9d37aa27ec4b79772fb3e1ceec423fba8930a80954856805a5032ebfd
+SHA512 (github.com_klauspost_compress_@v_v1.20.4.mod) = daa44321f728a625549812bef1437ca66525ebc942fa666260c562cf3bf3d66d989ab1d0075d3eb92770a95b7af810dedf67994b1c4a392523d87f3eb5181bcc
+Size (github.com_klauspost_compress_@v_v1.20.4.mod) = 201 bytes
+BLAKE2s (github.com_klauspost_compress_@v_v1.20.4.zip) = b287957682badf9036da6f49faad04df07e5555ca51e375ef3cec3ff45955382
+SHA512 (github.com_klauspost_compress_@v_v1.20.4.zip) = 7362ba67ca07e6aa18968b542a9366ace9f2118e976711da6b4df90f7269f04f81214a7bad0b2ecc30f5da9e76fe88c171a3940ad79386180d40cab53bb9f76a
+Size (github.com_klauspost_compress_@v_v1.20.4.zip) = 40557599 bytes
 BLAKE2s (github.com_klauspost_cpuid_v2_@v_v2.2.10.mod) = 76de9d0b46120dd73d3e7d94880ff9797571ebf6b2429525121aa21b4380b720
 SHA512 (github.com_klauspost_cpuid_v2_@v_v2.2.10.mod) = dbe08f63b93526e4784712308e4a67180f5e7fe710ddb825af83535114dffd6b164bd1c5b67fd1f93b6e48391f1b8d2695f697bd615126ff157d816256315986
 Size (github.com_klauspost_cpuid_v2_@v_v2.2.10.mod) = 80 bytes
@@ -228,9 +228,9 @@ Size (howett.net_plist_@v_v1.0.1.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.1.zip) = 43dd213cd6f655b89cb6074acf972bc2e134c71fb991af59c14ebaf6747c2545
 SHA512 (howett.net_plist_@v_v1.0.1.zip) = 4f8b07bebf808ff4bbc1b2fdcf501d60731e26e048c1e7e2f21cfb9816fab8937e9f1915b44ff693a6a5b0f91cff470f40c4d7a71d7728afe2d0a3bca99432cd
 Size (howett.net_plist_@v_v1.0.1.zip) = 72046 bytes
-BLAKE2s (kitty-0.51.0.tar.xz) = 2c8ca97938b89b62a7fb8a0baf1f14370793b20dd9e5a23a2b0cc1c81901cdff
-SHA512 (kitty-0.51.0.tar.xz) = 3a37db1b7038018a8584b884594cc8014e72cc9268752fbe79a60ffb3aa1530f51bdf06ab57d732f407b6fec95948f0856d04299e85aab14b047277603ba45e6
-Size (kitty-0.51.0.tar.xz) = 12442096 bytes
+BLAKE2s (kitty-0.51.1.tar.xz) = 93182031a05f374dff08b398d40db8bd50e558e2457c126d0af41c0b53df5483
+SHA512 (kitty-0.51.1.tar.xz) = 32c8d4a9bb6499449dca4d66d22a76fca1b47d62044ab146af83a403acd378377ac3d6afb7bf841a059e83ead38c31a707275d79f155ca7acf4340bf4f77fdcd
+Size (kitty-0.51.1.tar.xz) = 12471416 bytes
 SHA1 (patch-glfw_wl__client__side__decorations.c) = 4d3af82c2dbc086dbd3c0505e2d900bbdb386a79
 SHA1 (patch-glfw_wl__init.c) = 3dc143fba1a5fa5c15563aecc027cd6af872a0e0
 SHA1 (patch-glfw_wl__inject.c) = 321fbcc722941b0f8625e326da1e444c54247afe
