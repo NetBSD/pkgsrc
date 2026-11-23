@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2022/06/28 11:34:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8.34.1 2026/11/23 15:04:37 maya Exp $
 
-PKGREVISION= 3
 .include "../../mail/libytnef/Makefile.common"
 
 COMMENT=	Programs using libytnef to parse and handle TNEF attachments
@@ -16,5 +15,6 @@ SUBST_MESSAGE.prefix=	Setting prefix to ytnef in ytnefprocess
 SUBST_FILES.prefix=	ytnef/ytnefprocess
 SUBST_SED.prefix=	-e '/^my\ $$reader/s,/usr,${PREFIX},'
 
+BUILDLINK_API_DEPENDS.libytnef+=	libytnef>=${PKGVERSION_NOREV}
 .include "../../mail/libytnef/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

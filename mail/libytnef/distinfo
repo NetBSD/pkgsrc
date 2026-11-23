@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:54:05 nia Exp $
+$NetBSD: distinfo,v 1.7.40.1 2026/11/23 15:04:37 maya Exp $
 
-BLAKE2s (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = 68d7c4f21adae11ce943ee9da61e913695fd695ada1dd6106f91afb294e25f70
-SHA512 (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = be0a46e79561a5ff34f812b892a781809606cc7e38c6bfed15bae7773f952b4b55aed0fa784922e72839121672c540496db1bac602630c5a83141f8517a4a543
-Size (ytnef-1.9.3/ytnef-1.9.3.tar.gz) = 301338 bytes
+BLAKE2s (ytnef-2.1.3.tar.gz) = 5c332f109fe4849f76078724fcd4167debc8f08014080e0679e09b01f8018577
+SHA512 (ytnef-2.1.3.tar.gz) = 03648b56bc9c3bfa3c56b48c2332fcdf895e905641c16762959ce1ad6e729278f2d8a5d3071f86e05ad453aaa7a1cd2d5bca5647009cec85c69733f24b244b6b
+Size (ytnef-2.1.3.tar.gz) = 304859 bytes
 SHA1 (patch-ytnef_Makefile.am) = 1a93de2ec27b3230f52e9bb7de279fd1584e0e6a
 SHA1 (patch-ytnefprint_Makefile.am) = f9e02624df257b07f1a095aeb65e5c24d8f0ee37
