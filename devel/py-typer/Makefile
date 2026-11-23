@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/11/22 20:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/11/23 07:21:14 wiz Exp $
 
 DISTNAME=	typer-0.29.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,18 +23,11 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	typer
 
-# as of 0.29.2
-#    1620 passed
-#       7 failed
-#         - tests/test_tutorial/test_options/test_help/test_tutorial004.py:31 test_help[tutorial004_non_an]
-#         - tests/test_tutorial/test_options/test_help/test_tutorial004.py:31 test_help[tutorial004]
-#         - tests/test_tutorial/test_parameter_types/test_enum/test_tutorial003.py:25 test_help[tutorial003_non_an]
-#         - tests/test_tutorial/test_parameter_types/test_enum/test_tutorial003.py:25 test_help[tutorial003]
-#         - tests/test_type_conversion.py:166 test_tuple_wrong_arity
-#         - tests/test_types_file.py:138 test_binary_stderr
-#         - tests/test_types_file.py:273 test_file_error
-#       3 xfailed
-#      39 skipped
+# as of 0.29.2, all tests pass after 'make install'
+TEST_ENV+=	PYTHONPATH=${WRKSRC}
+# from scripts/test.sh
+TEST_ENV+=	TERMINAL_WIDTH=3000
+TEST_ENV+=	_TYPER_FORCE_DISABLE_TERMINAL=1
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
