@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2026/11/11 18:07:13 pin Exp $
+# $NetBSD: Makefile,v 1.35 2026/11/23 12:22:12 pin Exp $
 
-DISTNAME=	serie-0.10.2
+DISTNAME=	serie-0.11.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lusingander/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.88.0
+RUST_REQ=	1.88
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
