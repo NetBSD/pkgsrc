@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/11/16 12:39:08 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/23 16:43:58 adam Exp $
 
-DISTNAME=	pnpm-12.21.0
+DISTNAME=	pnpm-12.23.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pnpm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
