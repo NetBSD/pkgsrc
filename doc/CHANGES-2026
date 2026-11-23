@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8317 2026/11/23 10:59:54 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8318 2026/11/23 11:31:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12292,3 +12292,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added net/rustfs version 1.0.6 [adam 2026-11-23]
 	Updated chat/unrealircd to 6.2.7.1 [wiz 2026-11-23]
 	Removed chat/unrealircd6 successor chat/unrealircd [wiz 2026-11-23]
+	Updated textproc/git-delta to 0.22.0 [wiz 2026-11-23]
