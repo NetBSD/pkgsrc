@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2026/10/27 05:48:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.63 2026/11/24 06:36:31 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1820,9 +1820,6 @@ ${PYSITELIB}/yt_dlp/extractor/peloton.pyo
 ${PYSITELIB}/yt_dlp/extractor/performgroup.py
 ${PYSITELIB}/yt_dlp/extractor/performgroup.pyc
 ${PYSITELIB}/yt_dlp/extractor/performgroup.pyo
-${PYSITELIB}/yt_dlp/extractor/periscope.py
-${PYSITELIB}/yt_dlp/extractor/periscope.pyc
-${PYSITELIB}/yt_dlp/extractor/periscope.pyo
 ${PYSITELIB}/yt_dlp/extractor/pgatour.py
 ${PYSITELIB}/yt_dlp/extractor/pgatour.pyc
 ${PYSITELIB}/yt_dlp/extractor/pgatour.pyo
