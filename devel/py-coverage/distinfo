@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.89 2026/11/22 19:10:08 wiz Exp $
+$NetBSD: distinfo,v 1.90 2026/11/24 08:11:09 adam Exp $
 
-BLAKE2s (coverage-7.17.4.tar.gz) = a4a5708d9e427cdba686fe8549a9de346b1077e639a362e7ae572514dfb1a045
-SHA512 (coverage-7.17.4.tar.gz) = 71528fa2eb928b8b94115693e0e55b088b3454ad1afda3a2bf6cc8cee5d0a6e6c343a39179cbab02a84870fb2702422300732f98cbdb5ea2fdfd102cdb8b0e73
-Size (coverage-7.17.4.tar.gz) = 1008731 bytes
+BLAKE2s (coverage-7.17.5.tar.gz) = 2c00c654152353c7c73669f29f265be18835553d4f20d7b4660f1e7cae8b2047
+SHA512 (coverage-7.17.5.tar.gz) = de1df091d1460ca1ed713a28ec6b1576f73ed4503eb48dcf774fcffc7d76c39eefed8c20d922d77c8ed5dcc0ff3604bbf986e3641790d7c7ea71cd8cca4d141f
+Size (coverage-7.17.5.tar.gz) = 1009924 bytes
 SHA1 (patch-pyproject.toml) = 1453450c45f9f6291c8edebe838cf2d4aa8189a4
