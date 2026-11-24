@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2026/07/22 07:32:51 adam Exp $
+$NetBSD: distinfo,v 1.21 2026/11/24 12:20:35 adam Exp $
 
-BLAKE2s (dash-0.5.13.5.tar.gz) = 0acef945f8d6aad8cacfb53c946cd984de83718cf9af316eb5ef3d7eb55aa93c
-SHA512 (dash-0.5.13.5.tar.gz) = ae326c110713a9da6b7afb977ca6fd931793b03011f0a7aa2c42e873f116ed09448deea9ef5ca4515fe3afe24e210e0aaa580f7de89934edda9cf31ee44c94dd
-Size (dash-0.5.13.5.tar.gz) = 261540 bytes
+BLAKE2s (dash-0.5.13.6.tar.gz) = 598ba7c87640184f5281bcdaaa60e676d13074dfc959186ca5832665758c3345
+SHA512 (dash-0.5.13.6.tar.gz) = 706ed535eadb37885b59edea10dfc5fa393c377684d9747ec91c9efea3228a14298f50b6bdccb3f1746ba7f3ff646f0d632c17c090e9311dc566be5039fdc431
+Size (dash-0.5.13.6.tar.gz) = 261553 bytes
 SHA1 (patch-configure.ac) = 24f94810bfc466f85a87c56f84a17724f6f7bcd1
 SHA1 (patch-src_histedit.c) = a5d187bcbf3cd90f77e70b4505c939b69aa24cac
