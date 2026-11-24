@@ -1,13 +1,13 @@
-$NetBSD: patch-lib_Makefile,v 1.16 2025/02/20 08:10:34 adam Exp $
+$NetBSD: patch-lib_Makefile,v 1.17 2026/11/24 09:23:23 wiz Exp $
 
 Detect and use third-party libraries (taken from programs/Makefile).
 -fvisibility=hidden makes error when linking.
 Enable the "install" target on all OS.
 Fix pkgconfig installation path.
 
---- lib/Makefile.orig	2025-02-19 00:04:24.000000000 +0000
+--- lib/Makefile.orig	2026-11-23 22:40:52.000000000 +0000
 +++ lib/Makefile
-@@ -71,6 +71,43 @@ decompress/zstd_decompress_block.o : CFL
+@@ -71,6 +71,43 @@ endif
  endif
  
  
@@ -55,11 +55,11 @@ Fix pkgconfig installation path.
  #-----------------------------------------------------------------------------
  # make install is validated only for below listed environments
  #-----------------------------------------------------------------------------
--ifneq (,$(filter Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS Haiku AIX MSYS_NT% CYGWIN_NT%,$(UNAME)))
+-ifneq (,$(filter $(INSTALL_OS_LIST),$(UNAME)))
  
  lib: libzstd.pc
  
-@@ -307,11 +343,7 @@ else
+@@ -307,11 +343,7 @@ endif
    PCLIB := $(LDFLAGS_DYNLIB)
  endif
  
