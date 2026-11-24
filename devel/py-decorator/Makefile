@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/05/20 12:54:26 adam Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/24 08:09:58 adam Exp $
 
-DISTNAME=	decorator-5.3.1
+DISTNAME=	decorator-5.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/decorator/}
