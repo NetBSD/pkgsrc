@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/12/18 19:25:14 christos Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/24 14:06:54 wiz Exp $
 
 DISTNAME=	sysupgrade-1.5
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
 
