@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8375 2026/11/24 18:34:42 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8376 2026/11/24 19:23:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12386,3 +12386,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated ham/trustedQSL to 2.8.7 [gdt 2026-11-24]
 	Updated net/sniffnet to 1.6.0 [pin 2026-11-24]
 	Updated shells/oh-my-posh to 33.4.0 [pin 2026-11-24]
+	Added databases/postgresql19 version 19.0 [adam 2026-11-24]
