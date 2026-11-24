@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8356 2026/11/24 06:48:07 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8357 2026/11/24 08:04:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12349,3 +12349,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-regex to 2026.11.23 [adam 2026-11-24]
 	Updated devel/py-pkginfo to 2.0 [adam 2026-11-24]
 	Updated time/py-dateparser to 1.5.1 [adam 2026-11-24]
+	Updated devel/py-typeguard to 4.6.1 [adam 2026-11-24]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.17.7 [adam 2026-11-24]
+	Updated www/py-paste to 3.11.0 [adam 2026-11-24]
+	Updated net/py-pypiserver to 2.4.3 [adam 2026-11-24]
