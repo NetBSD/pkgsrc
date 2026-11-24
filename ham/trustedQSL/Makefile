@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2026/11/24 18:26:03 gdt Exp $
+# $NetBSD: Makefile,v 1.107 2026/11/24 19:07:59 gdt Exp $
 
 DISTNAME=		tqsl-2.8.7
 CATEGORIES=		ham
-MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
+MASTER_SITES=		https://www.arrl.org/files/file/LoTW%20Instructions/
 
 MAINTAINER=		makoto@ki.nu
 #MAINTAINER+=		gdt@NetBSD.org
@@ -42,7 +42,7 @@ post-install:
 .include "../../devel/cmake/build.mk"
 .include "../../databases/db5/buildlink3.mk"
 #.include "../../databases/lmdb/buildlink3.mk"
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
