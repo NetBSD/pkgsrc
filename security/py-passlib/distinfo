@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2026/10/19 11:36:59 adam Exp $
+$NetBSD: distinfo,v 1.13 2026/11/24 08:15:35 adam Exp $
 
-BLAKE2s (libpass-1.9.4.tar.gz) = bbb6f9b4a2fa41f77f1a14e77b749f4eeb42f0ee582ec9e3cba7551dc0b42645
-SHA512 (libpass-1.9.4.tar.gz) = 6f0e31a500478284a5455c0b849687a1ea043f448a2c97d7a911f970f5d28cc89c411f4d4dcbb7da3df4874c8d0c2072d6ff0c8496ff2c016eb4e9f31c08e69b
-Size (libpass-1.9.4.tar.gz) = 704877 bytes
+BLAKE2s (passlib-1.9.5.tar.gz) = 777188d6254c77b1e4be995df1a0615b826d87be8a71d0e445931aa6199ac238
+SHA512 (passlib-1.9.5.tar.gz) = 779aede4e753940628dc5f20cd3677e3f13dfb9cf5e16fdd9b435e47db265d993e04f663782f6c043fa8859b26de41d8787cb7c67294acbaaf31b23d8aabc572
+Size (passlib-1.9.5.tar.gz) = 652472 bytes

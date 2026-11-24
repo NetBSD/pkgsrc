@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2026/10/19 11:36:58 adam Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/24 08:15:35 adam Exp $
 
-# Using passlib's fork, because the original module is stalled.
-DISTNAME=	libpass-1.9.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/libpass/passlib/}
+DISTNAME=	passlib-1.9.5
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_PYPI:=l/libpass/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/passlib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/notypecheck/passlib
