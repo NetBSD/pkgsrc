@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2026/10/20 18:34:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2026/11/24 06:37:20 adam Exp $
 include/libtorrent/add_torrent_params.hpp
 include/libtorrent/address.hpp
 include/libtorrent/alert.hpp
@@ -22,6 +22,7 @@ include/libtorrent/aux_/bloom_filter.hpp
 include/libtorrent/aux_/bt_peer_connection.hpp
 include/libtorrent/aux_/buffer.hpp
 include/libtorrent/aux_/byteswap.hpp
+include/libtorrent/aux_/ceil_div.hpp
 include/libtorrent/aux_/chained_buffer.hpp
 include/libtorrent/aux_/choker.hpp
 include/libtorrent/aux_/container_wrapper.hpp
@@ -46,6 +47,7 @@ include/libtorrent/aux_/disk_io_thread_pool.hpp
 include/libtorrent/aux_/disk_job.hpp
 include/libtorrent/aux_/disk_job_fence.hpp
 include/libtorrent/aux_/disk_job_pool.hpp
+include/libtorrent/aux_/disk_tick_thread.hpp
 include/libtorrent/aux_/drive_info.hpp
 include/libtorrent/aux_/ed25519.hpp
 include/libtorrent/aux_/enum_net.hpp
