@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8353 2026/11/23 23:39:14 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8354 2026/11/24 01:11:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12341,3 +12341,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/expat to 2.11.0 [wiz 2026-11-23]
 	Updated lang/janet to 1.43.1 [ktnb 2026-11-23]
 	Updated x11/kitty to 0.51.1 [ktnb 2026-11-23]
+	Updated geography/geos to 3.15.1 [gdt 2026-11-24]
