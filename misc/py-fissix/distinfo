@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/24 17:19:26 adam Exp $
+
+BLAKE2s (fissix-26.10.29.tar.gz) = 7ad32c3f912ef0a0c9b3fe8bfb5cef1efb77ec3afde6c36086005aed1189197a
+SHA512 (fissix-26.10.29.tar.gz) = 95a6bac7243a1df2b1969e2bdd7bb4f4d06400e96d8042637f9d582ac3803de761031b61781d822b9a74e980a4121cb09fcfbd74383e02c001e540ba570e723c
+Size (fissix-26.10.29.tar.gz) = 152562 bytes
