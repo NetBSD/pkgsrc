@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8366 2026/11/24 14:07:05 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8367 2026/11/24 16:23:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12367,3 +12367,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/firefox153 to 153.8.0 [gutteridge 2026-11-24]
 	Updated www/firefox153-l10n to 153.8.0 [gutteridge 2026-11-24]
 	Updated sysutils/sysupgrade to 1.5nb13 [wiz 2026-11-24]
+	Updated net/qbittorrent to 5.3.1 [adam 2026-11-24]
+	Updated devel/py-argcomplete to 3.8.0 [adam 2026-11-24]
