@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8361 2026/11/24 10:26:30 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8362 2026/11/24 11:09:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12361,3 +12361,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated archivers/zstdgrep to 1.6.0 [wiz 2026-11-24]
 	Updated security/pcsc-lite to 2.5.4 [adam 2026-11-24]
 	Updated x11/gtk4 to 4.24.2 [adam 2026-11-24]
+	Added x11/mocu-xcursor version 1.1 [nia 2026-11-24]
