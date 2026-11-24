@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2026/06/28 08:55:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2026/11/24 17:28:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -128,6 +128,12 @@ ${PYSITELIB}/jinxed/terminfo/sun.pyo
 ${PYSITELIB}/jinxed/terminfo/syncterm.py
 ${PYSITELIB}/jinxed/terminfo/syncterm.pyc
 ${PYSITELIB}/jinxed/terminfo/syncterm.pyo
+${PYSITELIB}/jinxed/terminfo/teraterm.py
+${PYSITELIB}/jinxed/terminfo/teraterm.pyc
+${PYSITELIB}/jinxed/terminfo/teraterm.pyo
+${PYSITELIB}/jinxed/terminfo/teraterm_256color.py
+${PYSITELIB}/jinxed/terminfo/teraterm_256color.pyc
+${PYSITELIB}/jinxed/terminfo/teraterm_256color.pyo
 ${PYSITELIB}/jinxed/terminfo/tmux.py
 ${PYSITELIB}/jinxed/terminfo/tmux.pyc
 ${PYSITELIB}/jinxed/terminfo/tmux.pyo
@@ -176,6 +182,12 @@ ${PYSITELIB}/jinxed/terminfo/xterm_256color.pyo
 ${PYSITELIB}/jinxed/terminfo/xterm_new.py
 ${PYSITELIB}/jinxed/terminfo/xterm_new.pyc
 ${PYSITELIB}/jinxed/terminfo/xterm_new.pyo
+${PYSITELIB}/jinxed/terminfo/zutty.py
+${PYSITELIB}/jinxed/terminfo/zutty.pyc
+${PYSITELIB}/jinxed/terminfo/zutty.pyo
+${PYSITELIB}/jinxed/terminfo/zutty_256color.py
+${PYSITELIB}/jinxed/terminfo/zutty_256color.pyc
+${PYSITELIB}/jinxed/terminfo/zutty_256color.pyo
 ${PYSITELIB}/jinxed/win32.py
 ${PYSITELIB}/jinxed/win32.pyc
 ${PYSITELIB}/jinxed/win32.pyo
