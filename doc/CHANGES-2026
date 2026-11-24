@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8358 2026/11/24 08:16:08 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8359 2026/11/24 09:23:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12357,3 +12357,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-coverage to 7.17.5 [adam 2026-11-24]
 	Updated devel/py-deprecated to 3.0.1 [adam 2026-11-24]
 	Updated security/py-passlib to 1.9.5 [adam 2026-11-24]
+	Updated archivers/zstd to 1.6.0 [wiz 2026-11-24]
