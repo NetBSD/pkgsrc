@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1091 2026/11/15 02:14:12 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1092 2026/11/24 11:09:39 nia Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -256,6 +256,7 @@ SUBDIR+=	mate-terminal
 SUBDIR+=	mcookie
 SUBDIR+=	mkcomposecache
 SUBDIR+=	mlterm
+SUBDIR+=	mocu-xcursor
 SUBDIR+=	modeline
 SUBDIR+=	modular-xorg-server
 SUBDIR+=	modular-xorg-xephyr

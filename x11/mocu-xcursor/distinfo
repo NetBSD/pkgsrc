@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/24 11:09:39 nia Exp $
+
+BLAKE2s (mocu-xcursor-1.1.zip) = 8485bf15de6f9e1c3fbfa1c4d033b6a9f465672a1282dcd8d701a72949fc589a
+SHA512 (mocu-xcursor-1.1.zip) = 15ccc0b36899f07021d5b14b62fb296ffb2b9e4dadf66a20f186d5ed5fb478d312353ce0cefd6699322abcbe4f610e5a0ff49821a089eadd21c7077ee8b0bb29
+Size (mocu-xcursor-1.1.zip) = 3087473 bytes
