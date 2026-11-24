@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2026/09/18 16:39:11 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2026/11/24 01:11:18 gdt Exp $
 
-VERSION_BASE=	3.15.0
+VERSION_BASE=	3.15.1
 # Accomodate testing unreleased versions.
 #VERSION_RC=	rc1
 VERSION=	${VERSION_BASE}${VERSION_RC}
