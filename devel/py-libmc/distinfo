@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/11/03 11:50:39 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/11/24 17:34:28 adam Exp $
 
-BLAKE2s (pylibmc-1.6.3.tar.gz) = 15bedcf34397a4ae7dc18f76aea3341f0d2efb139c37dae500f51dd6fa25d04d
-SHA512 (pylibmc-1.6.3.tar.gz) = d389fd01a66fcb7bb3a565bd84cc6605f21cac835169e6e3054dc03b0d2dcf68054ecfecb419beb8d09a0c54e7d481048cd293499ec8812f717ed2af0f2c9dd2
-Size (pylibmc-1.6.3.tar.gz) = 63224 bytes
+BLAKE2s (pylibmc-1.8.0.tar.gz) = eb07bbe40f1f4d8256cc3ae30156b3f07393375a2b09e32051aac90b2a72d834
+SHA512 (pylibmc-1.8.0.tar.gz) = 94f108a5efbb0b9b07e89f7ecf9c2255c62ff44d081d3dde2f207c798de1d09d88bf7d0fd6470c31144794e6284204cc4d840c02de95d7f8156c4b4fe1aca031
+Size (pylibmc-1.8.0.tar.gz) = 137679 bytes
