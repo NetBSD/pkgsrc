@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8363 2026/11/24 12:21:59 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8364 2026/11/24 14:04:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12364,3 +12364,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added x11/mocu-xcursor version 1.1 [nia 2026-11-24]
 	Updated shells/dash to 0.5.13.6 [adam 2026-11-24]
 	Updated multimedia/mkvtoolnix to 104.0 [adam 2026-11-24]
+	Updated www/firefox153 to 153.8.0 [gutteridge 2026-11-24]
