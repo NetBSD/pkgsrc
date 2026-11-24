@@ -1,0 +1,17 @@
+$NetBSD: patch-src_Makefile.global.in,v 1.1 2026/11/24 19:22:51 adam Exp $
+
+Invert the meaning of FLEX_NO_BACKUP.
+
+--- src/Makefile.global.in.orig	2026-11-16 20:02:58.000000000 +0000
++++ src/Makefile.global.in
+@@ -804,8 +804,8 @@ endif
+ # Global targets and rules
+ 
+ %.c: %.l
+-	$(FLEX) $(if $(FLEX_NO_BACKUP),-b) $(FLEXFLAGS) -o'$@' $<
+-	@$(if $(FLEX_NO_BACKUP),if [ `wc -l <lex.backup` -eq 1 ]; then rm lex.backup; else echo "Scanner requires backup; see lex.backup." 1>&2; exit 1; fi)
++	$(FLEX) $(if $(FLEX_BACKUP),-b) $(FLEXFLAGS) -o'$@' $<
++	@$(if $(FLEX_BACKUP),if [ `wc -l <lex.backup` -eq 1 ]; then rm lex.backup; else echo "Scanner requires backup; see lex.backup." 1>&2; exit 1; fi)
+ 
+ %.c: %.y
+ 	$(if $(BISON_CHECK_CMD),$(BISON_CHECK_CMD))
