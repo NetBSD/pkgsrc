@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8364 2026/11/24 14:04:08 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8365 2026/11/24 14:05:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12365,3 +12365,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/dash to 0.5.13.6 [adam 2026-11-24]
 	Updated multimedia/mkvtoolnix to 104.0 [adam 2026-11-24]
 	Updated www/firefox153 to 153.8.0 [gutteridge 2026-11-24]
+	Updated www/firefox153-l10n to 153.8.0 [gutteridge 2026-11-24]
