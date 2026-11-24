@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8357 2026/11/24 08:04:42 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8358 2026/11/24 08:16:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12353,3 +12353,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-sphinx-autodoc-typehints to 3.17.7 [adam 2026-11-24]
 	Updated www/py-paste to 3.11.0 [adam 2026-11-24]
 	Updated net/py-pypiserver to 2.4.3 [adam 2026-11-24]
+	Updated devel/py-decorator to 5.3.2 [adam 2026-11-24]
+	Updated devel/py-coverage to 7.17.5 [adam 2026-11-24]
+	Updated devel/py-deprecated to 3.0.1 [adam 2026-11-24]
+	Updated security/py-passlib to 1.9.5 [adam 2026-11-24]
