@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2026/02/15 23:22:03 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/24 18:25:08 jakllsch Exp $
 
 DISTNAME=		gcc-15.2.0
 PKGNAME=		cross-m68k-none-elf-${DISTNAME}
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		cross
 NEWLIBVER=		4.6.0.20260123
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
@@ -13,7 +13,7 @@ SITES.newlib-${NEWLIBVER}.tar.gz=	https://www.sourceware.org/pub/newlib/
 
 MAINTAINER=		port-m68k@NetBSD.org
 HOMEPAGE=		# none
-COMMENT=		GCC for bare metal RISC-V 64-bit little-endian ELF
+COMMENT=		Cross GCC for bare metal m68k ELF
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 EXTRACT_USING=		bsdtar
