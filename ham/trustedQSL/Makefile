@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.105 2026/11/11 11:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2026/11/24 18:26:03 gdt Exp $
 
-DISTNAME=		tqsl-2.8.5
-PKGREVISION=		5
+DISTNAME=		tqsl-2.8.7
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 
 MAINTAINER=		makoto@ki.nu
+#MAINTAINER+=		gdt@NetBSD.org
 HOMEPAGE=		http://www.arrl.org/quick-start-tqsl
 COMMENT=		TrustedQSL, uploading QSL Data to LoTW of ARRL
 LICENSE=		arrl-license
