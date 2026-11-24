@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/09/15 12:15:29 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/24 06:42:02 adam Exp $
 
-DISTNAME=	zope_deprecation-6.0
+DISTNAME=	zope_deprecation-6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deprecation/}
