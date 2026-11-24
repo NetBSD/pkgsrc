@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2026/10/19 11:28:46 adam Exp $
+# $NetBSD: Makefile,v 1.64 2026/11/24 10:25:15 adam Exp $
 
-DISTNAME=	pcsc-lite-2.5.3
+DISTNAME=	pcsc-lite-2.5.4
 CATEGORIES=	security
 MASTER_SITES=	https://pcsclite.apdu.fr/files/
 EXTRACT_SUFX=	.tar.xz
