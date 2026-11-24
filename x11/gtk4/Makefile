@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2026/11/11 11:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2026/11/24 10:26:12 adam Exp $
 
-DISTNAME=	gtk-4.24.1
+DISTNAME=	gtk-4.24.2
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,9 +11,9 @@ HOMEPAGE=	https://www.gtk.org/
 COMMENT=	Multi-platform toolkit for creating GUIs, version 4
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	glib2-introspection-[0-9]*:../../devel/glib2-introspection
+TOOL_DEPENDS+=	glib2-introspection>=0:../../devel/glib2-introspection
 # TEST_DEPENDS, but meson fails if it's not found
-TOOL_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-gobject3>=0:../../devel/py-gobject3
 # TODO: add more python dependencies?
 # gi-docgen| subprojects/gi-docgen/meson.build:10:0: Exception: python3 is missing modules: jinja2, markdown, markupsafe, pygments, toml, typogrify
 

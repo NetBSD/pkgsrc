@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.35 2026/10/07 11:20:02 adam Exp $
+$NetBSD: distinfo,v 1.36 2026/11/24 10:26:12 adam Exp $
 
-BLAKE2s (gtk-4.24.1.tar.xz) = 1e6044f5145103d4e3a6bae7e068090418f0612cf12f87290f51924b0694eb11
-SHA512 (gtk-4.24.1.tar.xz) = 0e088442279c67a8f4c29bba979efe7e68bb1885a26da292035efc86425c462d1894476ea0e8bb4a08b5ad884f3eb3980782540a1cba89af5773852109af0ceb
-Size (gtk-4.24.1.tar.xz) = 17655236 bytes
+BLAKE2s (gtk-4.24.2.tar.xz) = 4440afe071fc9b9019814bd4967b58d665d201bd0bb4a7fa330d4c1243c74435
+SHA512 (gtk-4.24.2.tar.xz) = 2a892ba76e3724f1d181ad0707503693a659d58e9c255e7d7c1109183b8231b467b90b441ed72e3a377d537151a2e0ea8236fe2af2e006499110950c4bc63c0a
+Size (gtk-4.24.2.tar.xz) = 17653788 bytes
 SHA1 (patch-gdk_wayland_gdkseat-wayland.c) = 6065b568716089b6323058183ee4af2eeab044a0
 SHA1 (patch-meson.build) = ed697477ebfa2b06559877170cc5b05079c61ceb
 SHA1 (patch-testsuite_gdk_colorstate.c) = 7a6d441f91332bffbd4e170809d8ad7ec51773bd
