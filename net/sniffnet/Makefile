@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2026/08/06 13:26:10 pin Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/24 18:33:18 pin Exp $
 
-DISTNAME=	sniffnet-1.5.1
+DISTNAME=	sniffnet-1.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GyulyVGC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,9 +15,9 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.98.0-beta.6
+#RUST_REQ=	1.101.0-beta.3
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.98.0-beta.6 on amd64
+#This package is confirmed to build with Rust 1.101.0-beta.3 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
