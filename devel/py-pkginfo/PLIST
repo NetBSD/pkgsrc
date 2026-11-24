@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2026/01/06 16:37:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/24 06:45:42 adam Exp $
 bin/pkginfo-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -39,39 +39,6 @@ ${PYSITELIB}/pkginfo/sdist.py
 ${PYSITELIB}/pkginfo/sdist.pyc
 ${PYSITELIB}/pkginfo/sdist.pyi
 ${PYSITELIB}/pkginfo/sdist.pyo
-${PYSITELIB}/pkginfo/tests/__init__.py
-${PYSITELIB}/pkginfo/tests/__init__.pyc
-${PYSITELIB}/pkginfo/tests/__init__.pyo
-${PYSITELIB}/pkginfo/tests/conftest.py
-${PYSITELIB}/pkginfo/tests/conftest.pyc
-${PYSITELIB}/pkginfo/tests/conftest.pyo
-${PYSITELIB}/pkginfo/tests/test_bdist.py
-${PYSITELIB}/pkginfo/tests/test_bdist.pyc
-${PYSITELIB}/pkginfo/tests/test_bdist.pyo
-${PYSITELIB}/pkginfo/tests/test_commandline.py
-${PYSITELIB}/pkginfo/tests/test_commandline.pyc
-${PYSITELIB}/pkginfo/tests/test_commandline.pyo
-${PYSITELIB}/pkginfo/tests/test_develop.py
-${PYSITELIB}/pkginfo/tests/test_develop.pyc
-${PYSITELIB}/pkginfo/tests/test_develop.pyo
-${PYSITELIB}/pkginfo/tests/test_distribution.py
-${PYSITELIB}/pkginfo/tests/test_distribution.pyc
-${PYSITELIB}/pkginfo/tests/test_distribution.pyo
-${PYSITELIB}/pkginfo/tests/test_index.py
-${PYSITELIB}/pkginfo/tests/test_index.pyc
-${PYSITELIB}/pkginfo/tests/test_index.pyo
-${PYSITELIB}/pkginfo/tests/test_installed.py
-${PYSITELIB}/pkginfo/tests/test_installed.pyc
-${PYSITELIB}/pkginfo/tests/test_installed.pyo
-${PYSITELIB}/pkginfo/tests/test_sdist.py
-${PYSITELIB}/pkginfo/tests/test_sdist.pyc
-${PYSITELIB}/pkginfo/tests/test_sdist.pyo
-${PYSITELIB}/pkginfo/tests/test_utils.py
-${PYSITELIB}/pkginfo/tests/test_utils.pyc
-${PYSITELIB}/pkginfo/tests/test_utils.pyo
-${PYSITELIB}/pkginfo/tests/test_wheel.py
-${PYSITELIB}/pkginfo/tests/test_wheel.pyc
-${PYSITELIB}/pkginfo/tests/test_wheel.pyo
 ${PYSITELIB}/pkginfo/utils.py
 ${PYSITELIB}/pkginfo/utils.pyc
 ${PYSITELIB}/pkginfo/utils.pyi
