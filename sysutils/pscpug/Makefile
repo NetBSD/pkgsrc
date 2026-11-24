@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2025/04/21 21:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/24 18:18:06 wiz Exp $
 
 DISTNAME=		pscpug035
 PKGNAME=		pscpug-0.3.5
 PKGREVISION=		3
 CATEGORIES=		sysutils
-MASTER_SITES=		https://www.aydogan.net/distfiles/sysutils/
+MASTER_SITES=		http://www.charlesmercadal.com/assets/software/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://www.diablonet.net/~mercadal/projects/pscpug/
+HOMEPAGE=		http://www.charlesmercadal.com/software/2019/06/24/pscpug.html
 COMMENT=		Graph a given process's CPU usage
 LICENSE=		modified-bsd
 
