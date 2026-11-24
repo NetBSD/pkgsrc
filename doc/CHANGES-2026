@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8369 2026/11/24 16:58:23 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8370 2026/11/24 17:23:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12375,3 +12375,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-grpcio-status to 1.85.4 [adam 2026-11-24]
 	Updated net/py-grpcio-testing to 1.85.4 [adam 2026-11-24]
 	Updated net/py-grpcio-tools to 1.85.4 [adam 2026-11-24]
+	Added misc/py-fissix version 26.10.29 [adam 2026-11-24]
+	Updated devel/py-unittest2pytest to 0.6 [adam 2026-11-24]
+	Updated devel/py-testtools to 2.9.2 [adam 2026-11-24]
