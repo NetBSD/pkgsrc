@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8373 2026/11/24 18:26:08 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.8374 2026/11/24 18:33:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12384,3 +12384,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-libmc to 1.8.0 [adam 2026-11-24]
 	Updated cross/m68k-none-elf-gcc to 15.2.0nb1 [jakllsch 2026-11-24]
 	Updated ham/trustedQSL to 2.8.7 [gdt 2026-11-24]
+	Updated net/sniffnet to 1.6.0 [pin 2026-11-24]
