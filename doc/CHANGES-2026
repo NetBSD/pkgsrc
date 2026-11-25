@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8399 2026/11/25 14:11:02 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8400 2026/11/25 14:17:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12434,3 +12434,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-evalidate to 2.1.9 [adam 2026-11-25]
 	Updated www/py-django-sortedm2m to 4.1.0 [adam 2026-11-25]
 	Updated www/py-drf-nested-routers to 0.96.0 [adam 2026-11-25]
+	Updated net/libpcap to 1.11.1 [adam 2026-11-25]
+	Updated net/py-python-socks to 3.2.2 [adam 2026-11-25]
