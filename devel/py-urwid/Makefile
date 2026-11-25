@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2026/11/15 22:30:10 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2026/11/25 06:47:33 adam Exp $
 
-DISTNAME=	urwid-5.1.3
+DISTNAME=	urwid-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
@@ -12,7 +12,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80.8.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.1.0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.4:../../devel/py-wcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=0:../../devel/py-exceptiongroup
 TEST_DEPENDS+=	${PYPKGPREFIX}-gobject3>=0:../../devel/py-gobject3
@@ -24,6 +23,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
 TEST_DEPENDS+=	${PYPKGPREFIX}-zmq>=0:../../net/py-zmq
 
 USE_LANGUAGES=	# none
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 313
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5.0:../../devel/py-typing-extensions
+.endif
 
 # as of 5.1.3
 # 197 passed, 1 skipped, 6 warnings
