@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8384 2026/11/25 08:47:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8385 2026/11/25 08:49:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12406,3 +12406,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-mechanize to 0.4.11 [adam 2026-11-25]
 	Updated textproc/py-jsonschema-rs to 0.63.1 [adam 2026-11-25]
 	Updated devel/py-sbom to 0.5.0 [adam 2026-11-25]
+	Updated devel/cargo-c to 0.10.28 [pin 2026-11-25]
