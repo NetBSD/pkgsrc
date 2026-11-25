@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/11/25 08:51:21 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/25 22:18:10 wiz Exp $
 
 DISTNAME=	poetry_plugin_export-1.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly>=3.12:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-poetry
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
