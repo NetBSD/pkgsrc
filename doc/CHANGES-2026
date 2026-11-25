@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8394 2026/11/25 12:49:32 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8395 2026/11/25 13:51:12 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12426,3 +12426,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-url-normalize to 4.0.0 [adam 2026-11-25]
 	Updated devel/py-uv to 0.13.10 [adam 2026-11-25]
 	Updated devel/py-uv-build to 0.13.10 [adam 2026-11-25]
+	Updated www/chromium to 158.0.8127.88 [kikadf 2026-11-25]
