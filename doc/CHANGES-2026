@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8401 2026/11/25 14:21:40 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8402 2026/11/25 14:25:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12438,3 +12438,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-python-socks to 3.2.2 [adam 2026-11-25]
 	Updated misc/py-narwhals to 2.29.0 [adam 2026-11-25]
 	Updated devel/py-faker to 40.63.0 [adam 2026-11-25]
+	Added devel/py-lazy-importer version 0.1.0 [leot 2026-11-25]
