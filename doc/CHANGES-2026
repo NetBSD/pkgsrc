@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8392 2026/11/25 12:09:29 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8393 2026/11/25 12:16:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12422,3 +12422,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-zope.schema to 8.2 [adam 2026-11-25]
 	Updated graphics/py-wand to 0.7.3 [adam 2026-11-25]
 	Updated devel/py-test-testmon to 2.3.1 [adam 2026-11-25]
+	Updated devel/py-click-option-group to 0.5.10 [adam 2026-11-25]
+	Updated www/py-url-normalize to 4.0.0 [adam 2026-11-25]
