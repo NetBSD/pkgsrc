@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2026/11/12 09:06:30 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/11/25 12:36:08 nros Exp $
 
 BLAKE2s (libjxl-0.13.0.tar.gz) = a5fed835d2381c0938e21cd91a584a78b7aa93d3302b418ca6ce29f29f02c608
 SHA512 (libjxl-0.13.0.tar.gz) = f5a6cc4c875c9cdd217001096d34e5912afffdf3a58bae816c1c28c7e241eb0909ea37af0bef6d4b2fb8fae20ae94e29b2ef30fb65f778d4a7d62e07e20e3f85
@@ -7,3 +7,4 @@ SHA1 (patch-CMakeLists.txt) = 61a53fd1bd533f8c488b8e8c3db04fba3373a617
 SHA1 (patch-lib_jxl.cmake) = a0ddd494e1d7a4992ce22161602c44aae2c44267
 SHA1 (patch-lib_jxl__threads.cmake) = a18c85c6ab0111bad03eaa52b005d8f3204fcf58
 SHA1 (patch-plugins_gdk-pixbuf_CMakeLists.txt) = b37e6d4f0e414c3eb4d1542d732873eb1425a0b2
+SHA1 (patch-tools_speed__stats.cc) = 3192affd2b04a2a71f6dc2419026ba403ba6e335
