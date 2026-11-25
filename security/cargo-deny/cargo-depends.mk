@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2026/11/20 13:17:30 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2026/11/25 06:31:57 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.5
@@ -48,7 +48,7 @@ CARGO_CRATE_DEPENDS+=	find-msvc-tools-0.1.15
 CARGO_CRATE_DEPENDS+=	fixedbitset-0.5.9
 CARGO_CRATE_DEPENDS+=	flate2-1.1.11
 CARGO_CRATE_DEPENDS+=	foldhash-0.1.5
-CARGO_CRATE_DEPENDS+=	form_urlencoded-1.2.2
+CARGO_CRATE_DEPENDS+=	form_urlencoded-1.2.3
 CARGO_CRATE_DEPENDS+=	fs_extra-1.3.0
 CARGO_CRATE_DEPENDS+=	funty-2.0.0
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.17
@@ -151,7 +151,7 @@ CARGO_CRATE_DEPENDS+=	unicode-width-0.2.3
 CARGO_CRATE_DEPENDS+=	untrusted-0.9.0
 CARGO_CRATE_DEPENDS+=	ureq-3.5.2
 CARGO_CRATE_DEPENDS+=	ureq-proto-0.7.1
-CARGO_CRATE_DEPENDS+=	url-2.5.8
+CARGO_CRATE_DEPENDS+=	url-2.5.9
 CARGO_CRATE_DEPENDS+=	utf8-zero-0.8.1
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.1.0
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.2

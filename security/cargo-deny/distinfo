@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2026/11/20 13:17:30 adam Exp $
+$NetBSD: distinfo,v 1.6 2026/11/25 06:31:57 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -48,9 +48,9 @@ Size (bytes-1.12.2.crate) = 79024 bytes
 BLAKE2s (camino-1.2.6.crate) = 7f8f31c88faf025ee5f990e394d1c73f26b28764936f7a908cf173e786399588
 SHA512 (camino-1.2.6.crate) = 8e116488fd75c40841b8ec37f5304191e52662de1647c3151322275d51dbfc4b10f01cf0236afeedd7d77473da806dd7538b9a6c38b10dcfa654e254d0171c68
 Size (camino-1.2.6.crate) = 39988 bytes
-BLAKE2s (cargo-deny-0.22.0.tar.gz) = b2c5e2c6821c10cd0a61e6f1e8923d65fd5b892a1046bef344ad464e13c85798
-SHA512 (cargo-deny-0.22.0.tar.gz) = 7698e12653ffac396fad8cc97b7a645f867759434e8b995ac69036a3e8413a0e7b5cb8e47a92f5cf6caf15976b783dbcd87e462d7a5e576f80dc20fc068ce8fb
-Size (cargo-deny-0.22.0.tar.gz) = 580601 bytes
+BLAKE2s (cargo-deny-0.22.1.tar.gz) = cd81b88db570e02a3e1c457bbd14e80a8df712698d3d4828f880527f900b132b
+SHA512 (cargo-deny-0.22.1.tar.gz) = bcebe1138f9064b3b4405cdde782fcc594eb54773121ba84abfc00c96e796dbb84494d4e79319204f4454d2a78850fba0ff89df72cb7c16eff66451753766736
+Size (cargo-deny-0.22.1.tar.gz) = 582880 bytes
 BLAKE2s (cc-1.11.2.crate) = 5210ee78dc47c0bdffa3b42d1d1f7119b7f86095b8df5191fb6a54efcf4ef418
 SHA512 (cc-1.11.2.crate) = 0a1f1b050f1fb0b8cc2a8f92dba020634da9d9f8c9ed638f8acea931d1811e0eb86bf24f6aa638fb3077ccdd16cb0e024a3c806498c1f934a9c869977c08bf2a
 Size (cc-1.11.2.crate) = 150699 bytes
@@ -147,9 +147,9 @@ Size (flate2-1.1.11.crate) = 89270 bytes
 BLAKE2s (foldhash-0.1.5.crate) = d2e18d6a9ac10fd481f5d9c3d1d534545c67b1d4318170083b7747eb374caa3b
 SHA512 (foldhash-0.1.5.crate) = 3a634fdec410d87ffced8aa1bf8dacd9316a04c51424563d60b4dd611617041f09085edfd0ec96e6bb0e0db74a0e950b0616d1fb94a31667af35af1637604c22
 Size (foldhash-0.1.5.crate) = 21901 bytes
-BLAKE2s (form_urlencoded-1.2.2.crate) = a2bd40109d330e88635133e0c0fda55eb32549353cef6e88f29f37fe4ef801c6
-SHA512 (form_urlencoded-1.2.2.crate) = 07d27d852504e146d586d007b090e53cbe740da140859dfb7d647c83c1b55265a83ea0a0e514587699b1dc6b6ffea2fc913319bcc83b55ebe191801a3b429c8a
-Size (form_urlencoded-1.2.2.crate) = 9347 bytes
+BLAKE2s (form_urlencoded-1.2.3.crate) = b0eb85aec4f161cb94c5d8275d1a761293f5ca4355cddce8ad89aa3c4390d900
+SHA512 (form_urlencoded-1.2.3.crate) = 324d236c488fb16fe6ff8e3c518258b45277f261144c07db2a9e7c3011759cb9f31809b1e3fd194b48ad0ad13f09555ded39c8cf01320403175617adf005773e
+Size (form_urlencoded-1.2.3.crate) = 9323 bytes
 BLAKE2s (fs_extra-1.3.0.crate) = c7a8a9481929e4b2cc7f5029eabe9d55f53c580f9b39a59a60311c651bd9af18
 SHA512 (fs_extra-1.3.0.crate) = 090d2ace0517b86dd2f54c5491366cbb6e1677f64cf64f024f7dc6a3c42c4f8c54b215e954572e2df10ae7f0e956890ecf7ccbeebf66b645c7647409484c845d
 Size (fs_extra-1.3.0.crate) = 31298 bytes
@@ -456,9 +456,9 @@ Size (ureq-3.5.2.crate) = 187913 bytes
 BLAKE2s (ureq-proto-0.7.1.crate) = b70d7bd11b25b5ba3756e134f819d568b2269d3291e205076de93f814576508c
 SHA512 (ureq-proto-0.7.1.crate) = 14ed3d6cb07b2c7b5e975eee8229f865d51ff98ae6c80efbb8b29e8586227abe1a9f266dfbffe5f4bd269f9a420c82bd37102ef304480a5a22f86094f5c552fa
 Size (ureq-proto-0.7.1.crate) = 74855 bytes
-BLAKE2s (url-2.5.8.crate) = e3ca74f997fda512d3fb06b936955ab713c0961d06fda13e6af520654d75368a
-SHA512 (url-2.5.8.crate) = 5848b47d63ae9c195fd5f82bd8333c53cb399f383240e84a606c486d3dbb37db4e268b01a147deb8cdf5bc534a4ebc7b11391e73f81dc3ea3ad7254507ac0c6c
-Size (url-2.5.8.crate) = 86512 bytes
+BLAKE2s (url-2.5.9.crate) = c7b2594c6ff82e6f771ee3003c48d26213d82429454b27a4de39c6f680e81215
+SHA512 (url-2.5.9.crate) = afd81c979771c969b8c75d2f429b046269967ab724b205fd31776826ea6ca206c7eb8b4b4a8d9c18787db1237ed40fcedab25cdecdbd16b7cddef789bd51e93d
+Size (url-2.5.9.crate) = 89968 bytes
 BLAKE2s (utf8-zero-0.8.1.crate) = 3a5a28be437dcbcfdade80cdc42988ed59074af5ae0381df1a792ebf8cf53a3f
 SHA512 (utf8-zero-0.8.1.crate) = 2e6659989fb694f2724aa2931d43635938b5d83c1f58ae98181b8e46c14e0319a4d58087e1196afcd22247bb7faeee23e83bc8d9b928e8917930ac101437b386
 Size (utf8-zero-0.8.1.crate) = 13984 bytes
