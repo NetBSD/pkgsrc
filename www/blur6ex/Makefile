@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/11/25 16:14:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/25 17:16:35 wiz Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -54,6 +54,6 @@ do-install:
 		'-s|./engine/core/db.php$$||' .			\
 		${DESTDIR}${PREFIX}/${HTTPD_ROOT}/blog
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

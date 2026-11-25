@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2026/11/25 16:00:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2026/11/25 17:16:30 wiz Exp $
 # used by devel/rt-mysql/Makefile
 # used by devel/rt-pgsql/Makefile
 
@@ -132,5 +132,5 @@ pre-build:
 	${ECHO} '#define DATABASE_LIBRARY_PATH "${RT_DB_PATH}"' >> config.h; \
 	${ECHO} '#define RT_GROUP "${RT_GROUP}"' >> config.h )
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/11/11 11:56:15 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/11/25 17:16:36 wiz Exp $
 
 DISTNAME=	htdavlock-0.2
 PKGREVISION=	29
@@ -18,5 +18,5 @@ CONFIGURE_ARGS+=       --with-apxs=${APXS}
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/11/25 16:14:15 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/25 17:16:37 wiz Exp $
 
 DISTNAME=	mod_wsgi-4.9.4
 PKGNAME=	${PYPKGPREFIX}-ap24-${DISTNAME}
@@ -22,5 +22,5 @@ post-install:
 	${MV} mod_wsgi-express mod_wsgi-express-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

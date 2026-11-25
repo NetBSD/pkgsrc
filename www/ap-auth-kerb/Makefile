@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/11/25 16:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/25 17:16:33 wiz Exp $
 
 DISTNAME=	mod_auth_kerb-5.4
 PKGNAME=	${DISTNAME:S/mod/ap24/:S/_/-/g}
@@ -29,6 +29,6 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/src/.libs/mod_auth_kerb.so \
 	    ${DESTDIR}${PREFIX}/lib/httpd
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

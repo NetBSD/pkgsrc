@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2026/11/25 17:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2026/11/25 17:16:32 wiz Exp $
 
 DISTNAME=	modsecurity-v2.9.15
 PKGNAME=	ap24-${DISTNAME:S/-v/-/}
@@ -16,7 +16,6 @@ LICENSE=	apache-2.0
 APACHE_MODULE=		yes
 USE_LANGUAGES=		c++ c
 
-.include "../../mk/apache.mk"
 .include "options.mk"
 
 GNU_CONFIGURE=			YES
@@ -53,4 +52,5 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/lua51/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

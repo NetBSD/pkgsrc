@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/06/28 11:31:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2026/11/25 17:16:30 wiz Exp $
 
 DISTNAME=	bugzilla-3.6.8
 PKGREVISION=	5
@@ -96,5 +96,5 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${BZDIR}/${i}
 .endfor
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

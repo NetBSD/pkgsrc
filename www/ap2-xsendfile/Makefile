@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/11/25 16:14:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/25 17:16:35 wiz Exp $
 
 DISTNAME=		mod_xsendfile-0.12
 PKGNAME=		ap24-${DISTNAME:S/mod_//}
@@ -22,5 +22,5 @@ do-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/httpd
 	cd ${WRKSRC} && ${APXS} -i -S LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd ${APACHE_MODULE_LA}
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

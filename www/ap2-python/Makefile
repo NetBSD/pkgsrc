@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/11/25 16:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/11/25 17:16:34 wiz Exp $
 
 # Upstream tends to not have releases, so one must be cautious the
 # tags section of their site, or repology.  However, they did make a
@@ -42,5 +42,5 @@ INSTALLATION_DIRS+=	bin
 PY_PATCHPLIST=		yes
 
 .include "../../lang/python/extension.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

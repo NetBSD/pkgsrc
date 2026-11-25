@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2026/11/25 16:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2026/11/25 17:16:33 wiz Exp $
 
 DISTNAME=	mod_authnz_crowd-2.2.2
 PKGNAME=	ap24-${DISTNAME:S/mod_//:S/_/-/}
@@ -43,5 +43,5 @@ do-install:
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

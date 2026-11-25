@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2026/11/25 16:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2026/11/25 17:16:32 wiz Exp $
 
 DISTNAME=		netdisco-1.3.3_with_mibs
 PKGNAME=		${DISTNAME:S/_with_mibs//}
@@ -119,8 +119,6 @@ OWN_DIRS_PERMS+=	${PREFIX:Q}/netdisco/mason ${NETDISCOUSER} ${APACHE_GROUP} 0775
 RCD_SCRIPTS=			netdisco
 RCD_SCRIPT_SRC.netdisco=	${WRKSRC:Q}/bin/netdisco_daemon
 
-.include "../../mk/apache.mk"
-
 SUBST_STAGE.apachevers=		pre-configure
 SUBST_FILES.apachevers=		html/admin_user.html html/change_pw.html html/login.html
 SUBST_FILES.apachevers+=	html/logout.html html/portcontrol.html
@@ -151,4 +149,5 @@ do-install:
 	done
 	${RM} -f ${DESTDIR}${PREFIX:Q}/netdisco/bin/netdisco_daemon
 
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

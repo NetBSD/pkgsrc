@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/11/25 16:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/11/25 17:16:32 wiz Exp $
 
 PKGREVISION= 19
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -35,5 +35,5 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/autostart/mate-user-share-w
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

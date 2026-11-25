@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2026/08/12 15:02:31 taca Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/25 17:16:36 wiz Exp $
 
 DISTNAME=	osticket-v1.18.4
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -85,7 +85,7 @@ do-install:
 	cd ${WRKSRC}/setup/scripts && ${PAX} -rw . ${DESTDIR}${PREFIX}/${EGDIR}
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${OSTICKET_DIR}
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../www/php-apcu/buildlink3.mk"
 .include "../../lang/php/compat.mk"

@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.2 2026/11/25 16:14:13 wiz Exp $
+#	$NetBSD: Makefile,v 1.3 2026/11/25 17:16:35 wiz Exp $
 
 DISTNAME=	mod_auth_gssapi-1.6.5
 PKGNAME=	${DISTNAME:S/mod/ap24/:S/_/-/g}
@@ -60,6 +60,6 @@ post-patch-fix-permissions: .PHONY
 .include "../../devel/nss_wrapper/buildlink3.mk"
 .include "../../devel/socket_wrapper/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2026/10/24 10:39:25 hauke Exp $
+# $NetBSD: Makefile,v 1.26 2026/11/25 17:16:37 wiz Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -102,7 +102,7 @@ do-install:
 	cd ${WRKSRC} && rm -r files
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${GLPI_DIR}
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../lang/php/compat.mk"
 .include "../../mk/bsd.pkg.mk"

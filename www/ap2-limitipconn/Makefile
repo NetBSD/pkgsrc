@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2026/11/25 16:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/25 17:16:34 wiz Exp $
 
 LICVER=			limitipconn-0.24
 
@@ -35,5 +35,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mod_limitipconn
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mod_limitipconn/
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

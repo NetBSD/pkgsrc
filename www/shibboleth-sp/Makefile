@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2026/11/25 16:53:09 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2026/11/25 17:16:37 wiz Exp $
 
 DISTNAME=	shibboleth-sp-3.5.2
 PKGREVISION=	5
@@ -106,5 +106,5 @@ post-install:
 .include "../../textproc/xmltooling/buildlink3.mk"
 .include "../../security/opensaml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

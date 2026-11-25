@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/11/25 16:14:14 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/11/25 17:16:36 wiz Exp $
 
 DISTNAME=	libapreq2-2.17
 PKGNAME=	p5-ap24-${DISTNAME}
@@ -29,5 +29,5 @@ pre-configure:
 BUILDLINK_API_DEPENDS.ap2-perl+=	ap24-perl>=2.0.1
 .include "../../www/ap2-perl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.48
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

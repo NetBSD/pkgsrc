@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2026/11/25 16:14:14 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2026/11/25 17:16:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-HTML-Mason
 PKG_SUPPORTED_OPTIONS=	fastcgi modperl
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	# empty
 ### mod_perl usage for Apache webservers
 ###
 .if !empty(PKG_OPTIONS:Mmodperl)
-.  include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 DEPENDS+=	p5-ap24-libapreq2-[0-9]*:../../www/p5-libapreq2
 .include "../../www/ap2-perl/buildlink3.mk"
 .endif

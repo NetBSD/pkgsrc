@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2026/11/25 16:14:13 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2026/11/25 17:16:35 wiz Exp $
 
 PKGNAME=	ap24-subversion-${SVNVER}
 PKGREVISION=	3
@@ -23,5 +23,5 @@ post-patch:
 	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}/build-outputs.mk
 
 .include "../../devel/subversion-base/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

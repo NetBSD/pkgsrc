@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/11/25 16:00:15 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/11/25 17:16:30 wiz Exp $
 
 PKGNAME=	subversion-${SVNVER}
 PKGREVISION=	2
@@ -24,5 +24,5 @@ CATEGORIES+=	meta-pkgs
 
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/rubyversion.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

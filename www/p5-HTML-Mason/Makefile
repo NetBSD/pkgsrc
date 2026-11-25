@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/07/16 19:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/11/25 17:16:36 wiz Exp $
 
 DISTNAME=	HTML-Mason-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -37,5 +37,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/eg/MyApp/* ${DESTDIR:Q}${EGDIR:Q}/MyApp
 
 .include "../../lang/perl5/module.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

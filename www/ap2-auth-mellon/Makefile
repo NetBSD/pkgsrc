@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/11/25 16:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/11/25 17:16:33 wiz Exp $
 
 DISTNAME=	mod_auth_mellon-0.18.1
 PKGNAME=	ap24-${DISTNAME:S/mod_//:S/_/-/g}
@@ -20,7 +20,7 @@ USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config autoconf automake
 
 APACHE_MODULE=	YES
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 
 SUBST_CLASSES+=		pthflags
 SUBST_STAGE.pthflags=	post-configure

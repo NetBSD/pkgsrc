@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/11/25 16:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/25 17:16:34 wiz Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	ap24-jk-${JK_VERSION}
@@ -61,5 +61,5 @@ SUBST_FILES.jk-lt+=	jni/Makefile
 .include "../../mk/java-vm.mk"
 .endif
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

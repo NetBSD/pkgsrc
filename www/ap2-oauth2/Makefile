@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/11/25 16:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/25 17:16:34 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-4.2.0
 PKGNAME=	${DISTNAME:S/mod/ap24/:S/_/-/g}
@@ -24,6 +24,6 @@ INSTALLATION_DIRS+=	lib/httpd
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/.libs/mod_oauth2.so ${DESTDIR}${PREFIX}/lib/httpd
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../security/liboauth2-apache/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

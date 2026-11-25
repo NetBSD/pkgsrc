@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/11/25 16:00:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.20 2026/11/25 17:16:30 wiz Exp $
 
 DISTNAME=	ampache-3.5.3
 PKGREVISION=	4
@@ -54,6 +53,6 @@ do-install:
 	${RM} -f ${DESTDIR}${INSTDIR}/ampache.conf
 	${FIND} ${DESTDIR}${INSTDIR} -name '*.orig' | ${XARGS} ${RM} -f
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

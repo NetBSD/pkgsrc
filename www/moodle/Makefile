@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2026/11/25 16:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2026/11/25 17:16:36 wiz Exp $
 
 DISTNAME=	moodle-5.2.1
 CATEGORIES=	www
@@ -54,7 +54,7 @@ REPLACE_PERL+=		public/filter/algebra/algebra2tex.pl
 
 PLIST_SRC+=		${PKGDIR}/PLIST ${WRKDIR}/PLIST.AUTO
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 
 SUBST_CLASSES+=		conf
 SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.

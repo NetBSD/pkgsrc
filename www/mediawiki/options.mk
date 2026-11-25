@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2017/04/15 15:42:32 taca Exp $
+# $NetBSD: options.mk,v 1.7 2026/11/25 17:16:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mediawiki
 
@@ -20,5 +20,5 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5:../../databases/php-pgsql
 .endif
 
 .if !empty(PKG_OPTIONS:Mapache)
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/11/25 16:14:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/25 17:16:35 wiz Exp $
 
 DISTNAME=	mod_authz_ldap-0.30
 PKGNAME=	ap24-${DISTNAME:C/^mod_//:C/_/-/}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://authzldap.othello.ch/
 COMMENT=	Apache LDAP Authorization module
 LICENSE=	apache-2.0
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "options.mk"
 
 GNU_CONFIGURE=	yes

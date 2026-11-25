@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/11/11 11:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/11/25 17:16:32 wiz Exp $
 
 DISTNAME=		xymon-4.3.30
 PKGREVISION=		27
@@ -226,6 +226,5 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
-.include "../../mk/apache.mk"
-
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2026/11/25 17:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/25 17:16:33 wiz Exp $
 
 PKGREVISION= 4
 .include "../../security/liboauth2/Makefile.common"
@@ -20,8 +20,8 @@ do-install:
 		${DESTDIR}${PREFIX}/include/oauth2
 	${INSTALL_DATA} ${WRKSRC}/liboauth2_apache.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
-.include "../../mk/apache.mk"
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
 .include "../../security/liboauth2/buildlink3.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

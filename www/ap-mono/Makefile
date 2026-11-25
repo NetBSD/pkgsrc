@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2026/11/25 16:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2026/11/25 17:16:33 wiz Exp $
 
 DISTNAME=	mod_mono-3.13
 PKGNAME=	ap24-${DISTNAME:S/mod_//}
@@ -23,5 +23,5 @@ USE_LIBTOOL=		yes
 MAKE_JOBS_SAFE=		no
 
 .include "../../lang/mono/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

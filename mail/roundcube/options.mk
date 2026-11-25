@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2020/06/07 22:07:04 taca Exp $
+# $NetBSD: options.mk,v 1.18 2026/11/25 17:16:30 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
@@ -48,7 +48,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=4.3.1:../../converters/php-iconv
 WWW_USER?=		${APACHE_USER}
 WWW_GROUP?=		${APACHE_GROUP}
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .endif
 
 ###

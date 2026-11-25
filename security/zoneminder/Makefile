@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2026/11/25 16:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2026/11/25 17:16:33 wiz Exp $
 
 # This is a twisty maze of variables.  The plan is to edit VERSION
 # (the zoneminder version) on upgrades, and have everything flow from
@@ -318,7 +318,7 @@ CMAKE_CONFIGURE_ARGS+=	-DZM_WEB_GROUP=${APACHE_GROUP}
 CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_ZMS=/zm/cgi-bin/nph-zms
 
 .if !empty(PKG_OPTIONS:Mapache)
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 DEPENDS+=	ap24-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 .endif
 .if !empty(PKG_OPTIONS:Mnginx)

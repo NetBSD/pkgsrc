@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2026/11/25 16:14:14 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2026/11/25 17:16:36 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ganglia-webfrontend
 
@@ -18,7 +18,7 @@ DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=4.1:../../www/ap-php
 WWW_USER?=		${APACHE_USER}
 WWW_GROUP?=		${APACHE_GROUP}
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .endif
 
 ###

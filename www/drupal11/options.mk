@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2026/11/25 16:14:14 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2026/11/25 17:16:35 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
@@ -39,7 +39,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.7:../../converters/php-mbstring
 ###
 .if !empty(PKG_OPTIONS:Mapache)
 DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=5.2.7:../../www/ap-php
-.  include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 WWW_USER?=	${APACHE_USER}
 WWW_GROUP?=	${APACHE_GROUP}
 .else

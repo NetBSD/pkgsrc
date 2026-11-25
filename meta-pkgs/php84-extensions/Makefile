@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/25 16:00:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/25 17:16:31 wiz Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
 CATEGORIES=	meta-pkgs www
@@ -61,5 +61,5 @@ PHP_VERSIONS_ACCEPTED=	84
 META_PACKAGE=		yes
 
 .include "../../lang/php/phpversion.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2026/11/25 16:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2026/11/25 17:16:34 wiz Exp $
 
 DISTNAME=	mod_perl-2.0.13
 PKGNAME=	ap24-${DISTNAME:S/mod_//}
@@ -25,5 +25,5 @@ post-install:
 	${CP} -R ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/mod_perl
 
 .include "../../lang/perl5/module.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
