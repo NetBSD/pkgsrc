@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8397 2026/11/25 14:02:22 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8398 2026/11/25 14:04:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12430,3 +12430,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-humanize to 4.17.0 [adam 2026-11-25]
 	Updated security/py-oauthlib to 4.0.1 [adam 2026-11-25]
 	Updated sysutils/dust to 1.2.8 [pin 2026-11-25]
+	Updated devel/py-exceptiongroup to 1.3.2 [adam 2026-11-25]
+	Updated devel/py-evalidate to 2.1.9 [adam 2026-11-25]
