@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/10/28 08:55:27 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/25 08:05:13 adam Exp $
 
-DISTNAME=	jsonpatch-1.38
+DISTNAME=	jsonpatch-1.48
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpatch/}
@@ -11,7 +11,7 @@ COMMENT=	Library to apply JSON Patches according to RFC 6902
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-jsonpointer>=3.2:../../textproc/py-jsonpointer
+DEPENDS+=	${PYPKGPREFIX}-jsonpointer>=3.8:../../textproc/py-jsonpointer
 
 USE_LANGUAGES=	# none
 

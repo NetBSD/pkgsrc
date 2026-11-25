@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2026/10/13 11:30:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/25 08:05:13 adam Exp $
 bin/jsondiff-${PYVERSSUFFIX}
 bin/jsonpatch-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/jsonpatch-stubs/__init__.pyi
 ${PYSITELIB}/jsonpatch.py
 ${PYSITELIB}/jsonpatch.pyc
 ${PYSITELIB}/jsonpatch.pyo

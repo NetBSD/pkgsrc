@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2026/10/28 08:55:27 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/11/25 08:05:13 adam Exp $
 
-BLAKE2s (jsonpatch-1.38.tar.gz) = 951da7258e0b11af5285824d0bdedb99c3d5eb4feb0ca90476d0632622b1a91e
-SHA512 (jsonpatch-1.38.tar.gz) = 58443fc1a60569207c02ad1628df46f1c096097233d728afcd25cad3677d335024ee2ba7a6621febfd2b5afbd082a36ca58741203d0f5883fd6463e0b871f90b
-Size (jsonpatch-1.38.tar.gz) = 42237 bytes
+BLAKE2s (jsonpatch-1.48.tar.gz) = d528b249d4949552336b5e67b74a6b00097a9263920b7f371c99a36958e0b927
+SHA512 (jsonpatch-1.48.tar.gz) = 9b52b381467f3f87124148dd24c7134febe5af5974f51bdc8ee235c84b83a6bd558f644da7c5bc1e47d53108670f9ac46c74535170c256357a7bee62e5d800d4
+Size (jsonpatch-1.48.tar.gz) = 85549 bytes
