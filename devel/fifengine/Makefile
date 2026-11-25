@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2026/11/11 11:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/11/25 14:42:03 wiz Exp $
 
 DISTNAME=	fifengine-0.4.2
 PKGREVISION=	39
@@ -38,7 +38,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/extension.mk"

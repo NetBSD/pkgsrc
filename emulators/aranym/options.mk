@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/12/18 14:06:16 nia Exp $
+# $NetBSD: options.mk,v 1.4 2026/11/25 14:42:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aranym
 PKG_SUPPORTED_OPTIONS=	opengl aranym-mmu
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS.Linux+=	aranym-mmu
 
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--enable-opengl
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-opengl
 .endif

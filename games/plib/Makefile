@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/11/17 11:00:51 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/11/25 14:42:09 wiz Exp $
 
 DISTNAME=	plib-1.8.5
 PKGREVISION=	5
@@ -30,7 +30,7 @@ PLIST.sl=		yes
 PLIST.pw=		yes
 .endif
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

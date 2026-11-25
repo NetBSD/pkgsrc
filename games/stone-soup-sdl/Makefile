@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2026/11/11 11:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/11/25 14:42:10 wiz Exp $
 
 PKGREVISION= 12
 .include "../../games/stone-soup/Makefile.common"
@@ -39,7 +39,7 @@ post-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"

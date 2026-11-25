@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2026/01/10 16:08:56 ryoon Exp $
+# $NetBSD: options.mk,v 1.43 2026/11/25 14:42:17 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		alsa avahi dbus debug dts jack pulseaudio
@@ -127,7 +127,7 @@ CONFIGURE_ARGS+=	--disable-qt
 
 PLIST_VARS+=		x11
 .if !empty(PKG_OPTIONS:Mx11)
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 PLIST.x11=		yes

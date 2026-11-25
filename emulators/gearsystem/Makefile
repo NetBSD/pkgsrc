@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/11/11 11:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/25 14:42:05 wiz Exp $
 
 PKGREVISION= 14
 .include "Makefile.common"
@@ -34,7 +34,7 @@ do-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .  include "../../graphics/glew/buildlink3.mk"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .endif
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/dlopen.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/07/10 03:18:20 pho Exp $
+# $NetBSD: options.mk,v 1.3 2026/11/25 14:42:22 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xf86-video-vmware
 PKG_SUPPORTED_OPTIONS=	xatracker
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--without-libudev
 .if !empty(PKG_OPTIONS:Mxatracker)
 CFLAGS+=	-fPIC
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../lang/libLLVM/buildlink3.mk"
 .else
 pre-configure:

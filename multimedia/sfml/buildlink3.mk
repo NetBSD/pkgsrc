@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2026/07/13 04:36:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2026/11/25 14:42:17 wiz Exp $
 
 BUILDLINK_TREE+=	sfml
 
@@ -16,7 +16,7 @@ BUILDLINK_PKGSRCDIR.sfml?=	../../multimedia/sfml
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif	# SFML_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-sfml

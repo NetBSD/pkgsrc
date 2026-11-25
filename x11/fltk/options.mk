@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/02/12 11:52:04 micha Exp $
+# $NetBSD: options.mk,v 1.3 2026/11/25 14:42:20 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-cairo
 # Attention: Some packages that use FLTK need this option (disable with care)
 .if !empty(PKG_OPTIONS:Mopengl)
 .  if !empty(PKG_OPTIONS:Mx11)
-.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../mk/mesa.buildlink3.mk"
 .    include "../../graphics/glu/buildlink3.mk"
 .  endif
 CONFIGURE_ARGS+=	--enable-gl

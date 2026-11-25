@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/12/28 08:22:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/25 14:42:05 wiz Exp $
 
 DISTNAME=	handy_sdl-0.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -28,6 +28,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/handy_sdl
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

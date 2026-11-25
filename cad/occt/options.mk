@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/01/24 07:40:42 riastradh Exp $
+# $NetBSD: options.mk,v 1.4 2026/11/25 14:42:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.occt
 PKG_SUPPORTED_OPTIONS=	x11 occt-draw
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	x11
 
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../graphics/freeimage/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 CMAKE_CONFIGURE_ARGS+=	-DUSE_XLIB=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_FREEIMAGE=ON

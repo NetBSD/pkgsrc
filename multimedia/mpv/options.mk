@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.40 2025/12/24 15:34:22 leot Exp $
+# $NetBSD: options.mk,v 1.41 2026/11/25 14:42:16 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -187,7 +187,7 @@ MESON_ARGS+=	-Ddrm=disabled
 .  if ${MESALIB_SUPPORTS_EGL:tl} == "no"
 MESON_ARGS+=	-Degl-x11=disabled
 .  endif
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mrpi)
 TOOL_DEPENDS+=		raspberrypi-userland>=20170109:../../misc/raspberrypi-userland
 CFLAGS+=		"-L${PREFIX}/lib"

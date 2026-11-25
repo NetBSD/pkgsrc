@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/11/12 13:21:49 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/11/25 14:42:10 wiz Exp $
 
 DISTNAME=	mesa-demos-8.4.0
 PKGNAME=	${DISTNAME:S/mesa-demos/MesaDemos/}
@@ -41,7 +41,7 @@ PLIST_VARS+=		egl glesv2 osmesa
 # Appended in options.mk.
 EGL_PROGS+=		eglkms peglgears
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .if !empty(MESALIB_SUPPORTS_EGL:M[Yy][Ee][Ss])
 PLIST.egl=		yes
 .  if !empty(MESALIB_SUPPORTS_GLESv2:M[Yy][Ee][Ss])

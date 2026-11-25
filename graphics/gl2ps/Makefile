@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/08/17 12:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/25 14:42:12 wiz Exp $
 
 DISTNAME=	gl2ps-1.4.2
 PKGREVISION=	4
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collectio
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .endif

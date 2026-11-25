@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/01/07 22:36:54 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2026/11/25 14:42:12 wiz Exp $
 
 DISTNAME=		geomview-1.8.1
 PKGREVISION=		8
@@ -41,7 +41,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/pix/*			\
 	    ${DESTDIR}${PREFIX}/share/doc/geomview/pix
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2025/01/06 21:49:02 ktnb Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2026/11/25 14:42:02 wiz Exp $
 
 SDL12_TYPE?=		retro
 
@@ -20,7 +20,7 @@ PTHREAD_OPTS+=	require
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "IRIX" && ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

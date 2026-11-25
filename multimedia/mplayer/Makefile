@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2026/09/29 06:06:52 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2026/11/25 14:42:16 wiz Exp $
 
 PKGNAME=	mplayer-${MPLAYER_VERSION}
 PKGREVISION=	4
@@ -21,7 +21,7 @@ LDFLAGS.SunOS+=	-lX11 -lXext
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../multimedia/mplayer-share/depends.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

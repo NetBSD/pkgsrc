@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/07/13 04:36:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/25 14:42:17 wiz Exp $
 
 DISTNAME=	SFML-2.5.1-sources
 PKGNAME=	${DISTNAME:S/-sources//:tl}
@@ -35,6 +35,6 @@ INSTALLATION_DIRS+=	include/SFML/Window lib
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

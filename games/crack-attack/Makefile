@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2026/09/29 06:05:07 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/11/25 14:42:08 wiz Exp $
 
 DISTNAME=	crack-attack-1.1.14
 PKGREVISION=	57
@@ -22,7 +22,7 @@ post-install:
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

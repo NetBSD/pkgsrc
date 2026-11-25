@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2026/11/11 11:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2026/11/25 14:42:11 wiz Exp $
 #
 
 DISTNAME=	djview-4.12
@@ -26,7 +26,7 @@ SUBST_MESSAGE.nsdejavu=	Fixing hardcoded paths.
 SUBST_FILES.nsdejavu=	nsdejavu/nsdejavu.c
 SUBST_SED.nsdejavu=	-e 's:/usr/local/lib:${LOCALBASE}/lib:'
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
 .include "../../x11/qt5-qttools/buildlink3.mk"

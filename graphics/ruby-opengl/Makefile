@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2026/08/04 20:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2026/11/25 14:42:14 wiz Exp $
 
 DISTNAME=	ruby-opengl-0.60.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -26,7 +26,7 @@ CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
 CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../lang/ruby/gem.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

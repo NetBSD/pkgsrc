@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2026/11/11 11:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2026/11/25 14:42:07 wiz Exp $
 
 PKGREVISION=	21
 
@@ -20,7 +20,7 @@ LDFLAGS+=	-framework OpenGL
 LDFLAGS+=	-lSDL2
 .else
 .  include "../../audio/openal-soft/buildlink3.mk"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../x11/libX11/buildlink3.mk"
 LDFLAGS+=	-lGL -lX11 -lopenal
 .endif

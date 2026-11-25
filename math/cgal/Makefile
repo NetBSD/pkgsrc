@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2026/11/11 11:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2026/11/25 14:42:16 wiz Exp $
 
 DISTNAME=	CGAL-5.6.2
 PKGNAME=	${DISTNAME:tl}
@@ -27,7 +27,7 @@ REPLACE_SH+=	scripts/cgal_create_cmake_script
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"

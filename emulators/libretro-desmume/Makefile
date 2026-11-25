@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/01/21 11:00:13 nia Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/25 14:42:05 wiz Exp $
 
 DISTNAME=	libretro-desmume-20190426
 PKGREVISION=	2
@@ -35,7 +35,7 @@ MAKE_FLAGS+=	DESMUME_JIT=0
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=../../frontend/libretro/link.T
 
 .include "../../emulators/retroarch/core.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

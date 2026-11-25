@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2026/11/11 11:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/25 14:42:12 wiz Exp $
 
 DISTNAME=	glfw-3.4
 PKGREVISION=	1
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	src/glfw3.pc.in
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .  include "options.mk"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../graphics/glu/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

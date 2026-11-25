@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.18 2024/08/03 09:28:41 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.19 2026/11/25 14:42:19 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -144,7 +144,7 @@ BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.12
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"

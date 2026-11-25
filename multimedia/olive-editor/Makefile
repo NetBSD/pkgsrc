@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2026/11/11 11:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/25 14:42:17 wiz Exp $
 
 DISTNAME=	olive-editor-0.2.0pre20230924
 PKGREVISION=	43
@@ -29,7 +29,7 @@ CMAKE_CONFIGURE_ARGS+=	-DPORTAUDIO_LIBRARY=${BUILDLINK_DIR}/lib/portaudio2/libpo
 
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/opencolorio/buildlink3.mk"
 .include "../../graphics/openimageio/buildlink3.mk"

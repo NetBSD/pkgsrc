@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/11/11 11:56:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/11/25 14:42:18 wiz Exp $
 
 BUILDLINK_TREE+=	wlroots
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.wlroots?=	../../wayland/wlroots
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 PREFER.MesaLib=	pkgsrc	# glesv2
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libliftoff/buildlink3.mk"
 .include "../../graphics/vulkan-loader/buildlink3.mk"

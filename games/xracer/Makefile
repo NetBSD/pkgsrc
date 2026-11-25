@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2026/07/16 19:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2026/11/25 14:42:10 wiz Exp $
 
 DISTNAME=		xracer-0.96.9
 PKGREVISION=		34
@@ -37,7 +37,7 @@ post-configure: do-makemaker-configure
 DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

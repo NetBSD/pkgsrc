@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/03/02 12:45:45 nia Exp $
+# $NetBSD: options.mk,v 1.2 2026/11/25 14:42:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi jack sdl
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	--disable-gtk
 
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--enable-opengl
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-opengl

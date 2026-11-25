@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/04/25 14:25:06 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2026/11/25 14:42:20 wiz Exp $
 
 DISTNAME=	gtkglarea-1.2.3
 PKGREVISION=	4
@@ -20,7 +20,7 @@ post-install:
 	${INSTALL_MAN} gdkgl.txt "${DESTDIR}${PREFIX}/share/doc/gtkglarea" ; \
 	${INSTALL_MAN} gtkglarea.txt "${DESTDIR}${PREFIX}/share/doc/gtkglarea"
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2019/05/29 19:52:48 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/11/25 14:42:21 wiz Exp $
 
 BUILDLINK_TREE+=	slop
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.slop?=	slop>=7.4nb3
 BUILDLINK_PKGSRCDIR.slop?=	../../x11/slop
 
 .include "../../graphics/glew/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"

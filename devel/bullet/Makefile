@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/08/20 11:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/25 14:42:02 wiz Exp $
 
 DISTNAME=	bullet-2.89
 CATEGORIES=	devel
@@ -30,7 +30,7 @@ PKGCONFIG_OVERRIDE+=	bullet.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

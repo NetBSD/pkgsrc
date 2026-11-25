@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2026/11/11 11:56:51 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/11/25 14:42:21 wiz Exp $
 
 DISTNAME=	slop-7.5
 PKGREVISION=	15
@@ -23,7 +23,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

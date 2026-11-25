@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2026/11/11 11:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/25 14:42:18 wiz Exp $
 
 DISTNAME=		wlroots-0.20.2
 PKGREVISION=		4
@@ -38,7 +38,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 PREFER.MesaLib=	pkgsrc	# glesv2
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glslang/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libliftoff/buildlink3.mk"

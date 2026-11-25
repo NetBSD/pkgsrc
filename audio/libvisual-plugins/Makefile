@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2026/11/11 11:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2026/11/25 14:42:00 wiz Exp $
 
 DISTNAME=	libvisual-plugins-0.4.2
 PKGREVISION=	7
@@ -24,7 +24,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 # required for libGl check
 BUILDLINK_DEPMETHOD.libXt?=	build

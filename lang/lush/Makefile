@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/11/17 11:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/25 14:42:15 wiz Exp $
 
 DISTNAME=	lush-1.2.1
 PKGREVISION=	6
@@ -25,7 +25,7 @@ post-install:
 .include "../../devel/SDL/buildlink3.mk"
 # rl_getc, rl_basic_quote_characters, rl_insert_close
 .include "../../devel/readline/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

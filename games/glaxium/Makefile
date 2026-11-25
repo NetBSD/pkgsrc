@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/08/04 20:28:55 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/11/25 14:42:08 wiz Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -48,7 +48,7 @@ CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

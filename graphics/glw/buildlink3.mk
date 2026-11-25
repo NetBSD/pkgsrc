@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/10/14 21:35:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/11/25 14:42:13 wiz Exp $
 
 BUILDLINK_TREE+=	glw
 
@@ -8,7 +8,7 @@ GLW_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.glw+=	glw>=8.0.0
 BUILDLINK_PKGSRCDIR.glw?=	../../graphics/glw
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .endif	# GLW_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2026/08/04 20:29:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2026/11/25 14:42:21 wiz Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -32,7 +32,7 @@ _WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
 CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
 CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2026/11/13 17:03:16 adam Exp $
+# $NetBSD: Makefile,v 1.35 2026/11/25 14:42:03 wiz Exp $
 
 DISTNAME=	kivy-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -81,7 +81,7 @@ do-test:
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif
 .include "../../lang/python/wheel.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"

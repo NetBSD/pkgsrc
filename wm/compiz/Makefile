@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.182 2026/11/11 11:56:08 wiz Exp $
+# $NetBSD: Makefile,v 1.183 2026/11/25 14:42:18 wiz Exp $
 
 PKGVER=		0.8.8
 DISTNAME=	compiz-${PKGVER}
@@ -102,7 +102,7 @@ post-install:
 .include "../../x11/startup-notification/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libXrender+=	libXrender>=0.9.3
 .include "../../x11/libXrender/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

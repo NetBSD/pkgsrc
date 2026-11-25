@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/10/27 22:57:36 nia Exp $
+# $NetBSD: options.mk,v 1.5 2026/11/25 14:42:04 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.flycast
 
@@ -37,6 +37,6 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL=OFF
 .  include "../../misc/raspberrypi-userland/buildlink3.mk"
 .else
 .  if ${OPSYS} != "Darwin"
-.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../mk/mesa.buildlink3.mk"
 .  endif
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/12 13:21:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/25 14:42:11 wiz Exp $
 
 DISTNAME=	ftgl-2.1.3-rc5
 PKGNAME=	${DISTNAME:S/-r/r/1}
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--without-x
 
 PKGCONFIG_OVERRIDE+=	ftgl.pc.in
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

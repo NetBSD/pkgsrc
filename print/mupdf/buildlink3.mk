@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.74 2026/11/11 11:55:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.75 2026/11/25 14:42:17 wiz Exp $
 
 BUILDLINK_TREE+=	mupdf
 
@@ -19,7 +19,7 @@ pkgbase := mupdf
 .endif
 
 .if ${PKG_BUILD_OPTIONS.mupdf:Mopengl}
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .endif
 

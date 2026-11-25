@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:14 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2026/11/25 14:42:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.efltk
 PKG_SUPPORTED_OPTIONS=	opengl mysql
@@ -11,7 +11,7 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 PLIST.opengl=		yes
 CONFIGURE_ARGS+=	--enable-opengl
 MAKE_ENV+=		HAVE_OPENGL=yes
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-opengl
 MAKE_ENV+=		HAVE_OPENGL=no

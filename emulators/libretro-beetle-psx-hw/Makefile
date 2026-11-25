@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/02/12 06:44:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/25 14:42:05 wiz Exp $
 
 LIBRETRO_CORE=	mednafen_psx_hw
 
@@ -13,5 +13,5 @@ COMMENT=	Libretro core based on the Mednafen PlayStation emulator (OpenGL)
 
 MAKE_FLAGS+=	HAVE_OPENGL=1
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

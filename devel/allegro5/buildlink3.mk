@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/04/19 10:14:56 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/11/25 14:42:02 wiz Exp $
 
 BUILDLINK_TREE+=	allegro5
 
@@ -15,7 +15,7 @@ pkgbase:= allegro5
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.allegro5:Mx11}

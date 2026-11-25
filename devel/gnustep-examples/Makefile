@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2026/11/11 11:52:34 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2026/11/25 14:42:03 wiz Exp $
 
 DISTNAME=	gnustep-examples-1.3.0
 PKGREVISION=	35
@@ -16,7 +16,7 @@ NO_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 
 .include "../../x11/gnustep-back/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

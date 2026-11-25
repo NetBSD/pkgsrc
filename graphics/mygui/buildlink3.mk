@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2026/11/11 11:53:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2026/11/25 14:42:14 wiz Exp $
 
 BUILDLINK_TREE+=	mygui
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.mygui?=	../../graphics/mygui
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .endif	# MYGUI_BUILDLINK3_MK
 

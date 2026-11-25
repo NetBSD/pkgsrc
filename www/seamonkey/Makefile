@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.302 2026/11/11 11:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.303 2026/11/25 14:42:19 wiz Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -229,7 +229,7 @@ RUST_REQ=	1.23.0
 .include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../x11/libXt/buildlink3.mk"
 .  include "../../x11/gtk3/buildlink3.mk"
 .endif

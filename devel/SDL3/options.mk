@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2026/11/07 16:47:53 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2026/11/25 14:42:02 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL3
 PKG_SUPPORTED_OPTIONS=		alsa dbus jack libusb pulseaudio x11
@@ -71,7 +71,7 @@ CMAKE_CONFIGURE_ARGS+=	-DSDL_HIDAPI_LIBUSB=OFF
 .if !empty(PKG_OPTIONS:Mopengl)
 CMAKE_CONFIGURE_ARGS+=	-DSDL_OPENGL=ON
 .  if ${OPSYS} != "Darwin"
-.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../mk/mesa.buildlink3.mk"
 .  endif
 .else
 CMAKE_CONFIGURE_ARGS+=	-DSDL_OPENGL=OFF

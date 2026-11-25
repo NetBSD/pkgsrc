@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2026/08/04 20:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2026/11/25 14:42:18 wiz Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
@@ -39,7 +39,7 @@ _WRAP_EXTRA_ARGS.CXX+=	${_RELRO_LDFLAGS}
 CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
 CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/11/17 11:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/25 14:42:13 wiz Exp $
 
 DISTNAME=	irrlicht-1.8.4
 PKGREVISION=	1
@@ -38,6 +38,6 @@ CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_BZLIB_=1
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

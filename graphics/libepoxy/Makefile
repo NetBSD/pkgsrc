@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/01/10 09:44:30 adam Exp $
+# $NetBSD: Makefile,v 1.37 2026/11/25 14:42:13 wiz Exp $
 
 DISTNAME=	libepoxy-1.5.10
 PKGREVISION=	2
@@ -21,7 +21,7 @@ PLIST_VARS+=		egl
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .else
 MESON_ARGS+=	-Dglx=no
 .endif

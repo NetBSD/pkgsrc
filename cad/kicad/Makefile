@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2026/11/11 11:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2026/11/25 14:42:02 wiz Exp $
 
 V=		10.0.6
 DISTNAME=	kicad-${V}
@@ -57,7 +57,7 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.9.8
 .include "../../graphics/glm/buildlink3.mk"

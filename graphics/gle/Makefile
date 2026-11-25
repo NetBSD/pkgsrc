@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/10/11 10:19:15 martin Exp $
+# $NetBSD: Makefile,v 1.37 2026/11/25 14:42:12 wiz Exp $
 #
 
 DISTNAME=	gle-3.1.0
@@ -26,7 +26,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 # GLUT is used only by the examples, which aren't built or installed.
 #.include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

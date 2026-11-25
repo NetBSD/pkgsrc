@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2026/10/13 22:15:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/25 14:42:13 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-gl/}
 CATEGORIES=	graphics gnome
@@ -39,7 +39,7 @@ pre-configure: fix-gl-deps
 .include "../../multimedia/gst-plugins1-base/Makefile.common"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2026/07/13 04:35:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2026/11/25 14:42:01 wiz Exp $
 
 DISTNAME=	ykchorus-v0.2.2-source
 PKGNAME=	${DISTNAME:S/-source//1:S/-v/-/1}
@@ -36,7 +36,7 @@ REPLACE_SH+=	dpf/utils/generate-ttl.sh
 
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/liblo/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}

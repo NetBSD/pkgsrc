@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2026/11/11 11:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.210 2026/11/25 14:42:10 wiz Exp $
 
 DISTNAME=	simgear-2020.3.11
 PKGREVISION=	80
@@ -49,7 +49,7 @@ pre-configure:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .endif
 .include "../../graphics/osg/buildlink3.mk"

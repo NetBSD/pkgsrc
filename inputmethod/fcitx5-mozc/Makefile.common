@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2024/02/10 12:26:00 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2026/11/25 14:42:15 wiz Exp $
 
 # used by inputmethod/fcitx5-mozc/Makefile
 
@@ -52,7 +52,7 @@ CHECK_PIE_SUPPORTED=	no
 pre-configure:
 	${RM} -r ${WRKDIR}/.cwrapper
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 
 # devel/bazel can use clang only for C/C++ projects.

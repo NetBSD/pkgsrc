@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/11 11:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/25 14:42:06 wiz Exp $
 
 DISTNAME=	M88M-1.2.4
 PKGNAME=	${DISTNAME:tl}
@@ -26,7 +26,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../devel/raygui/buildlink3.mk"
 .include "../../devel/raylib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"

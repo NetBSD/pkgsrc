@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/12/22 06:26:20 vins Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/25 14:42:13 wiz Exp $
 
 DISTNAME=	glw-8.0.0
 PKGREVISION=	2
@@ -19,6 +19,6 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	glw.pc.in
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/08/11 05:08:41 gutteridge Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2026/11/25 14:42:12 wiz Exp $
 
 BUILDLINK_TREE+=	gl2ps
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.gl2ps?=	../../graphics/gl2ps
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .endif

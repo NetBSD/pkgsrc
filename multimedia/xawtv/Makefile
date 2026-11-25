@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/04/24 14:15:21 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/11/25 14:42:17 wiz Exp $
 
 DISTNAME=	xawtv-3.95
 PKGREVISION=	31
@@ -63,7 +63,7 @@ PLIST.bsd=		yes
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libXaw3d/buildlink3.mk"
 .include "../../x11/libFS/buildlink3.mk"

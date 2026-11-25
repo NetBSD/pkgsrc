@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2026/11/11 11:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.290 2026/11/25 14:42:16 wiz Exp $
 
 DISTNAME=	octave-11.3.0
 PKGREVISION=	6
@@ -106,7 +106,7 @@ post-install:
 
 .if ${OPSYS} != "Darwin"
 # Also can use osmesa for plotting.
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif
 

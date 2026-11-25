@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2026/11/11 11:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2026/11/25 14:42:14 wiz Exp $
 
 DISTNAME=	qt3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qt3d-${QTVERSION}
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	-qt3d-simd no
 .include "../../multimedia/assimp/buildlink3.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

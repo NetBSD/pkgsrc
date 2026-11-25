@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/05/31 16:03:04 nia Exp $
+# $NetBSD: options.mk,v 1.2 2026/11/25 14:42:05 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-parallel-n64
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS+=		opengl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mopengl)
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mrpi)
 MAKE_FLAGS+=	GLES=1
 MAKE_FLAGS+=	GL_LIB="-lbrcmGLESv2"

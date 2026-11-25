@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/08/22 19:19:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/11/25 14:42:12 wiz Exp $
 
 BUILDLINK_TREE+=	glfw
 
@@ -19,7 +19,7 @@ pkgbase:= glfw
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../graphics/glu/buildlink3.mk"
 .endif
 

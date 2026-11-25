@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2026/11/11 11:56:52 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/25 14:42:21 wiz Exp $
 
 DISTNAME=	wxWidgets-3.2.12
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -139,7 +139,7 @@ post-install:
 	${LN} -sf ../libexec/wx-3.2/wx-config ${DESTDIR}${PREFIX}/bin/wx-config-3.2
 
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"

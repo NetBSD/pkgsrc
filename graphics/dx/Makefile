@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2026/11/11 11:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2026/11/25 14:42:11 wiz Exp $
 
 DISTNAME=	dx-4.4.4
 PKGREVISION=	119
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		ARCH=""
 .include "../../devel/netcdf/buildlink3.mk"
 # XXX ImageMagick detection in "configure" is broken
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

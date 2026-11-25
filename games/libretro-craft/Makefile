@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/31 16:30:13 nia Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/25 14:42:09 wiz Exp $
 
 DISTNAME=	libretro-craft-20200504
 CATEGORIES=	games
@@ -15,5 +15,5 @@ LIBRETRO_CORE=	craft
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./link.T
 
 .include "../../emulators/retroarch/core.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

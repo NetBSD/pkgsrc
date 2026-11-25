@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2026/11/05 22:25:40 leot Exp $
+# $NetBSD: Makefile,v 1.6 2026/11/25 14:42:16 wiz Exp $
 
 DISTNAME=	libplacebo-v7.387.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -46,7 +46,7 @@ pre-configure:
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/xxhash/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../lang/python/tool.mk"

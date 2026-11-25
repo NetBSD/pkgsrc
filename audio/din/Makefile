@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2026/10/30 08:21:41 fox Exp $
+# $NetBSD: Makefile,v 1.65 2026/11/25 14:42:00 wiz Exp $
 
 DISTNAME=	din-66.2
 CATEGORIES=	audio
@@ -32,6 +32,6 @@ LIBS+=	-ltcl -lSDL -lGL -lpthread
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

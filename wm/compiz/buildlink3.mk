@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.89 2026/11/11 11:56:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.90 2026/11/25 14:42:18 wiz Exp $
 
 BUILDLINK_TREE+=	compiz
 
@@ -25,7 +25,7 @@ pkgbase := compiz
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

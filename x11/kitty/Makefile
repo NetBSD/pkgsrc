@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2026/11/23 23:38:52 ktnb Exp $
+# $NetBSD: Makefile,v 1.114 2026/11/25 14:42:20 wiz Exp $
 
 DISTNAME=	kitty-0.51.1
 CATEGORIES=	x11
@@ -131,7 +131,7 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/shader-slang/buildlink3.mk"
 .include "../../net/librsync/buildlink3.mk"

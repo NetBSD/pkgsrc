@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.172 2026/11/11 11:53:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.173 2026/11/25 14:42:14 wiz Exp $
 
 BUILDLINK_TREE+=	osg
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.osg?=	../../graphics/osg
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2024/08/25 06:18:41 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2026/11/25 14:42:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mgba
 
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 .if !empty(PKG_OPTIONS:Mopengl)
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_GL=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_EPOXY=ON
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
 .else

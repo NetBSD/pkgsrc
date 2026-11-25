@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2024/11/19 14:58:05 nia Exp $
+# $NetBSD: options.mk,v 1.6 2026/11/25 14:42:05 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-flycast
 
@@ -27,6 +27,6 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL=OFF
 .elif !empty(PKG_OPTIONS:Mopengl)
 CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL=ON
 .  if ${OPSYS} != "Darwin"
-.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../mk/mesa.buildlink3.mk"
 .  endif
 .endif

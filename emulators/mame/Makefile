@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2026/11/11 11:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.238 2026/11/25 14:42:06 wiz Exp $
 
 DISTNAME=	mame-0.289
 PKGREVISION=	4
@@ -133,7 +133,7 @@ do-install:
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/rapidjson/buildlink3.mk"
 .if ${OPSYS} != Darwin
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .endif
 .include "../../mk/jpeg.buildlink3.mk"

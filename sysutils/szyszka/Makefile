@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/11/11 11:55:49 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2026/11/25 14:42:18 wiz Exp $
 
 DISTNAME=	szyszka-3.0.0
 PKGREVISION=	23
@@ -53,5 +53,5 @@ BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
 .include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

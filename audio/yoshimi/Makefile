@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/11/14 07:23:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/25 14:42:01 wiz Exp $
 
 DISTNAME=	yoshimi-2.3.6.5
 CATEGORIES=	audio
@@ -21,7 +21,7 @@ USE_LANGUAGES=	c++ c
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../audio/lv2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/mxml/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2025/01/24 17:40:08 riastradh Exp $
+# $NetBSD: options.mk,v 1.7 2026/11/25 14:42:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.smalltalk
 PKG_SUPPORTED_OPTIONS=	cairo curses expat gdbm gtk opengl readline sdl sqlite tk
@@ -52,7 +52,7 @@ BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
 # turning off gtk option also turns off opengl
 .  if !empty(PKG_OPTIONS:Mopengl)
 PLIST.opengl=		yes
-.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../mk/mesa.buildlink3.mk"
 .    include "../../graphics/glu/buildlink3.mk"
 .    include "../../graphics/freeglut/buildlink3.mk"
 .    include "../../x11/libICE/buildlink3.mk"

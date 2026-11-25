@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2026/11/11 11:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2026/11/25 14:42:09 wiz Exp $
 
 DISTNAME=	MoonlightSrc-4.3.1
 PKGNAME=	moonlight-qt-4.3.1
@@ -39,7 +39,7 @@ do-configure:
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"

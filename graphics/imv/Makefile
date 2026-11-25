@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2026/11/11 11:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2026/11/25 14:42:13 wiz Exp $
 
 DISTNAME=	v4.5.0
 DIST_SUBDIR=	imv
@@ -40,7 +40,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "options.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeimage/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"

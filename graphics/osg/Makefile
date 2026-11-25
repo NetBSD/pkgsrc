@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2026/11/11 11:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.219 2026/11/25 14:42:14 wiz Exp $
 
 DISTNAME=	osg-3.6.5
 PKGREVISION=	91
@@ -63,7 +63,7 @@ CXXFLAGS+=	-D__STDC_LIMIT_MACROS
 .include "../../www/curl/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 PLIST.notdarwin=	yes
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

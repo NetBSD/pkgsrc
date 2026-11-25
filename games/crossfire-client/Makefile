@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2026/11/11 11:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2026/11/25 14:42:08 wiz Exp $
 
 DISTNAME=	crossfire-client-1.75.3
 PKGREVISION=	22
@@ -27,7 +27,7 @@ CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/05/14 16:42:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2026/11/25 14:42:21 wiz Exp $
 
 DISTNAME=	modular-xorg-xquartz-1.20.99.1.20210408
 PKGREVISION=	5
@@ -92,7 +92,7 @@ pre-configure:
 .include "../../fonts/font-util/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../wm/libAppleWM/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

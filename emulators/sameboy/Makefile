@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2026/11/11 11:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2026/11/25 14:42:06 wiz Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -15,7 +15,7 @@ MAKE_FLAGS+=	FREEDESKTOP=true
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif
 
 .include "options.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2026/11/11 11:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2026/11/25 14:42:17 wiz Exp $
 
 DISTNAME=	obs-studio-26.1.2
 PKGREVISION=	53
@@ -35,7 +35,7 @@ TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
 .if ${OPSYS} != "NetBSD"
 .  include "../../graphics/libv4l/buildlink3.mk"
 .endif
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../lang/LuaJIT2/platform.mk"
 PLIST_VARS+=	lua
 .if !empty(PLATFORM_SUPPORTS_LUAJIT:M[Yy][Ee][Ss])

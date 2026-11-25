@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/11/11 11:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/25 14:42:07 wiz Exp $
 
 DISTNAME=	xroar-1.4.2
 PKGREVISION=	9
@@ -19,6 +19,6 @@ FORCE_C_STD=	c99
 .include "options.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

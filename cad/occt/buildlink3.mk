@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2026/03/01 01:06:34 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2026/11/25 14:42:02 wiz Exp $
 
 BUILDLINK_TREE+=	occt
 
@@ -17,7 +17,7 @@ pkgbase := occt
 
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../graphics/freeimage/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif
 

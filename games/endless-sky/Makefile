@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/11/11 11:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/25 14:42:08 wiz Exp $
 
 DISTNAME=	endless-sky-0.9.14
 PKGREVISION=	16
@@ -25,7 +25,7 @@ post-extract:
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2021/09/17 00:10:21 nia Exp $
+# $NetBSD: options.mk,v 1.5 2026/11/25 14:42:16 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gpac
 PKG_SUPPORTED_OPTIONS=		alsa jack pulseaudio x11
@@ -45,7 +45,7 @@ PLIST_VARS+=		x11
 CONFIGURE_ARGS+=	--X11-path=${X11BASE}
 PLIST.x11=		yes
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2026/11/11 11:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2026/11/25 14:42:20 wiz Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -148,7 +148,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../lang/python/extension.mk"
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../devel/qjson/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .if ${X11_TYPE} == "modular" && !empty(MESALIB_SUPPORTS_EGL:M[yY][eE][sS])
 PLIST.gles=	yes
 .elif exists(${X11BASE:Q}/include/GLES2/gl2.h)

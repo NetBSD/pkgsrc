@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2026/10/16 19:43:58 adam Exp $
+# $NetBSD: Makefile,v 1.52 2026/11/25 14:42:14 wiz Exp $
 
 DISTNAME=	pyopengl-3.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyopengl/OpenGL/}
@@ -25,7 +25,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	311
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .endif

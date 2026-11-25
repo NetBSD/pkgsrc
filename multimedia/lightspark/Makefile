@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2026/11/11 11:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2026/11/25 14:42:16 wiz Exp $
 
 DISTNAME=	lightspark-0.8.5
 PKGREVISION=	43
@@ -33,7 +33,7 @@ CONF_FILES+=	${PREFIX}/share/examples/lightspark/xdg/lightspark.conf \
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"

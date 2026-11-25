@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/11/11 11:53:01 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/25 14:42:04 wiz Exp $
 
 DISTNAME=	fs-uae-3.2.35
 PKGREVISION=	6
@@ -44,7 +44,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 .if ${OPSYS} != "Darwin"
 .include "../../audio/openal-soft/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"

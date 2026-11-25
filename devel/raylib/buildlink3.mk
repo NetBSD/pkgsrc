@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2026/11/08 16:39:33 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2026/11/25 14:42:03 wiz Exp $
 
 BUILDLINK_TREE+=	raylib
 
@@ -8,7 +8,7 @@ RAYLIB_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.raylib+=	raylib>=6.2
 BUILDLINK_PKGSRCDIR.raylib?=	../../devel/raylib
 
-#.include "../../graphics/MesaLib/buildlink3.mk"
+#.include "../../mk/mesa.buildlink3.mk"
 #.include "../../graphics/glfw/buildlink3.mk"
 .endif	# RAYLIB_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/01 18:50:46 vins Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/25 14:42:01 wiz Exp $
 
 DISTNAME=	xmakemol-5.16h
 CATEGORIES=	biology x11
@@ -47,7 +47,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/applications/xmakemol.desktop
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glw/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

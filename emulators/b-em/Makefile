@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/09/15 17:09:38 reinoud Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/25 14:42:04 wiz Exp $
 
 DISTNAME=	b-em-2.2
 PKGNAME=	b-em-20230915
@@ -45,7 +45,7 @@ BUILDLINK_API_DEPENDS.allegro+=	allegro>=4.4.2nb2
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

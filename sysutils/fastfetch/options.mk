@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2026/06/07 08:08:21 vins Exp $
+# $NetBSD: options.mk,v 1.19 2026/11/25 14:42:18 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server
@@ -126,7 +126,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_ZLIB=OFF
 ## Needed by the OpenGL module for gl context creation.
 ##
 .if !empty(PKG_OPTIONS:Mopengl)
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=  -DENABLE_EGL=OFF
 .endif

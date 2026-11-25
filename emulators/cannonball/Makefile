@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2026/11/11 11:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/25 14:42:04 wiz Exp $
 
 DISTNAME=	cannonball-0.34
 PKGREVISION=	25
@@ -66,7 +66,7 @@ do-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .  include "../../graphics/glu/buildlink3.mk"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .endif
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

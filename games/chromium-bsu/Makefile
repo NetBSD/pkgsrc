@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/11/11 11:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/11/25 14:42:07 wiz Exp $
 
 DISTNAME=		chromium-bsu-0.9.16.1
 PKGREVISION=		18
@@ -46,7 +46,7 @@ CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

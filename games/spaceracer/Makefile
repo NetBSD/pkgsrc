@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/11/17 11:00:53 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/11/25 14:42:10 wiz Exp $
 #
 
 DISTNAME=		spaceracer-0.2.4
@@ -20,7 +20,7 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

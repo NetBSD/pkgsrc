@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/03/11 07:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/11/25 14:42:03 wiz Exp $
 
 DISTNAME=	ode-0.16.5
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE=	ode.pc.in
 
 CONFIGURE_ARGS+=	--enable-shared
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

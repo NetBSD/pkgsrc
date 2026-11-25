@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/05/29 14:36:02 zafer Exp $
+# $NetBSD: Makefile,v 1.49 2026/11/25 14:42:07 wiz Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -48,6 +48,6 @@ do-install:
 pre-clean:
 	@${RM} -rf ${WRKDIR}/battalionSUN4
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

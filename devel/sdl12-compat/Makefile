@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/11/11 11:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/25 14:42:03 wiz Exp $
 
 DISTNAME=	sdl12-compat-1.2.78
 PKGREVISION=	1
@@ -20,7 +20,7 @@ BUILDLINK_DEPMETHOD.SDL2=	build
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

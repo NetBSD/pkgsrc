@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2026/11/11 11:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2026/11/25 14:42:11 wiz Exp $
 
 DISTNAME=	blender-3.6.18
 PKGREVISION=	23
@@ -61,7 +61,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-function-declaration
 BUILDLINK_TRANSFORM+=	rm:-Werror=return-type
 BUILDLINK_TRANSFORM+=	rm:-Werror=vla
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .if ${MESALIB_SUPPORTS_EGL} == "yes"
 #CMAKE_CONFIGURE_ARGS+=	-DWITH_GL_EGL=ON
 .endif

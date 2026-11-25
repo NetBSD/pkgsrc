@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2026/11/05 22:25:40 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2026/11/25 14:42:16 wiz Exp $
 
 BUILDLINK_TREE+=	libplacebo
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.libplacebo+=	libplacebo>=7.387.0
 BUILDLINK_PKGSRCDIR.libplacebo?=	../../multimedia/libplacebo
 
 .include "../../devel/xxhash/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/vulkan-headers/buildlink3.mk"
 .endif	# LIBPLACEBO_BUILDLINK3_MK

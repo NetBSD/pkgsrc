@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/11/17 11:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/11/25 14:42:09 wiz Exp $
 #
 
 DISTNAME=	gltron-0.70-source
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-warn
 LIBS.SunOS+=	-lm
 
 .include "../../audio/SDL_sound/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

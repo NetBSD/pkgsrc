@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2026/09/29 06:04:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2026/11/25 14:42:02 wiz Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -26,7 +26,7 @@ pkgbase := SDL2
 .endif
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Mopengl} && ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.SDL2:Mrpi}

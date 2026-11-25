@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/05/15 11:57:39 rjs Exp $
+# $NetBSD: Makefile,v 1.26 2026/11/25 14:42:01 wiz Exp $
 
 DISTNAME=	glmark2-2023.01
 CATEGORIES=	benchmarks
@@ -31,7 +31,7 @@ MESON_ARGS+=	-Dflavors=x11-gl
 .include "../../devel/meson/build.mk"
 .include "../../devel/cmake/build.mk"
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

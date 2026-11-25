@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/11/23 11:41:36 adam Exp $
+# $NetBSD: Makefile,v 1.80 2026/11/25 14:42:10 wiz Exp $
 
 PKGNAME=	supertux-0.7.0.1
 DISTNAME=	SuperTux-v${PKGVERSION_NOREV}-Source
@@ -29,7 +29,7 @@ PLIST_VARS+=	desktop
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 PLIST.desktop=	yes
 .endif

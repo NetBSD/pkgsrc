@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2026/11/11 11:56:52 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2026/11/25 14:42:21 wiz Exp $
 
 DISTNAME=	wxWidgets-3.0.5.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
@@ -115,7 +115,7 @@ post-install:
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

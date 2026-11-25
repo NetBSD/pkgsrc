@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.139 2026/11/11 11:53:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.140 2026/11/25 14:42:10 wiz Exp $
 
 BUILDLINK_TREE+=	simgear
 
@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.simgear?=	../../games/simgear
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .endif
 .include "../../graphics/osg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

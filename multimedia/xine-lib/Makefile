@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2026/11/11 11:54:54 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2026/11/25 14:42:17 wiz Exp $
 
 PKGREVISION= 5
 .include "Makefile.common"
@@ -69,7 +69,7 @@ PLIST_VARS+=	egl
 .  if ${MESALIB_SUPPORTS_EGL} == "yes"
 PLIST.egl=	yes
 .  endif
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../graphics/glu/buildlink3.mk"
 .endif
 .include "../../graphics/mng/buildlink3.mk"

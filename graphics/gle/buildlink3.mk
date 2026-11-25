@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2018/01/07 13:04:14 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2026/11/25 14:42:12 wiz Exp $
 
 BUILDLINK_TREE+=	gle
 
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.gle?=	../../graphics/gle
 # GLUT is used only by the examples, which aren't built or installed.
 #.include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .endif # GLE_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/08/20 11:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/25 14:42:12 wiz Exp $
 
 DISTNAME=	1079563a36edfe10a5f5d79ad38fe465425b989e
 PKGREVISION=	1
@@ -19,6 +19,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/glpng.htm ${DESTDIR}${PREFIX}/share/doc/glpng
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

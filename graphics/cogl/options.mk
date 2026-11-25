@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2022/06/28 10:40:39 nia Exp $
+# $NetBSD: options.mk,v 1.7 2026/11/25 14:42:11 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cogl
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=	x11
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--enable-gdk-pixbuf
 CONFIGURE_ARGS+=	--with-gl-libname=libGL
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"

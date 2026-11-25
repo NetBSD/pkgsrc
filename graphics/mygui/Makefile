@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2026/11/11 11:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/25 14:42:14 wiz Exp $
 
 DISTNAME=	mygui-3.2.3.20190707
 PKGREVISION=	19
@@ -31,6 +31,6 @@ CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

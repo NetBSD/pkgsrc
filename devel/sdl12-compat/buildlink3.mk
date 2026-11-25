@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/04/21 06:56:18 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2026/11/25 14:42:03 wiz Exp $
 
 BUILDLINK_TREE+=	sdl12-compat
 
@@ -12,7 +12,7 @@ BUILDLINK_INCDIRS.sdl12-compat+=	include/SDL
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../graphics/glu/buildlink3.mk"
 .endif
 

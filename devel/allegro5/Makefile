@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/11/11 11:52:27 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2026/11/25 14:42:02 wiz Exp $
 
 DISTNAME=	allegro-5.2.10.1
 PKGNAME=	${DISTNAME:S/allegro-/allegro5-/1}
@@ -54,7 +54,7 @@ PKGCONFIG_OVERRIDE+=	misc/allegro_video.pc.in
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../graphics/glu/buildlink3.mk"
 .  include "../../graphics/png/buildlink3.mk"
 .  include "../../x11/libXcursor/buildlink3.mk"

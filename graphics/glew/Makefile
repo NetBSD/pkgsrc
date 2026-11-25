@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2026/01/24 08:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.31 2026/11/25 14:42:12 wiz Exp $
 
 DISTNAME=	glew-2.3.1
 CATEGORIES=	graphics
@@ -28,7 +28,7 @@ MAKE_ENV.SunOS+=	SYSTEM=solaris-gcc
 .endif
 
 .if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"

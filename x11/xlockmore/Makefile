@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2026/11/11 11:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2026/11/25 14:42:22 wiz Exp $
 
 PKGREVISION= 7
 .include "Makefile.common"
@@ -27,7 +27,7 @@ PLIST_SUBST+=	LITE=""
 USE_TOOLS+=	pkg-config
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

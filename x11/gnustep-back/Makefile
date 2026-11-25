@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2026/11/11 11:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2026/11/25 14:42:20 wiz Exp $
 
 GITHUB_PROJECT=	libs-back
 GITHUB_TAG=	back-0_28_0
@@ -35,7 +35,7 @@ pre-install:
 
 .include "../../x11/gnustep-gui/buildlink3.mk"
 .include "../../lang/libunwind/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"

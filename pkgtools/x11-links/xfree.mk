@@ -1,9 +1,9 @@
-# $NetBSD: xfree.mk,v 1.19 2018/03/07 11:57:32 wiz Exp $
+# $NetBSD: xfree.mk,v 1.20 2026/11/25 14:42:17 wiz Exp $
 
 FILES_LIST=	${FILESDIR}/xfree
 
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"

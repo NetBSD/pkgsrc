@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/12/16 09:44:45 vins Exp $
+# $NetBSD: options.mk,v 1.3 2026/11/25 14:42:04 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dosbox-staging
 
@@ -32,7 +32,7 @@ MESON_ARGS+=	-Duse_fluidsynth=false
 ## Enable OpenGL support.
 ##
 .if !empty(PKG_OPTIONS:Mopengl)
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 MESON_ARGS+=	-Duse_opengl=true
 .else
 MESON_ARGS+=	-Duse_opengl=false

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2026/11/11 11:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/25 14:42:08 wiz Exp $
 
 DISTNAME=	ClassiCube-1.3.6
 PKGNAME=	${DISTNAME:tl}
@@ -51,7 +51,7 @@ do-install:
 
 .if ${OPSYS} != "Darwin"
 .  include "../../audio/openal-soft/buildlink3.mk"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .  include "../../www/curl/buildlink3.mk"
 .  include "../../x11/libX11/buildlink3.mk"

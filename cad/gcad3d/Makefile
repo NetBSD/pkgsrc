@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2026/09/29 06:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2026/11/25 14:42:01 wiz Exp $
 #
 
 #
@@ -81,7 +81,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/gcad3d
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/gcad3d
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

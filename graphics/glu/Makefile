@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2023/08/24 11:35:49 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2026/11/25 14:42:12 wiz Exp $
 
 DISTNAME=	glu-9.0.3
 CATEGORIES=	graphics
@@ -19,5 +19,5 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/glu.pc
 .include "../../devel/meson/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

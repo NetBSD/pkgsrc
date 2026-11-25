@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2023/07/09 22:09:28 nia Exp $
+# $NetBSD: Makefile,v 1.38 2026/11/25 14:42:09 wiz Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/KnightCap ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/knightcap
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

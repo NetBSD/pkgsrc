@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/11/17 11:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/25 14:42:08 wiz Exp $
 
 DISTNAME=	foobillardplus-3.42beta
 PKGNAME=	${DISTNAME:S/beta/b/}
@@ -31,7 +31,7 @@ pre-configure:
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libICE/buildlink3.mk"

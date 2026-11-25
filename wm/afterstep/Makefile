@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2026/09/29 06:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2026/11/25 14:42:18 wiz Exp $
 
 DISTNAME=	AfterStep-2.2.12
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -32,7 +32,7 @@ LIBS+=		-lexecinfo
 MAKE_ENV+=	EXTRA_LIBRARIES=-lexecinfo
 .endif
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

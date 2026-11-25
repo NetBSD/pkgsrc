@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2026/11/11 11:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.285 2026/11/25 14:42:06 wiz Exp $
 
 DISTNAME=	wine-9.0
 PKGREVISION=	19
@@ -95,7 +95,7 @@ CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
 # Wine will use system frameworks on Darwin.
 .if ${OPSYS} != "Darwin"
 PLIST.desktop=		yes
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .endif

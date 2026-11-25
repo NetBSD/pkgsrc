@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/08/30 22:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/11/25 14:42:17 wiz Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -35,7 +35,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/gtkglarea/buildlink3.mk"

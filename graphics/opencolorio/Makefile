@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2026/05/14 11:15:01 adam Exp $
+# $NetBSD: Makefile,v 1.22 2026/11/25 14:42:14 wiz Exp $
 
 DISTNAME=	OpenColorIO-2.5.2
 PKGNAME=	${DISTNAME:tl}
@@ -47,7 +47,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../devel/sse2neon/buildlink3.mk"
 .  endif
 .else
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .endif

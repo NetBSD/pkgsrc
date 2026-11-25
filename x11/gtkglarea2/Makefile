@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2026/09/29 06:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2026/11/25 14:42:20 wiz Exp $
 
 DISTNAME=	gtkglarea-2.1.0
 PKGNAME=	${DISTNAME:S/gtkglarea/gtkglarea2/}
@@ -20,6 +20,6 @@ CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 
 PKGCONFIG_OVERRIDE=	gtkgl-2.0.pc.in
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

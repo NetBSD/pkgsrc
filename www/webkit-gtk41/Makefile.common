@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2026/11/18 10:26:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2026/11/25 14:42:19 wiz Exp $
 # used by www/webkit-gtk41/Makefile
 # used by www/webkit-gtk60/Makefile
 
@@ -207,7 +207,7 @@ PREFER.gettext=	pkgsrc
 .include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=21
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 # SkJpegCodec.cpp:210:58: error: 'JCS_RGB565' was not declared in this scope; did you mean 'JCS_RGB'?
 JPEG_ACCEPTED=		libjpeg-turbo

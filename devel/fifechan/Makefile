@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2026/11/11 11:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/25 14:42:03 wiz Exp $
 
 DISTNAME=	fifechan-0.1.5
 PKGREVISION=	17
@@ -24,6 +24,6 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

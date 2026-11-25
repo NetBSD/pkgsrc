@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2026/01/09 23:02:01 nia Exp $
+# $NetBSD: Makefile,v 1.14 2026/11/25 14:42:10 wiz Exp $
 
 DISTNAME=	tyrquake-0.71
 CATEGORIES=	games x11
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/tyr-* ${DESTDIR}${PREFIX}/bin
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"

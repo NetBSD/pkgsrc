@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2025/08/30 22:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/11/25 14:42:22 wiz Exp $
 #
 
 DISTNAME=	xforms-2c1a9f151baf50887a517280645ec23379fb96f8
@@ -19,7 +19,7 @@ USE_TOOLS+=	aclocal autoconf autoreconf automake
 pre-configure:
 	set -e; cd ${WRKSRC} && autoreconf -fiv
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

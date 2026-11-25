@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2026/11/11 11:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2026/11/25 14:42:09 wiz Exp $
 
 DISTNAME=	lugaru-${VERSION}
 VERSION=	1.2
@@ -23,7 +23,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

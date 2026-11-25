@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/08/22 05:31:50 adam Exp $
+# $NetBSD: options.mk,v 1.4 2026/11/25 14:42:04 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emulationstation
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
@@ -20,5 +20,5 @@ PKG_SUGGESTED_OPTIONS+=		opengl
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif

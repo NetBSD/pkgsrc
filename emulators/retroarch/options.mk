@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2023/11/14 10:30:43 nia Exp $
+# $NetBSD: options.mk,v 1.19 2026/11/25 14:42:06 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--disable-sixel
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--enable-opengl
 .  if ${OPSYS} != "Darwin"
-.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../mk/mesa.buildlink3.mk"
 .  endif
 
 # Enable use of the Raspberry Pi GPU driver

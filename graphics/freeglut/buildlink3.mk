@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2023/05/03 15:20:41 triaxx Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2026/11/25 14:42:11 wiz Exp $
 
 BUILDLINK_TREE+=	freeglut
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.freeglut+=	freeglut>=2.2.0
 BUILDLINK_ABI_DEPENDS.freeglut+=	freeglut>=3.2.2nb1
 BUILDLINK_PKGSRCDIR.freeglut?=		../../graphics/freeglut
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 
 pkgbase:=	freeglut

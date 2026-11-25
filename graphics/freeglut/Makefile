@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2026/11/11 11:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2026/11/25 14:42:11 wiz Exp $
 
 DISTNAME=	freeglut-3.6.0
 PKGREVISION=	2
@@ -32,7 +32,7 @@ post-install:
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

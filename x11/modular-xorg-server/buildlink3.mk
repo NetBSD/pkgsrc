@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2023/11/12 13:24:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2026/11/25 14:42:21 wiz Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -22,7 +22,7 @@ pkgbase := modular-xorg-server
 .include "../../x11/libxcvt/buildlink3.mk"
 .include "../../x11/libXfont2/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.modular-xorg-server:Mdri}
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif
 .endif # MODULAR_XORG_SERVER_BUILDLINK3_MK
 

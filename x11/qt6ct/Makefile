@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2026/11/11 11:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2026/11/25 14:42:21 wiz Exp $
 
 DISTNAME=	qt6ct-0.11
 PKGREVISION=	9
@@ -37,7 +37,7 @@ post-install:
 		${DESTDIR}${PREFIX}/${DOCDIR}/README
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"

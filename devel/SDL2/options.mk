@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2025/12/14 13:49:50 vins Exp $
+# $NetBSD: options.mk,v 1.23 2026/11/25 14:42:02 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--disable-nas
 
 .if !empty(PKG_OPTIONS:Mopengl)
 .  if ${OPSYS} != "Darwin"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .  endif
 .else
 CONFIGURE_ARGS+=	--disable-video-opengl
