@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2026/11/03 16:48:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/25 21:03:12 wiz Exp $
 
 .include "../../graphics/vulkan-headers/Makefile.common"
 
 DISTNAME=		vulkan-tools-${SDK_VERSION}
+PKGREVISION=		1
 CATEGORIES=		graphics
 GITHUB_PROJECT=		Vulkan-Tools
 
@@ -10,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/Vulkan-Tools/
 COMMENT=	Vulkan information and demo utilities
 LICENSE=	apache-2.0
+
+DEPENDS+=	vulkan-loader>=${SDK_VERSION}:../../graphics/vulkan-loader
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
