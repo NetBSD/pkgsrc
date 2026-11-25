@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2026/11/24 16:57:40 adam Exp $
+# $NetBSD: Makefile,v 1.108 2026/11/25 15:52:11 wiz Exp $
 
 DISTNAME=	grpcio_tools-1.85.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -26,6 +26,8 @@ FORCE_CXX_STD=		c++17
 MAKE_ENV+=	GRPC_PYTHON_LDFLAGS="-lprotoc ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.protobuf}/lib"
 
 PY_RENAME_BINARIES=	python-grpc-tools-protoc
+
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-cython
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
