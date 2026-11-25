@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2026/07/24 15:56:04 taca Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/25 16:00:15 wiz Exp $
 
 PKGNAME=	subversion-${SVNVER}
 PKGREVISION=	2
@@ -9,7 +9,7 @@ META_PACKAGE=	yes
 .include "../../devel/subversion/Makefile.common"
 
 DEPENDS+=	subversion-base-${SVNVER}{,nb[0-9]*}:../../devel/subversion-base
-DEPENDS+=	${APACHE_PKG_PREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../www/ap2-subversion
+DEPENDS+=	ap24-subversion-${SVNVER}{,nb[0-9]*}:../../www/ap2-subversion
 DEPENDS+=	p5-subversion-${SVNVER}{,nb[0-9]*}:../../devel/p5-subversion
 DEPENDS+=	${PYPKGPREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../devel/py-subversion
 DEPENDS+=	${RUBY_PKGPREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../devel/ruby-subversion

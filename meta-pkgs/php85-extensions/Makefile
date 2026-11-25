@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/20 16:38:28 taca Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/25 16:00:16 wiz Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
 CATEGORIES=	meta-pkgs www
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.php.net/
 COMMENT=	"meta-package" for the PHP 8.5 HTML-embedded scripting language
 
 DEPENDS+=	php${PHP_VER}>=${PHP_VERSION}<${NEXT_VERS}:${PHPPKGSRCDIR}
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_VERSION}<${NEXT_VERS}:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=${PHP_VERSION}<${NEXT_VERS}:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=${PHP_VERSION}<${NEXT_VERS}:../../www/php-fpm
 
 DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=${PHP_VERSION}<${NEXT_VERS}:../../math/php-bcmath

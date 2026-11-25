@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.32 2019/12/28 11:43:58 wiz Exp $
+# $NetBSD: apache.mk,v 1.33 2026/11/25 16:00:15 wiz Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -30,11 +30,6 @@
 #
 #	Possible values: (see PKG_APACHE_DEFAULT)
 #
-# APACHE_PKG_PREFIX
-#	The package name prefix for apache modules.
-#
-#	Possible values: ap24
-#
 
 .if !defined(APACHE_MK)
 APACHE_MK=			# defined
@@ -42,13 +37,13 @@ APACHE_MK=			# defined
 _VARGROUPS+=		apache
 _USER_VARS.apache=	PKG_APACHE_DEFAULT
 _PKG_VARS.apache=	PKG_APACHE_ACCEPTED USE_APR
-_SYS_VARS.apache=	PKG_APACHE APACHE_PKG_PREFIX
+_SYS_VARS.apache=	PKG_APACHE
 
 .include "bsd.fast.prefs.mk"
 
 PKG_APACHE_DEFAULT?=		apache24
 BUILD_DEFS+=			PKG_APACHE_DEFAULT
-BUILD_DEFS_EFFECTS+=		PKG_APACHE APACHE_PKG_PREFIX
+BUILD_DEFS_EFFECTS+=		PKG_APACHE
 
 # Package-settable variables
 PKG_APACHE_ACCEPTED?=		${_PKG_APACHES}
@@ -58,7 +53,6 @@ USE_APR?=			no
 _PKG_APACHES=			apache24
 
 _APACHE_PKGBASE.apache24=	apache-2.[456789]*
-_APACHE_PKG_PREFIX.apache24=	ap24
 _APACHE_PKGSRCDIR.apache24=	../../www/apache24
 
 #
@@ -117,8 +111,6 @@ PKG_APACHE?=		${ap}
 PKG_FAIL_REASON+=	"[apache.mk] No acceptable apache package found."
 PKG_APACHE=		none
 .endif
-
-APACHE_PKG_PREFIX=	${_APACHE_PKG_PREFIX.${PKG_APACHE}}
 
 .if !empty(USE_APR:M[Yy][Ee][Ss])
 .  include "../../devel/apr/buildlink3.mk"

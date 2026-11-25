@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/02/08 03:27:04 taca Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/25 16:00:15 wiz Exp $
 #
 
 DISTNAME=	ampache-3.5.3
@@ -12,7 +12,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	https://ampache.org/
 COMMENT=	Web-based Audio file manager
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
