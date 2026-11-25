@@ -1,14 +1,12 @@
-# $NetBSD: Makefile.common,v 1.53 2026/11/22 21:27:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.54 2026/11/25 12:49:06 adam Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
-UV_VERSION=	0.13.9
+UV_VERSION=	0.13.10
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/astral-sh/uv
 LICENSE=	mit OR apache-2.0
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
 
 CFLAGS+=	-Wno-implicit-function-declaration
 
