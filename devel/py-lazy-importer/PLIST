@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/25 14:24:30 leot Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/lazy_importer/__init__.py
+${PYSITELIB}/lazy_importer/__init__.pyc
+${PYSITELIB}/lazy_importer/__init__.pyo
+${PYSITELIB}/lazy_importer/_imports.py
+${PYSITELIB}/lazy_importer/_imports.pyc
+${PYSITELIB}/lazy_importer/_imports.pyo
+${PYSITELIB}/lazy_importer/_native.py
+${PYSITELIB}/lazy_importer/_native.pyc
+${PYSITELIB}/lazy_importer/_native.pyo
+${PYSITELIB}/lazy_importer/py.typed

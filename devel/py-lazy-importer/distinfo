@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/25 14:24:31 leot Exp $
+
+BLAKE2s (lazy_importer-0.1.0.tar.gz) = 49adbf73b3625888ea6a0b8494cbcf5a6a2566f5b25acec2c1ad8ea07905b2fd
+SHA512 (lazy_importer-0.1.0.tar.gz) = 935fd9f8af4b1827d3189ece108095d69ad77b4fe97ef4bfd4e0dc9889f64b36431fb95cdf50785aeb18783d404cac707235a402086794660b4f8b3108b3144e
+Size (lazy_importer-0.1.0.tar.gz) = 84008 bytes
