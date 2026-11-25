@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2026/09/03 11:18:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.75 2026/11/25 14:21:22 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -457,6 +457,9 @@ ${PYSITELIB}/faker/providers/bank/en_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/es_AR/__init__.py
 ${PYSITELIB}/faker/providers/bank/es_AR/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/es_AR/__init__.pyo
+${PYSITELIB}/faker/providers/bank/es_CO/__init__.py
+${PYSITELIB}/faker/providers/bank/es_CO/__init__.pyc
+${PYSITELIB}/faker/providers/bank/es_CO/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/es_ES/__init__.py
 ${PYSITELIB}/faker/providers/bank/es_ES/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/es_ES/__init__.pyo
@@ -1177,6 +1180,9 @@ ${PYSITELIB}/faker/providers/internet/es_AR/__init__.pyo
 ${PYSITELIB}/faker/providers/internet/es_CL/__init__.py
 ${PYSITELIB}/faker/providers/internet/es_CL/__init__.pyc
 ${PYSITELIB}/faker/providers/internet/es_CL/__init__.pyo
+${PYSITELIB}/faker/providers/internet/es_CO/__init__.py
+${PYSITELIB}/faker/providers/internet/es_CO/__init__.pyc
+${PYSITELIB}/faker/providers/internet/es_CO/__init__.pyo
 ${PYSITELIB}/faker/providers/internet/es_ES/__init__.py
 ${PYSITELIB}/faker/providers/internet/es_ES/__init__.pyc
 ${PYSITELIB}/faker/providers/internet/es_ES/__init__.pyo
@@ -2089,6 +2095,9 @@ ${PYSITELIB}/faker/providers/ssn/en_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/en_US/__init__.py
 ${PYSITELIB}/faker/providers/ssn/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/ssn/es_AR/__init__.py
+${PYSITELIB}/faker/providers/ssn/es_AR/__init__.pyc
+${PYSITELIB}/faker/providers/ssn/es_AR/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/es_CA/__init__.py
 ${PYSITELIB}/faker/providers/ssn/es_CA/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/es_CA/__init__.pyo
@@ -2104,6 +2113,9 @@ ${PYSITELIB}/faker/providers/ssn/es_ES/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/es_MX/__init__.py
 ${PYSITELIB}/faker/providers/ssn/es_MX/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/es_MX/__init__.pyo
+${PYSITELIB}/faker/providers/ssn/es_VE/__init__.py
+${PYSITELIB}/faker/providers/ssn/es_VE/__init__.pyc
+${PYSITELIB}/faker/providers/ssn/es_VE/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/et_EE/__init__.py
 ${PYSITELIB}/faker/providers/ssn/et_EE/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/et_EE/__init__.pyo
