@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8407 2026/11/25 16:57:17 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8408 2026/11/25 17:02:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12446,3 +12446,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-js-asset to 5.0.0 [adam 2026-11-25]
 	Updated graphics/photoc to 0.8.0 [ktnb 2026-11-25]
 	mk: add MESA_DEFAULT for selecting the Mesa package [wiz 2026-11-25]
+	Updated textproc/py-types-yaml to 6.0.12.20261122 [adam 2026-11-25]
+	Updated textproc/py-types-docutils to 0.23.0.20261122 [adam 2026-11-25]
+	Updated devel/py-types-gdb to 16.3.0.20261122 [adam 2026-11-25]
+	Updated devel/py-types-setuptools to 84.2.0.20261122 [adam 2026-11-25]
+	Updated time/py-types-python-dateutil to 2.9.0.20261122 [adam 2026-11-25]
