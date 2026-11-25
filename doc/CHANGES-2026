@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8403 2026/11/25 14:28:15 leot Exp $
+$NetBSD: CHANGES-2026,v 1.8404 2026/11/25 14:31:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12440,3 +12440,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-faker to 40.63.0 [adam 2026-11-25]
 	Added devel/py-lazy-importer version 0.1.0 [leot 2026-11-25]
 	Updated devel/py-importlib-metadata to 10.2.0nb1 [leot 2026-11-25]
+	Updated converters/py-charset-normalizer to 3.5.3 [adam 2026-11-25]
+	Updated www/py-python-multipart to 0.0.34 [adam 2026-11-25]
