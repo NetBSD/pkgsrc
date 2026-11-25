@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2026/11/17 08:43:41 adam Exp $
+$NetBSD: distinfo,v 1.24 2026/11/25 16:58:13 adam Exp $
 
-BLAKE2s (types_pyyaml-6.0.12.20261113.tar.gz) = 94b448b1a4abc0144e427fbf33dec0408296633f9cc2c671de06b38543ef1c8a
-SHA512 (types_pyyaml-6.0.12.20261113.tar.gz) = adf4601310c99855a37ab499eed97beaf4e9c0c1c5ed2399d6716d83dd78c05eebf622ef754419a4e71632c8bbb8d7809bdf1b5e4ed5bf97d7850141057f56b7
-Size (types_pyyaml-6.0.12.20261113.tar.gz) = 19017 bytes
+BLAKE2s (types_pyyaml-6.0.12.20261122.tar.gz) = a736bbc037562f31dbb752439b5b53f3060147bd7e14d1df6d37a9e3844ac40d
+SHA512 (types_pyyaml-6.0.12.20261122.tar.gz) = f355a56497044bdcdb9d49e1092a9193301ede5ddea825f2c867393a15c1ae054571a7982d3d06b0b86caffcb483379d71f22dc003bbbcf074a21b9b519861c7
+Size (types_pyyaml-6.0.12.20261122.tar.gz) = 19093 bytes
