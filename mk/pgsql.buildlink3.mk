@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.71 2026/11/24 19:22:50 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.72 2026/11/25 10:47:37 adam Exp $
 #
 # User-settable variables:
 #
@@ -61,7 +61,7 @@ _PGSQL_VERSION_14_INSTALLED=	yes
 .  endif
 .else
 .  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.19)
-_PGSQL_VERSION_18_INSTALLED=	yes
+_PGSQL_VERSION_19_INSTALLED=	yes
 .  endif
 .  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.18)
 _PGSQL_VERSION_18_INSTALLED=	yes
