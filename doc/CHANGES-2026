@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8377 2026/11/24 23:08:57 gutteridge Exp $
+$NetBSD: CHANGES-2026,v 1.8378 2026/11/25 06:37:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12388,3 +12388,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/sniffnet to 1.6.0 [pin 2026-11-24]
 	Updated shells/oh-my-posh to 33.4.0 [pin 2026-11-24]
 	Added databases/postgresql19 version 19.0 [adam 2026-11-24]
+	Updated devel/sccache to 0.20.1 [adam 2026-11-25]
+	Updated security/cargo-deny to 0.22.1 [adam 2026-11-25]
+	Updated devel/py-cython to 3.3.2 [adam 2026-11-25]
+	Updated devel/py-babel to 2.19.0 [adam 2026-11-25]
