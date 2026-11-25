@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2026/08/12 08:03:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2026/11/25 07:29:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -24,8 +24,6 @@ ${PYSITELIB}/photologue/locale/da/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/da/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/de/LC_MESSAGES/django.po
-${PYSITELIB}/photologue/locale/en/LC_MESSAGES/django.mo
-${PYSITELIB}/photologue/locale/en/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/en_US/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/en_US/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/es_ES/LC_MESSAGES/django.mo
@@ -54,8 +52,6 @@ ${PYSITELIB}/photologue/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/sk/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/tr/LC_MESSAGES/django.po
-${PYSITELIB}/photologue/locale/tr_TR/LC_MESSAGES/django.mo
-${PYSITELIB}/photologue/locale/tr_TR/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/photologue/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/photologue/locale/zh_Hans/LC_MESSAGES/django.mo
