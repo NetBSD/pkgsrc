@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2026/10/29 13:27:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/25 08:03:43 adam Exp $
 
-DISTNAME=	jsonpointer-3.6
+DISTNAME=	jsonpointer-3.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpointer/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/stefankoegl/python-json-pointer
 COMMENT=	Library to resolve JSON Pointers according to RFC 6901
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
