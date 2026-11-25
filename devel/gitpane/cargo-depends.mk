@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.23 2026/11/23 12:20:17 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.24 2026/11/25 08:50:32 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.25.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -157,9 +157,9 @@ CARGO_CRATE_DEPENDS+=	mio-1.2.2
 CARGO_CRATE_DEPENDS+=	nix-0.29.0
 CARGO_CRATE_DEPENDS+=	nom-7.1.3
 CARGO_CRATE_DEPENDS+=	nom-8.0.0
-CARGO_CRATE_DEPENDS+=	notify-8.2.2
-CARGO_CRATE_DEPENDS+=	notify-debouncer-full-0.7.0
-CARGO_CRATE_DEPENDS+=	notify-types-2.1.0
+CARGO_CRATE_DEPENDS+=	notify-9.0.0
+CARGO_CRATE_DEPENDS+=	notify-debouncer-full-0.8.0
+CARGO_CRATE_DEPENDS+=	notify-types-2.3.1
 CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.3
 CARGO_CRATE_DEPENDS+=	num-conv-0.2.2
 CARGO_CRATE_DEPENDS+=	num-derive-0.4.2
@@ -225,6 +225,7 @@ CARGO_CRATE_DEPENDS+=	regex-automata-0.4.18
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.11
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.28
+CARGO_CRATE_DEPENDS+=	rustc-hash-2.1.3
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rustix-0.38.44
 CARGO_CRATE_DEPENDS+=	rustix-1.1.6
@@ -357,5 +358,6 @@ CARGO_CRATE_DEPENDS+=	wit-bindgen-0.57.1
 CARGO_CRATE_DEPENDS+=	wl-clipboard-rs-0.9.3
 CARGO_CRATE_DEPENDS+=	x11rb-0.13.2
 CARGO_CRATE_DEPENDS+=	x11rb-protocol-0.13.2
+CARGO_CRATE_DEPENDS+=	xxhash-rust-0.8.21
 CARGO_CRATE_DEPENDS+=	zeroize-1.9.0
 CARGO_CRATE_DEPENDS+=	zmij-1.0.23

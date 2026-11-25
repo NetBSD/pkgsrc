@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2026/11/23 12:20:17 pin Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/25 08:50:32 pin Exp $
 
-DISTNAME=	gitpane-0.19.3
+DISTNAME=	gitpane-0.20.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=affromero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.88.0
+RUST_REQ=	1.91
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl gmake
 
