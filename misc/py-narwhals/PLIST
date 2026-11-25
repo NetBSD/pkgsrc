@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/10/20 06:02:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/25 14:19:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -36,6 +36,9 @@ ${PYSITELIB}/narwhals/_arrow/series_dt.pyo
 ${PYSITELIB}/narwhals/_arrow/series_list.py
 ${PYSITELIB}/narwhals/_arrow/series_list.pyc
 ${PYSITELIB}/narwhals/_arrow/series_list.pyo
+${PYSITELIB}/narwhals/_arrow/series_map.py
+${PYSITELIB}/narwhals/_arrow/series_map.pyc
+${PYSITELIB}/narwhals/_arrow/series_map.pyo
 ${PYSITELIB}/narwhals/_arrow/series_str.py
 ${PYSITELIB}/narwhals/_arrow/series_str.pyc
 ${PYSITELIB}/narwhals/_arrow/series_str.pyo
@@ -129,6 +132,9 @@ ${PYSITELIB}/narwhals/_duckdb/expr_dt.pyo
 ${PYSITELIB}/narwhals/_duckdb/expr_list.py
 ${PYSITELIB}/narwhals/_duckdb/expr_list.pyc
 ${PYSITELIB}/narwhals/_duckdb/expr_list.pyo
+${PYSITELIB}/narwhals/_duckdb/expr_map.py
+${PYSITELIB}/narwhals/_duckdb/expr_map.pyc
+${PYSITELIB}/narwhals/_duckdb/expr_map.pyo
 ${PYSITELIB}/narwhals/_duckdb/expr_str.py
 ${PYSITELIB}/narwhals/_duckdb/expr_str.pyc
 ${PYSITELIB}/narwhals/_duckdb/expr_str.pyo
@@ -180,6 +186,9 @@ ${PYSITELIB}/narwhals/_ibis/expr_dt.pyo
 ${PYSITELIB}/narwhals/_ibis/expr_list.py
 ${PYSITELIB}/narwhals/_ibis/expr_list.pyc
 ${PYSITELIB}/narwhals/_ibis/expr_list.pyo
+${PYSITELIB}/narwhals/_ibis/expr_map.py
+${PYSITELIB}/narwhals/_ibis/expr_map.pyc
+${PYSITELIB}/narwhals/_ibis/expr_map.pyo
 ${PYSITELIB}/narwhals/_ibis/expr_str.py
 ${PYSITELIB}/narwhals/_ibis/expr_str.pyc
 ${PYSITELIB}/narwhals/_ibis/expr_str.pyo
@@ -246,6 +255,9 @@ ${PYSITELIB}/narwhals/_pandas_like/series_dt.pyo
 ${PYSITELIB}/narwhals/_pandas_like/series_list.py
 ${PYSITELIB}/narwhals/_pandas_like/series_list.pyc
 ${PYSITELIB}/narwhals/_pandas_like/series_list.pyo
+${PYSITELIB}/narwhals/_pandas_like/series_map.py
+${PYSITELIB}/narwhals/_pandas_like/series_map.pyc
+${PYSITELIB}/narwhals/_pandas_like/series_map.pyo
 ${PYSITELIB}/narwhals/_pandas_like/series_str.py
 ${PYSITELIB}/narwhals/_pandas_like/series_str.pyc
 ${PYSITELIB}/narwhals/_pandas_like/series_str.pyo
@@ -297,6 +309,9 @@ ${PYSITELIB}/narwhals/_spark_like/expr_dt.pyo
 ${PYSITELIB}/narwhals/_spark_like/expr_list.py
 ${PYSITELIB}/narwhals/_spark_like/expr_list.pyc
 ${PYSITELIB}/narwhals/_spark_like/expr_list.pyo
+${PYSITELIB}/narwhals/_spark_like/expr_map.py
+${PYSITELIB}/narwhals/_spark_like/expr_map.pyc
+${PYSITELIB}/narwhals/_spark_like/expr_map.pyo
 ${PYSITELIB}/narwhals/_spark_like/expr_str.py
 ${PYSITELIB}/narwhals/_spark_like/expr_str.pyc
 ${PYSITELIB}/narwhals/_spark_like/expr_str.pyo
@@ -378,6 +393,9 @@ ${PYSITELIB}/narwhals/expr_dt.pyo
 ${PYSITELIB}/narwhals/expr_list.py
 ${PYSITELIB}/narwhals/expr_list.pyc
 ${PYSITELIB}/narwhals/expr_list.pyo
+${PYSITELIB}/narwhals/expr_map.py
+${PYSITELIB}/narwhals/expr_map.pyc
+${PYSITELIB}/narwhals/expr_map.pyo
 ${PYSITELIB}/narwhals/expr_name.py
 ${PYSITELIB}/narwhals/expr_name.pyc
 ${PYSITELIB}/narwhals/expr_name.pyo
@@ -415,6 +433,9 @@ ${PYSITELIB}/narwhals/series_dt.pyo
 ${PYSITELIB}/narwhals/series_list.py
 ${PYSITELIB}/narwhals/series_list.pyc
 ${PYSITELIB}/narwhals/series_list.pyo
+${PYSITELIB}/narwhals/series_map.py
+${PYSITELIB}/narwhals/series_map.pyc
+${PYSITELIB}/narwhals/series_map.pyo
 ${PYSITELIB}/narwhals/series_str.py
 ${PYSITELIB}/narwhals/series_str.pyc
 ${PYSITELIB}/narwhals/series_str.pyo

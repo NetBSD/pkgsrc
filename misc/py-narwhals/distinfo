@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2026/10/28 13:23:12 adam Exp $
+$NetBSD: distinfo,v 1.7 2026/11/25 14:19:20 adam Exp $
 
-BLAKE2s (narwhals-2.28.0.tar.gz) = c33260de9d452f787befc1c8d4ec644e2cc2554f6cb50011875a224a88ea7954
-SHA512 (narwhals-2.28.0.tar.gz) = c7dcd116c9f0973929d5abbffc869051eb027363a87e3a81f3bb51cfa458a8f1df656129d0f979388f053d4a256a23b61e5c2928840c5c5c610f985ea277e414
-Size (narwhals-2.28.0.tar.gz) = 754977 bytes
+BLAKE2s (narwhals-2.29.0.tar.gz) = ddeb8f6e9543dca39f1e664a87971e78dd8ba5f7e982ca9eb2fb026576c5d319
+SHA512 (narwhals-2.29.0.tar.gz) = 0b34db6afceb7858f219fe6b65a755e61240943566819b32fff89406a550a17bf4ef5354454ed6753053ccc56bee95fd7ae9049aab7d0e025df8d87d4539d6ad
+Size (narwhals-2.29.0.tar.gz) = 773295 bytes
