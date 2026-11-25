@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2026/11/15 21:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2026/11/25 14:28:09 leot Exp $
 
 DISTNAME=	importlib_metadata-10.2.0
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -19,6 +20,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-perf>=0.9.2:../../devel/py-test-perf
 
 USE_LANGUAGES=	# none
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 315
+DEPENDS+=	${PYPKGPREFIX}-lazy-importer>=0.1:../../devel/py-lazy-importer
+.endif
 
 # as of 10.2.0
 # 1 failed, 149 passed, 1 skipped
