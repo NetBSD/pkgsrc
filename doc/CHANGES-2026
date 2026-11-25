@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8388 2026/11/25 09:16:26 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8389 2026/11/25 10:33:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12412,3 +12412,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-poetry-plugin-export to 1.10.2 [adam 2026-11-25]
 	Updated devel/py-virtualenv to 21.15.13 [adam 2026-11-25]
 	Updated lang/py-python-discovery to 1.9.7 [adam 2026-11-25]
+	Added misc/py-vermin version 1.9.2 [adam 2026-11-25]
+	Added www/py-django-unfold version 0.110.1 [adam 2026-11-25]
