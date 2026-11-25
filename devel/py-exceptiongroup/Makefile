@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/11/22 19:51:55 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/25 14:02:37 adam Exp $
 
-DISTNAME=	exceptiongroup-1.3.1
+DISTNAME=	exceptiongroup-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/exceptiongroup/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/agronholm/exceptiongroup
 COMMENT=	Backport of PEP 654 (exception groups)
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_scm-[0-9]*:../../devel/py-flit_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_scm>=0:../../devel/py-flit_scm
 
 USE_LANGUAGES=	# none
 
