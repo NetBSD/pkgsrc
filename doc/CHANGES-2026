@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8408 2026/11/25 17:02:36 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8409 2026/11/25 21:03:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12451,3 +12451,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-types-gdb to 16.3.0.20261122 [adam 2026-11-25]
 	Updated devel/py-types-setuptools to 84.2.0.20261122 [adam 2026-11-25]
 	Updated time/py-types-python-dateutil to 2.9.0.20261122 [adam 2026-11-25]
+	Updated graphics/vulkan-tools to 1.4.363.0nb1 [wiz 2026-11-25]
