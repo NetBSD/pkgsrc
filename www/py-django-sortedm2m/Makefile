@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2025/09/03 14:44:24 adam Exp $
+# $NetBSD: Makefile,v 1.9 2026/11/25 14:08:56 adam Exp $
 
-DISTNAME=	django-sortedm2m-4.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_sortedm2m-4.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
-#MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sortedm2m/}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jazzband/}
-GITHUB_PROJECT=	django-sortedm2m
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sortedm2m/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jazzband/django-sortedm2m

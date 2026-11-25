@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 18:56:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/25 14:08:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sortedm2m/__init__.py
 ${PYSITELIB}/sortedm2m/__init__.pyc
 ${PYSITELIB}/sortedm2m/__init__.pyo
+${PYSITELIB}/sortedm2m/admin.py
+${PYSITELIB}/sortedm2m/admin.pyc
+${PYSITELIB}/sortedm2m/admin.pyo
 ${PYSITELIB}/sortedm2m/compat.py
 ${PYSITELIB}/sortedm2m/compat.pyc
 ${PYSITELIB}/sortedm2m/compat.pyo
@@ -31,7 +34,9 @@ ${PYSITELIB}/sortedm2m/models.pyo
 ${PYSITELIB}/sortedm2m/operations.py
 ${PYSITELIB}/sortedm2m/operations.pyc
 ${PYSITELIB}/sortedm2m/operations.pyo
-${PYSITELIB}/sortedm2m/static/sortedm2m/jquery-ui.js
+${PYSITELIB}/sortedm2m/static/sortedm2m/jquery-ui.min.js
+${PYSITELIB}/sortedm2m/static/sortedm2m/ordered_autocomplete.css
+${PYSITELIB}/sortedm2m/static/sortedm2m/ordered_autocomplete.js
 ${PYSITELIB}/sortedm2m/static/sortedm2m/selector-search.gif
 ${PYSITELIB}/sortedm2m/static/sortedm2m/widget.css
 ${PYSITELIB}/sortedm2m/static/sortedm2m/widget.js
