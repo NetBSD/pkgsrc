@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2026/07/01 10:01:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2026/11/25 13:58:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -68,6 +68,8 @@ ${PYSITELIB}/humanize/locale/pt_PT/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/pt_PT/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/ru_RU/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/ru_RU/LC_MESSAGES/humanize.po
+${PYSITELIB}/humanize/locale/si_LK/LC_MESSAGES/humanize.mo
+${PYSITELIB}/humanize/locale/si_LK/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/sk_SK/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/sk_SK/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/sl_SI/LC_MESSAGES/humanize.mo
