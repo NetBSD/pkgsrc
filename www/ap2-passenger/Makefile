@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2026/11/25 16:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2026/11/25 17:01:23 wiz Exp $
 
 PKGNAME=		ap24-${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=		27
@@ -11,7 +11,6 @@ DEPENDS+=		${RUBY_PKGPREFIX}-${DISTNAME}{,nb*}:../../www/passenger
 .include "../../www/passenger/Makefile.common"
 
 APACHE_MODULE=		yes
-USE_APR=		yes
 
 # Get rid of these bits from www/apache24 as they break build on SunOS
 BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE
@@ -26,5 +25,7 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/buildout/apache2/mod_passenger.so \
 	  ${DESTDIR}${PREFIX}/lib/httpd/mod_passenger.so
 
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"

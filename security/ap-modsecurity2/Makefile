@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2026/11/25 16:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2026/11/25 17:01:23 wiz Exp $
 
 DISTNAME=	modsecurity-v2.9.15
 PKGNAME=	ap24-${DISTNAME:S/-v/-/}
@@ -14,7 +14,6 @@ COMMENT=	Intrusion detection and prevention engine for web applications
 LICENSE=	apache-2.0
 
 APACHE_MODULE=		yes
-USE_APR=		yes
 USE_LANGUAGES=		c++ c
 
 .include "../../mk/apache.mk"
@@ -47,6 +46,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/modsecurity.conf-recommended ${DESTDIR}${PREFIX}/${EGDIR}/
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/${DOCDIR}/README.pkgsrc
 
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

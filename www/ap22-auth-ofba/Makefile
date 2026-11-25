@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2026/11/25 16:14:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/25 17:01:23 wiz Exp $
 
 DISTNAME=	mod_auth_ofba-0.6
 PKGNAME=	ap24-${DISTNAME:S/mod_//:S/_/-/g}
@@ -13,7 +13,6 @@ LICENSE=	original-bsd
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
-USE_APR=		yes
 GNU_CONFIGURE_APXS2=	no
 
 .include "../../mk/apache.mk"
@@ -32,5 +31,7 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} ofba_session ${DESTDIR}${PREFIX}/sbin
 	cd ${WRKSRC} && ${INSTALL_DATA} README ${DESTDIR}${PREFIX}/${DOC_DIR}/
 
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .include "../../mk/apache.module.mk"
 .include "../../mk/bsd.pkg.mk"
