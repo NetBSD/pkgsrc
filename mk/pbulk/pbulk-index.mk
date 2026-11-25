@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.32 2026/09/25 09:48:46 wiz Exp $
+#	$NetBSD: pbulk-index.mk,v 1.33 2026/11/25 16:10:59 wiz Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -16,11 +16,7 @@
 #	_PBULK_MULTI_VAR.foo forces a specific version
 #	_PBULK_MULTI_DEFAULT.foo contains the default value
 
-_PBULK_MULTI?=	apache emacs lua mysql php postgresql python rails ruby
-
-_PBULK_MULTI_LIST.apache=	PKG_APACHE_ACCEPTED
-_PBULK_MULTI_VAR.apache=	PKG_APACHE
-_PBULK_MULTI_DEFAULT.apache=	PKG_APACHE_DEFAULT
+_PBULK_MULTI?=	emacs lua mysql php postgresql python rails ruby
 
 _PBULK_MULTI_LIST.emacs=	_EMACS_VERSIONS_BULK
 _PBULK_MULTI_VAR.emacs=		EMACS_VERSION_REQD
