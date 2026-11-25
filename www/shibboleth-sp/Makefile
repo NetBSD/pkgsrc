@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2026/11/25 16:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2026/11/25 16:53:09 wiz Exp $
 
 DISTNAME=	shibboleth-sp-3.5.2
 PKGREVISION=	5
@@ -29,8 +29,6 @@ CFLAGS.SunOS+=	-fpermissive
 RCD_SCRIPTS=	shibd
 
 APACHE_MODULE=	YES
-
-PLIST_SUBST+=	PKG_APACHE_NUM=24
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	configs/Makefile.in
