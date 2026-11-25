@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/01/08 01:55:28 wen Exp $
+# $NetBSD: options.mk,v 1.2 2026/11/25 16:14:14 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
@@ -38,7 +38,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.7:../../converters/php-mbstring
 ### Drupal can run on a number of web servers, we support apache by default
 ###
 .if !empty(PKG_OPTIONS:Mapache)
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2.7:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=5.2.7:../../www/ap-php
 .  include "../../mk/apache.mk"
 WWW_USER?=	${APACHE_USER}
 WWW_GROUP?=	${APACHE_GROUP}

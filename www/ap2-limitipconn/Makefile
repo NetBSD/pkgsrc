@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2026/08/03 13:12:33 wiz Exp $
-#
-#        * APACHE_PKG_PREFIX = ap24
-#        * PKG_APACHE = apache24
+# $NetBSD: Makefile,v 1.4 2026/11/25 16:14:12 wiz Exp $
 
 LICVER=			limitipconn-0.24
 
 DISTNAME=		mod_${LICVER}
 EXTRACT_SUFX=		.tar.bz2
-PKGNAME=		${APACHE_PKG_PREFIX}-${LICVER}
+PKGNAME=		ap24-${LICVER}
 PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://dominia.org/djao/limit/

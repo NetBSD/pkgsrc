@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/11/04 22:09:55 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2026/11/25 16:14:14 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ganglia-webfrontend
 
@@ -14,7 +14,7 @@ PKG_SUGGESTED_OPTIONS=		apache
 ### Use apache web server
 ###
 .if !empty(PKG_OPTIONS:Mapache)
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.1:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=4.1:../../www/ap-php
 WWW_USER?=		${APACHE_USER}
 WWW_GROUP?=		${APACHE_GROUP}
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP

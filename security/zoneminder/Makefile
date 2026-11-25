@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2026/11/11 11:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2026/11/25 16:14:10 wiz Exp $
 
 # This is a twisty maze of variables.  The plan is to edit VERSION
 # (the zoneminder version) on upgrades, and have everything flow from
@@ -319,7 +319,7 @@ CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_ZMS=/zm/cgi-bin/nph-zms
 
 .if !empty(PKG_OPTIONS:Mapache)
 .include "../../mk/apache.mk"
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 .endif
 .if !empty(PKG_OPTIONS:Mnginx)
 # \todo Actually test this option.  Add an nginx config fragment to files/examples.

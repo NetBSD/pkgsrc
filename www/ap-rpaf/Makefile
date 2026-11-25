@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2016/10/19 18:43:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/25 16:14:11 wiz Exp $
 #
 
 DISTNAME=		mod_rpaf-0.8.4
-PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
+PKGNAME=		ap24-${DISTNAME:S/mod_//}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnif/}
 GITHUB_PROJECT=		mod_rpaf

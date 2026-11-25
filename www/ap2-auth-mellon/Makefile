@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2026/11/11 11:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2026/11/25 16:14:11 wiz Exp $
 
 DISTNAME=	mod_auth_mellon-0.18.1
-PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
+PKGNAME=	ap24-${DISTNAME:S/mod_//:S/_/-/g}
 PKGREVISION=	18
 #PKGREVISION=	1
 CATEGORIES=	www security

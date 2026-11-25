@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/01/15 15:40:17 mef Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/25 16:14:13 wiz Exp $
 
 DISTNAME=	mod_auth_ofba-0.6
-PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
+PKGNAME=	ap24-${DISTNAME:S/mod_//:S/_/-/g}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.espci.fr/pub/mod_auth_ofba/
 

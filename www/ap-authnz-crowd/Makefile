@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2026/11/11 11:56:11 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2026/11/25 16:14:11 wiz Exp $
 
 DISTNAME=	mod_authnz_crowd-2.2.2
-PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
+PKGNAME=	ap24-${DISTNAME:S/mod_//:S/_/-/}
 PKGREVISION=	53
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.atlassian.com/software/crowd/downloads/cwdapache/
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 APACHE_MODULE=		yes
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-subversion>0:../../www/ap2-subversion
+DEPENDS+=	ap24-subversion>0:../../www/ap2-subversion
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

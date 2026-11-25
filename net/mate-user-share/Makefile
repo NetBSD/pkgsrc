@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2026/11/11 11:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2026/11/25 16:14:10 wiz Exp $
 
 PKGREVISION= 19
 .include "../../meta-pkgs/mate/Makefile.common"
@@ -8,7 +8,7 @@ CATEGORIES=	net
 
 COMMENT=	MATE user-level file sharing
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-dnssd>=0.6:../../www/ap22-dnssd
+DEPENDS+=	ap24-dnssd>=0.6:../../www/ap22-dnssd
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}

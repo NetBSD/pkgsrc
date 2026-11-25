@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/02/08 04:08:58 taca Exp $
+# $NetBSD: Makefile,v 1.26 2026/11/25 16:14:14 wiz Exp $
 
 .include "../../www/phraseanet/Makefile.common"
 PKGNAME=	phraseanet-${VERS}
@@ -25,7 +25,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-memcache>=2.2.7<3:../../devel/php-memcache2
 DEPENDS+=	phraseanet-indexer-${VERS}{,nb*}:../../www/phraseanet-indexer
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	p5-Image-ExifTool-[0-9]*:../../graphics/p5-Image-ExifTool
 

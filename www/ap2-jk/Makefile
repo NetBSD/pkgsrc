@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/05/25 05:54:05 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/25 16:14:12 wiz Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
-PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
+PKGNAME=	ap24-jk-${JK_VERSION}
 JK_VERSION=	1.2.43
 CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-connectors/jk/}

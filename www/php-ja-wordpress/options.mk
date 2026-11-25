@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/07/26 07:21:50 taca Exp $
+# $NetBSD: options.mk,v 1.5 2026/11/25 16:14:14 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wordpress
 PKG_SUPPORTED_OPTIONS=		ap-php php-fpm
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		ap-php
 
 .if !empty(PKG_OPTIONS:Map-php)
 .  include "../../mk/apache.mk"
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
 .endif
 
 .if !empty(PKG_OPTIONS:Mphp-fpm)

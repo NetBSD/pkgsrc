@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/06 01:17:36 manu Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/25 16:14:10 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_RELEASE}
-PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
+PKGNAME=	ap24-${DISTNAME:S/mod_//}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maxmind/}
 GITHUB_PROJECT=	mod_maxminddb

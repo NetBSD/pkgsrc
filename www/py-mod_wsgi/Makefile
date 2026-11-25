@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2022/11/15 08:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2026/11/25 16:14:15 wiz Exp $
 
 DISTNAME=	mod_wsgi-4.9.4
-PKGNAME=	${PYPKGPREFIX}-${APACHE_PKG_PREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-ap24-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mod_wsgi/}
 

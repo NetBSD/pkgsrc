@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2022/08/26 10:27:14 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2026/11/25 16:14:10 wiz Exp $
 
 DISTNAME=		netdisco-1.3.3_with_mibs
 PKGNAME=		${DISTNAME:S/_with_mibs//}
@@ -26,7 +26,7 @@ DEPENDS+=		p5-Graph-[0-9]*:../../devel/p5-Graph
 DEPENDS+=		p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
 #DEPENDS+=		{perl>=5.9.3,p5-IO-Compress-[0-9]*}:../../devel/p5-IO-Compress	# Compress::Zlib
 DEPENDS+=		p5-Net-NBName-[0-9]*:../../net/p5-Net-NBName
-DEPENDS+=		p5-${APACHE_PKG_PREFIX}-libapreq2-[0-9]*:../../www/p5-libapreq2
+DEPENDS+=		p5-ap24-libapreq2-[0-9]*:../../www/p5-libapreq2
 DEPENDS+=		p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}

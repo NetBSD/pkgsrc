@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2026/10/09 10:48:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2026/11/25 16:14:11 wiz Exp $
 
-PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
+PKGNAME=		ap24-${PHP_PKG_PREFIX}-${PHP_VERSION}
 PKGREVISION=		13
 COMMENT=		Apache (${PKG_APACHE}) module for ${PHP_PKG_PREFIX}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/12/09 21:05:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/25 16:14:13 wiz Exp $
 
 DISTNAME=	mod_authnz_external-${DISTVERS}
-PKGNAME=	${APACHE_PKG_PREFIX}-authnz-external-${DISTVERS}
+PKGNAME=	ap24-authnz-external-${DISTVERS}
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/phokz/mod-auth-external/archive/
 
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/phokz/mod-auth-external/tree/master/mod_authnz_external
 COMMENT=	Apache module for external program authentication
 LICENSE=	apache-1.1
-
-PKG_APACHE_ACCEPTED=	apache24
 
 WRKSRC=		${WRKDIR}/mod-auth-external-${DISTNAME}
 APACHE_MODULE_NAME=	mod_authnz_external.${MODULE_EXT}

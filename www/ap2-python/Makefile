@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2023/08/28 09:47:46 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2026/11/25 16:14:12 wiz Exp $
 
 # Upstream tends to not have releases, so one must be cautious the
 # tags section of their site, or repology.  However, they did make a
 # release on request:
 #   https://github.com/grisha/mod_python/issues/126
 DISTNAME=	mod_python-3.5.0.1
-PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
+PKGNAME=	ap24-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grisha/}
 GITHUB_PROJECT=	mod_python

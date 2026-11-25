@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/11/04 22:09:51 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/25 16:14:12 wiz Exp $
 
 DISTNAME=		mod_mkdir-0.4
 EXTRACT_SUFX=		.tgz
-PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
+PKGNAME=		ap24-${DISTNAME:S/mod_//}
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.espci.fr/pub/mod_mkdir/
 
