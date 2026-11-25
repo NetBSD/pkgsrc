@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/10/22 07:16:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/25 12:11:46 adam Exp $
 
-DISTNAME=	click_option_group-0.5.9
+DISTNAME=	click_option_group-0.5.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-option-group/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/click-contrib/click-option-group
 COMMENT=	Option groups missing in Click
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 
 USE_LANGUAGES=	# none
