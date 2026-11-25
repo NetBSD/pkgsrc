@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.20 2026/10/17 08:59:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2026/11/25 10:53:15 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/sboms/tox.cdx.json
 ${PYSITELIB}/tox/__init__.py
 ${PYSITELIB}/tox/__init__.pyc
 ${PYSITELIB}/tox/__init__.pyo
@@ -89,6 +90,9 @@ ${PYSITELIB}/tox/config/of_type.pyo
 ${PYSITELIB}/tox/config/set_env.py
 ${PYSITELIB}/tox/config/set_env.pyc
 ${PYSITELIB}/tox/config/set_env.pyo
+${PYSITELIB}/tox/config/set_env_line.py
+${PYSITELIB}/tox/config/set_env_line.pyc
+${PYSITELIB}/tox/config/set_env_line.pyo
 ${PYSITELIB}/tox/config/sets.py
 ${PYSITELIB}/tox/config/sets.pyc
 ${PYSITELIB}/tox/config/sets.pyo
@@ -173,6 +177,9 @@ ${PYSITELIB}/tox/plugin/inline.pyo
 ${PYSITELIB}/tox/plugin/manager.py
 ${PYSITELIB}/tox/plugin/manager.pyc
 ${PYSITELIB}/tox/plugin/manager.pyo
+${PYSITELIB}/tox/plugin/marker.py
+${PYSITELIB}/tox/plugin/marker.pyc
+${PYSITELIB}/tox/plugin/marker.pyo
 ${PYSITELIB}/tox/plugin/spec.py
 ${PYSITELIB}/tox/plugin/spec.pyc
 ${PYSITELIB}/tox/plugin/spec.pyo

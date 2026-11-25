@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2026/10/17 08:59:15 adam Exp $
+# $NetBSD: Makefile,v 1.73 2026/11/25 10:53:15 adam Exp $
 
-DISTNAME=	tox-4.66.0
+DISTNAME=	tox-4.67.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -11,8 +11,10 @@ COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21:../../textproc/py-docutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=25.1:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.29:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0.1.2:../../devel/py-sbom
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=7.0.3:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.25:../../devel/py-filelock
@@ -20,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=26:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.9.4:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.6:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-project-api>=1.10:../../devel/py-project-api
-DEPENDS+=	${PYPKGPREFIX}-python-discovery>=1.4.4:../../lang/py-python-discovery
+DEPENDS+=	${PYPKGPREFIX}-python-discovery>=1.9:../../lang/py-python-discovery
 DEPENDS+=	${PYPKGPREFIX}-tomli_w>=1.2:../../textproc/py-tomli_w
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.1:../../devel/py-virtualenv
 
