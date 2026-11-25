@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.22 2026/10/24 09:05:56 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.23 2026/11/25 06:41:57 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	bstr-1.13.1
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
@@ -15,7 +15,7 @@ CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.30.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.47
 CARGO_CRATE_DEPENDS+=	serde_core-1.0.229
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.229
-CARGO_CRATE_DEPENDS+=	similar-3.2.0
+CARGO_CRATE_DEPENDS+=	similar-3.2.1
 CARGO_CRATE_DEPENDS+=	syn-3.0.9
 CARGO_CRATE_DEPENDS+=	target-lexicon-0.13.5
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.27
