@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8395 2026/11/25 13:51:12 kikadf Exp $
+$NetBSD: CHANGES-2026,v 1.8396 2026/11/25 14:00:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12427,3 +12427,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-uv to 0.13.10 [adam 2026-11-25]
 	Updated devel/py-uv-build to 0.13.10 [adam 2026-11-25]
 	Updated www/chromium to 158.0.8127.88 [kikadf 2026-11-25]
+	Updated textproc/py-humanize to 4.17.0 [adam 2026-11-25]
+	Updated security/py-oauthlib to 4.0.1 [adam 2026-11-25]
