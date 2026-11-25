@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8381 2026/11/25 07:30:11 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8382 2026/11/25 08:05:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12400,3 +12400,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-import-export to 4.4.6 [adam 2026-11-25]
 	Updated www/py-django-mptt to 0.22.0 [adam 2026-11-25]
 	Updated www/py-django-photologue to 3.21 [adam 2026-11-25]
+	Updated textproc/py-jsonpointer to 3.12 [adam 2026-11-25]
+	Updated textproc/py-jsonpatch to 1.48 [adam 2026-11-25]
