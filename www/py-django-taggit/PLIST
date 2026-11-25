@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/14 14:16:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2026/11/25 14:59:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -86,6 +86,9 @@ ${PYSITELIB}/taggit/migrations/0005_auto_20220424_2025.pyo
 ${PYSITELIB}/taggit/migrations/0006_rename_taggeditem_content_type_object_id_taggit_tagg_content_8fc721_idx.py
 ${PYSITELIB}/taggit/migrations/0006_rename_taggeditem_content_type_object_id_taggit_tagg_content_8fc721_idx.pyc
 ${PYSITELIB}/taggit/migrations/0006_rename_taggeditem_content_type_object_id_taggit_tagg_content_8fc721_idx.pyo
+${PYSITELIB}/taggit/migrations/0007_alter_taggeditem_options.py
+${PYSITELIB}/taggit/migrations/0007_alter_taggeditem_options.pyc
+${PYSITELIB}/taggit/migrations/0007_alter_taggeditem_options.pyo
 ${PYSITELIB}/taggit/migrations/__init__.py
 ${PYSITELIB}/taggit/migrations/__init__.pyc
 ${PYSITELIB}/taggit/migrations/__init__.pyo

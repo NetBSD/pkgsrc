@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/04/14 14:16:21 adam Exp $
+# $NetBSD: Makefile,v 1.13 2026/11/25 14:59:34 adam Exp $
 
-DISTNAME=	django_taggit-6.1.0
+DISTNAME=	django_taggit-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-taggit/}
 
@@ -12,7 +11,7 @@ COMMENT=	Generic tagging application for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-django>=4.1:../../www/py-django4
+DEPENDS+=	${PYPKGPREFIX}-django>=5.2:../../www/py-django4
 
 USE_LANGUAGES=	# none
 
