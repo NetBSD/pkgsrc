@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2026/11/25 10:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.74 2026/11/25 14:32:57 wiz Exp $
 
 DISTNAME=	filelock-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,9 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=21.2:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
 
-# as of 4.3.0
-# https://github.com/tox-dev/filelock/issues/1124
-# 3 failed, 3218 passed, 489 skipped
+# as of 4.3.1, all tests pass
+# 3220 passed, 490 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
