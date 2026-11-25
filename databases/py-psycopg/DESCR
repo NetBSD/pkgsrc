@@ -1,0 +1,5 @@
+Psycopg 3 is a modern implementation of a PostgreSQL adapter for Python.
+
+A complete implementation of the Python DB API 2.0 specification, built on top
+of the official PostgreSQL client library, with many extensions giving access
+to the full power of modern Python and PostgreSQL.

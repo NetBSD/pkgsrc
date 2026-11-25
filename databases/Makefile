@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.762 2026/11/24 19:22:50 adam Exp $
+# $NetBSD: Makefile,v 1.763 2026/11/25 10:50:13 adam Exp $
 
 COMMENT=	Databases
 
@@ -401,6 +401,7 @@ SUBDIR+=	py-orderedmultidict
 SUBDIR+=	py-peewee
 SUBDIR+=	py-pickleshare
 SUBDIR+=	py-postgresql
+SUBDIR+=	py-psycopg
 SUBDIR+=	py-psycopg2
 SUBDIR+=	py-pymysql
 SUBDIR+=	py-pypika
