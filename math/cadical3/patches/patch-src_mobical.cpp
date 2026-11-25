@@ -1,9 +1,9 @@
-$NetBSD: patch-src_mobical.cpp,v 1.1 2026/11/22 12:10:51 drixter Exp $
+$NetBSD: patch-src_mobical.cpp,v 1.2 2026/11/25 20:50:12 alnsn Exp $
 
 Use POSIX feature detection instead of APPLE checks. 
 
---- /usr/work/amd64/wip/cadical3/work/cadical-rel-3.1.0/src/mobical.cpp.orig	2026-11-22 11:51:03.375061575 +0000
-+++ /usr/work/amd64/wip/cadical3/work/cadical-rel-3.1.0/src/mobical.cpp
+--- src/mobical.cpp.orig	2026-11-22 11:51:03.375061575 +0000
++++ src/mobical.cpp
 @@ -269,7 +269,7 @@ void initialize_allocators () {
    libc_realloc = reinterpret_cast<realloc_t> (dlsym (RTLD_NEXT, "realloc"));
    libc_free = reinterpret_cast<free_t> (dlsym (RTLD_NEXT, "free"));
