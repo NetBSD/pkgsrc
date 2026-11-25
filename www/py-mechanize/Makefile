@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2026/10/16 19:44:28 adam Exp $
+# $NetBSD: Makefile,v 1.41 2026/11/25 08:10:58 adam Exp $
 
-DISTNAME=	mechanize-0.4.10
+DISTNAME=	mechanize-0.4.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mechanize/}
 
