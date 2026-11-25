@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2026/10/17 08:57:23 adam Exp $
+# $NetBSD: Makefile,v 1.117 2026/11/25 09:11:08 adam Exp $
 
-DISTNAME=	virtualenv-21.14.8
+DISTNAME=	virtualenv-21.15.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -10,8 +10,10 @@ HOMEPAGE=	https://virtualenv.pypa.io/
 COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=25.1:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.28:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0.1.2:../../devel/py-sbom
 DEPENDS+=	${PYPKGPREFIX}-distlib>=0.4.3:../../devel/py-distlib
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.24.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-packaging>=26.3:../../devel/py-packaging

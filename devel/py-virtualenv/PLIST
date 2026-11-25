@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2026/10/12 09:49:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.85 2026/11/25 09:11:08 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -26,6 +26,7 @@ ${PYSITELIB}/virtualenv/activation/bash/activate.sh
 ${PYSITELIB}/virtualenv/activation/batch/__init__.py
 ${PYSITELIB}/virtualenv/activation/batch/__init__.pyc
 ${PYSITELIB}/virtualenv/activation/batch/__init__.pyo
+${PYSITELIB}/virtualenv/activation/batch/_assign.bat
 ${PYSITELIB}/virtualenv/activation/batch/activate.bat
 ${PYSITELIB}/virtualenv/activation/batch/deactivate.bat
 ${PYSITELIB}/virtualenv/activation/batch/pydoc.bat
@@ -65,6 +66,9 @@ ${PYSITELIB}/virtualenv/app_data/__init__.pyo
 ${PYSITELIB}/virtualenv/app_data/base.py
 ${PYSITELIB}/virtualenv/app_data/base.pyc
 ${PYSITELIB}/virtualenv/app_data/base.pyo
+${PYSITELIB}/virtualenv/app_data/cache_migration.py
+${PYSITELIB}/virtualenv/app_data/cache_migration.pyc
+${PYSITELIB}/virtualenv/app_data/cache_migration.pyo
 ${PYSITELIB}/virtualenv/app_data/na.py
 ${PYSITELIB}/virtualenv/app_data/na.pyc
 ${PYSITELIB}/virtualenv/app_data/na.pyo
@@ -113,6 +117,9 @@ ${PYSITELIB}/virtualenv/create/pyenv_cfg.pyo
 ${PYSITELIB}/virtualenv/create/via_global_ref/__init__.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/__init__.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/__init__.pyo
+${PYSITELIB}/virtualenv/create/via_global_ref/_venv_scripts.py
+${PYSITELIB}/virtualenv/create/via_global_ref/_venv_scripts.pyc
+${PYSITELIB}/virtualenv/create/via_global_ref/_venv_scripts.pyo
 ${PYSITELIB}/virtualenv/create/via_global_ref/_virtualenv.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/_virtualenv.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/_virtualenv.pyo
@@ -164,6 +171,9 @@ ${PYSITELIB}/virtualenv/create/via_global_ref/store.pyo
 ${PYSITELIB}/virtualenv/create/via_global_ref/venv.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/venv.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/venv.pyo
+${PYSITELIB}/virtualenv/create/via_global_ref/venv_copied.py
+${PYSITELIB}/virtualenv/create/via_global_ref/venv_copied.pyc
+${PYSITELIB}/virtualenv/create/via_global_ref/venv_copied.pyo
 ${PYSITELIB}/virtualenv/discovery/__init__.py
 ${PYSITELIB}/virtualenv/discovery/__init__.pyc
 ${PYSITELIB}/virtualenv/discovery/__init__.pyo
@@ -192,6 +202,12 @@ ${PYSITELIB}/virtualenv/report.pyo
 ${PYSITELIB}/virtualenv/run/__init__.py
 ${PYSITELIB}/virtualenv/run/__init__.pyc
 ${PYSITELIB}/virtualenv/run/__init__.pyo
+${PYSITELIB}/virtualenv/run/cli.py
+${PYSITELIB}/virtualenv/run/cli.pyc
+${PYSITELIB}/virtualenv/run/cli.pyo
+${PYSITELIB}/virtualenv/run/parser.py
+${PYSITELIB}/virtualenv/run/parser.pyc
+${PYSITELIB}/virtualenv/run/parser.pyo
 ${PYSITELIB}/virtualenv/run/plugin/__init__.py
 ${PYSITELIB}/virtualenv/run/plugin/__init__.pyc
 ${PYSITELIB}/virtualenv/run/plugin/__init__.pyo
@@ -231,6 +247,9 @@ ${PYSITELIB}/virtualenv/seed/embed/via_app_data/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/__init__.py
 ${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/__init__.pyo
+${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/_safe_extract_zip.py
+${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/_safe_extract_zip.pyc
+${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/_safe_extract_zip.pyo
 ${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/base.py
 ${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/base.pyc
 ${PYSITELIB}/virtualenv/seed/embed/via_app_data/pip_install/base.pyo
@@ -259,9 +278,12 @@ ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.py
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-26.0.1-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-26.2.1-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-26.3-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-82.0.1-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-84.0.0-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-84.2.1-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/index.py
+${PYSITELIB}/virtualenv/seed/wheels/index.pyc
+${PYSITELIB}/virtualenv/seed/wheels/index.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.py
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyo
@@ -274,6 +296,9 @@ ${PYSITELIB}/virtualenv/util/__init__.pyo
 ${PYSITELIB}/virtualenv/util/error.py
 ${PYSITELIB}/virtualenv/util/error.pyc
 ${PYSITELIB}/virtualenv/util/error.pyo
+${PYSITELIB}/virtualenv/util/home.py
+${PYSITELIB}/virtualenv/util/home.pyc
+${PYSITELIB}/virtualenv/util/home.pyo
 ${PYSITELIB}/virtualenv/util/lock.py
 ${PYSITELIB}/virtualenv/util/lock.pyc
 ${PYSITELIB}/virtualenv/util/lock.pyo
@@ -289,6 +314,9 @@ ${PYSITELIB}/virtualenv/util/path/_sync.pyo
 ${PYSITELIB}/virtualenv/util/path/_win.py
 ${PYSITELIB}/virtualenv/util/path/_win.pyc
 ${PYSITELIB}/virtualenv/util/path/_win.pyo
+${PYSITELIB}/virtualenv/util/path/windows.py
+${PYSITELIB}/virtualenv/util/path/windows.pyc
+${PYSITELIB}/virtualenv/util/path/windows.pyo
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.py
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.pyc
 ${PYSITELIB}/virtualenv/util/subprocess/__init__.pyo
