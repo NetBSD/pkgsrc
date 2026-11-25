@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/10/30 05:50:31 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/25 12:16:13 adam Exp $
 
-DISTNAME=	url_normalize-3.1.0
+DISTNAME=	url_normalize-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/url_normalize/}

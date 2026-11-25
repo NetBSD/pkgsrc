@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2026/10/30 05:50:31 adam Exp $
+$NetBSD: distinfo,v 1.5 2026/11/25 12:16:13 adam Exp $
 
-BLAKE2s (url_normalize-3.1.0.tar.gz) = 389493aaa25c72b82c231d2c4f4f8df76b94c81c2289575440b7593307c8906c
-SHA512 (url_normalize-3.1.0.tar.gz) = 505a4ee76a394fc315d56b948a1597b38921b0af1d8fbb13f521d9851599f3bc3238a39c17c6043780561f64966bfa21aee23eed22d0ba023ec280bd39f9eedc
-Size (url_normalize-3.1.0.tar.gz) = 30464 bytes
+BLAKE2s (url_normalize-4.0.0.tar.gz) = 86d045b7c7cd9f0d049771f5bc266175e22ca189c94caa3a70ee94379e4a1d55
+SHA512 (url_normalize-4.0.0.tar.gz) = 5fb55595854da7b1d64f5f0f3cb900ca19b310c4359dc9a2fc736c857efb096df2adf70bd8f8933b40e732d0e0d69867deec7cb07ee622785864fb733ce2d982
+Size (url_normalize-4.0.0.tar.gz) = 90053 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/04/28 09:04:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/25 12:16:13 adam Exp $
 bin/url-normalize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -9,12 +9,21 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/url_normalize/__init__.py
 ${PYSITELIB}/url_normalize/__init__.pyc
 ${PYSITELIB}/url_normalize/__init__.pyo
+${PYSITELIB}/url_normalize/_encoding.py
+${PYSITELIB}/url_normalize/_encoding.pyc
+${PYSITELIB}/url_normalize/_encoding.pyo
+${PYSITELIB}/url_normalize/_schemes.py
+${PYSITELIB}/url_normalize/_schemes.pyc
+${PYSITELIB}/url_normalize/_schemes.pyo
+${PYSITELIB}/url_normalize/_tracking.py
+${PYSITELIB}/url_normalize/_tracking.pyc
+${PYSITELIB}/url_normalize/_tracking.pyo
+${PYSITELIB}/url_normalize/_url.py
+${PYSITELIB}/url_normalize/_url.pyc
+${PYSITELIB}/url_normalize/_url.pyo
 ${PYSITELIB}/url_normalize/cli.py
 ${PYSITELIB}/url_normalize/cli.pyc
 ${PYSITELIB}/url_normalize/cli.pyo
-${PYSITELIB}/url_normalize/generic_url_cleanup.py
-${PYSITELIB}/url_normalize/generic_url_cleanup.pyc
-${PYSITELIB}/url_normalize/generic_url_cleanup.pyo
 ${PYSITELIB}/url_normalize/normalize_fragment.py
 ${PYSITELIB}/url_normalize/normalize_fragment.pyc
 ${PYSITELIB}/url_normalize/normalize_fragment.pyo
@@ -39,6 +48,9 @@ ${PYSITELIB}/url_normalize/normalize_userinfo.pyo
 ${PYSITELIB}/url_normalize/param_allowlist.py
 ${PYSITELIB}/url_normalize/param_allowlist.pyc
 ${PYSITELIB}/url_normalize/param_allowlist.pyo
+${PYSITELIB}/url_normalize/param_filter.py
+${PYSITELIB}/url_normalize/param_filter.pyc
+${PYSITELIB}/url_normalize/param_filter.pyo
 ${PYSITELIB}/url_normalize/provide_url_domain.py
 ${PYSITELIB}/url_normalize/provide_url_domain.pyc
 ${PYSITELIB}/url_normalize/provide_url_domain.pyo
@@ -46,9 +58,6 @@ ${PYSITELIB}/url_normalize/provide_url_scheme.py
 ${PYSITELIB}/url_normalize/provide_url_scheme.pyc
 ${PYSITELIB}/url_normalize/provide_url_scheme.pyo
 ${PYSITELIB}/url_normalize/py.typed
-${PYSITELIB}/url_normalize/tools.py
-${PYSITELIB}/url_normalize/tools.pyc
-${PYSITELIB}/url_normalize/tools.pyo
 ${PYSITELIB}/url_normalize/url_humanize.py
 ${PYSITELIB}/url_normalize/url_humanize.pyc
 ${PYSITELIB}/url_normalize/url_humanize.pyo
