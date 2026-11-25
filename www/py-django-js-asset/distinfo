@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2026/10/24 10:06:57 adam Exp $
+$NetBSD: distinfo,v 1.14 2026/11/25 15:00:42 adam Exp $
 
-BLAKE2s (django_js_asset-4.2.0.tar.gz) = 42cfe7885605cb281769b00130de24c2bebfe5577097a860d9b3080b24b75154
-SHA512 (django_js_asset-4.2.0.tar.gz) = df97da7a074c58eb409b4b52b901b5f72f0d6709c0f34f23113ba3f764685be6eac47d11bcb992560abcfddd76598627967761335914d7e9f1a294455e40d87f
-Size (django_js_asset-4.2.0.tar.gz) = 39532 bytes
+BLAKE2s (django_js_asset-5.0.0.tar.gz) = cb38f46a3bbe79e85dab3d82771e806297ba327b24cf7ffb91a9edc68cb8894e
+SHA512 (django_js_asset-5.0.0.tar.gz) = dbcb8af30a1fbc1fbdb270da06ad0e62890dc485c13499e9d77ea4cf7602791d55ae5aaad599f32d830729789c4b96a6187be6976b540857e59f2afaaa475bcd
+Size (django_js_asset-5.0.0.tar.gz) = 39584 bytes
