@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2026/11/11 11:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2026/11/25 16:46:55 wiz Exp $
 
 DISTNAME=	shibboleth-sp-3.5.2
-PKGREVISION=	
 PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://shibboleth.net/downloads/service-provider/${PKGVERSION_NOREV}/
@@ -31,7 +30,7 @@ RCD_SCRIPTS=	shibd
 
 APACHE_MODULE=	YES
 
-PLIST_SUBST+=	PKG_APACHE_NUM=${PKG_APACHE:S/apache//}
+PLIST_SUBST+=	PKG_APACHE_NUM=24
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	configs/Makefile.in

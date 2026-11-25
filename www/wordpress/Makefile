@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2026/11/19 13:54:10 taca Exp $
+# $NetBSD: Makefile,v 1.128 2026/11/25 16:46:55 wiz Exp $
 #
 # when updating this, please run 'PKG_DEVELOPER=1 make upload-distfiles'
 
@@ -53,7 +53,7 @@ SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	../wordpress.conf
 SUBST_VARS.conf=	WPHOME
-.if !empty(PKG_OPTIONS:Map-php) && ${PKG_APACHE} == "apache24"
+.if !empty(PKG_OPTIONS:Map-php)
 SUBST_SED.conf+=	-e "/Order allow,deny/d"
 SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
 .endif

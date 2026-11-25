@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2026/08/07 01:41:55 taca Exp $
+# $NetBSD: Makefile,v 1.113 2026/11/25 16:46:55 wiz Exp $
 
 DISTNAME=	moodle-5.2.1
 CATEGORIES=	www
@@ -62,10 +62,8 @@ SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	../moodle.conf
 SUBST_VARS.conf=	MOODLEDIR
 SUBST_VARS.conf+=	MOODLEDATADIR
-.if ${PKG_APACHE} == "apache24"
 SUBST_SED.conf+=	-e "/Order allow,deny/d"
 SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
-.endif
 
 WRKSRC=			${WRKDIR}/moodle
 
