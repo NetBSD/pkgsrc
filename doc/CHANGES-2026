@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8405 2026/11/25 15:01:21 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8406 2026/11/25 15:57:04 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12444,3 +12444,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-python-multipart to 0.0.34 [adam 2026-11-25]
 	Updated www/py-django-taggit to 7.0.0 [adam 2026-11-25]
 	Updated www/py-django-js-asset to 5.0.0 [adam 2026-11-25]
+	Updated graphics/photoc to 0.8.0 [ktnb 2026-11-25]
