@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2026/11/25 09:16:09 adam Exp $
+# $NetBSD: Makefile,v 1.16 2026/11/25 10:31:19 adam Exp $
 
 DISTNAME=	python_discovery-1.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -19,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.6.1:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.3.4:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14.1:../../devel/py-test-mock
-#TEST_DEPENDS+=	${PYPKGPREFIX}-vermin>=1.8:../../
+TEST_DEPENDS+=	${PYPKGPREFIX}-vermin>=1.8:../../misc/py-vermin
 
 USE_LANGUAGES=	# none
 
