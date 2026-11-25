@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2026/10/16 19:43:51 adam Exp $
+# $NetBSD: Makefile,v 1.39 2026/11/25 08:50:02 adam Exp $
 
-DISTNAME=	poetry-2.4.3
+DISTNAME=	poetry-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=24.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pbs-installer>=2025.6.10:../../misc/py-pbs-installer
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.12:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.0.0:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.4.0:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.5.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks>=1.0.0:../../devel/py-pyproject_hooks
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.26:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=1.0.0:../../devel/py-requests-toolbelt
