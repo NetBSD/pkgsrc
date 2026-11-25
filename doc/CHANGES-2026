@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8400 2026/11/25 14:17:51 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8401 2026/11/25 14:21:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12436,3 +12436,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-drf-nested-routers to 0.96.0 [adam 2026-11-25]
 	Updated net/libpcap to 1.11.1 [adam 2026-11-25]
 	Updated net/py-python-socks to 3.2.2 [adam 2026-11-25]
+	Updated misc/py-narwhals to 2.29.0 [adam 2026-11-25]
+	Updated devel/py-faker to 40.63.0 [adam 2026-11-25]
