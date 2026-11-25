@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/10/27 07:01:09 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/25 11:56:35 adam Exp $
 
-DISTNAME=	zope_schema-8.1
+DISTNAME=	zope_schema-8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.schema/}
@@ -11,11 +11,11 @@ COMMENT=	Zope Interface extension for defining data schemas
 LICENSE=	zpl-2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
+DEPENDS+=	${PYPKGPREFIX}-zope.event>=0:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.0.0:../../devel/py-zope.interface
-TEST_DEPENDS+=	${PYPKGPREFIX}-zope.i18nmessageid-[0-9]*:../../devel/py-zope.i18nmessageid
-TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner-[0-9]*:../../devel/py-zope.testrunner
-TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.i18nmessageid>=0:../../devel/py-zope.i18nmessageid
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner>=0:../../devel/py-zope.testrunner
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing>=0:../../devel/py-zope.testing
 
 USE_LANGUAGES=	# none
 
