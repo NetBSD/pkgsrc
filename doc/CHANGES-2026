@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8406 2026/11/25 15:57:04 ktnb Exp $
+$NetBSD: CHANGES-2026,v 1.8407 2026/11/25 16:57:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12445,3 +12445,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/py-django-taggit to 7.0.0 [adam 2026-11-25]
 	Updated www/py-django-js-asset to 5.0.0 [adam 2026-11-25]
 	Updated graphics/photoc to 0.8.0 [ktnb 2026-11-25]
+	mk: add MESA_DEFAULT for selecting the Mesa package [wiz 2026-11-25]
