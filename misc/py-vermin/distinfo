@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/25 10:29:44 adam Exp $
+
+BLAKE2s (vermin-1.9.2.tar.gz) = c758f06921a8cac900771d6677739fceedbf12a6dca6175db935d3952dfc0801
+SHA512 (vermin-1.9.2.tar.gz) = 94aec0742b7333a1366216f9529c1a408ed61dd76a7d8de41983f98db7c790d5c3aa03444939aaa2c31c985877f3f17fc8d3965a812d30bd83d4a77ac4baef7d
+Size (vermin-1.9.2.tar.gz) = 223209 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.702 2026/11/24 17:19:26 adam Exp $
+# $NetBSD: Makefile,v 1.703 2026/11/25 10:29:43 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -324,6 +324,7 @@ SUBDIR+=	py-tibs
 SUBDIR+=	py-tmuxp
 SUBDIR+=	py-tqdm
 SUBDIR+=	py-trove-classifiers
+SUBDIR+=	py-vermin
 SUBDIR+=	py-watchfiles
 SUBDIR+=	qbrew
 SUBDIR+=	qt6-qtsensors
