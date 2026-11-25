@@ -1,4 +1,7 @@
-$NetBSD: patch-meson.build,v 1.1 2026/11/23 10:29:52 adam Exp $
+$NetBSD: patch-meson.build,v 1.2 2026/11/25 13:48:28 wiz Exp $
+
+gcc supports the flag, but the rest of the toolchain on NetBSD doesn't;
+disable check.
 
 --- meson.build.orig	2026-09-09 00:28:54.907977305 +0000
 +++ meson.build
