@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/25 10:32:44 adam Exp $
+
+BLAKE2s (django_unfold-0.110.1.tar.gz) = b0f8a3bc3a6e9b0eaf8cbeedb35cd51ffdeec315675fc82ceed26ad0d72ee556
+SHA512 (django_unfold-0.110.1.tar.gz) = 7fc62d0a68063bb58e6b04e890ef6c6273e483a397497a9cfb331610a905c9a4afa845ebfae9a19e342eaffa374024975e74eb5806fa4f66108d23911ff3f375
+Size (django_unfold-0.110.1.tar.gz) = 1172856 bytes
