@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.11 2026/11/23 15:24:32 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2026Q3,v 1.1.2.12 2026/11/25 14:48:12 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2026Q3 branch:
 
@@ -336,3 +336,7 @@ www/ruby-rack2: Security fix
 
 Pullup ticket #7420 - requested by taca
 mail/roundcube: Security fix
+
+Pullup ticket #7423 - requested by gutteridge
+www/firefox153: Security fix
+www/firefox153-l10n: Security fix
