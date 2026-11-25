@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/09/02 20:21:17 adam Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/25 06:39:42 adam Exp $
 
-DISTNAME=	durationpy-0.11
+DISTNAME=	durationpy-0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/durationpy/}
