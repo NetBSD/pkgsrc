@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8389 2026/11/25 10:33:04 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8390 2026/11/25 10:53:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12414,3 +12414,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated lang/py-python-discovery to 1.9.7 [adam 2026-11-25]
 	Added misc/py-vermin version 1.9.2 [adam 2026-11-25]
 	Added www/py-django-unfold version 0.110.1 [adam 2026-11-25]
+	Added databases/py-psycopg version 3.3.9 [adam 2026-11-25]
+	Updated devel/py-filelock to 4.3.1 [adam 2026-11-25]
+	Updated devel/py-tox to 4.67.16 [adam 2026-11-25]
