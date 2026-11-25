@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2026/04/06 10:47:10 wiz Exp $
+# $NetBSD: Makefile,v 1.221 2026/11/25 14:48:25 wiz Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++03
 USE_CXX_FEATURES+=	c++14
 
 USE_FEATURES+=	strnlen
+
+CONFLICTS+=	mesa-[0-9]*
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 CXXFLAGS.SunOS+=	-Drestrict=__restrict__

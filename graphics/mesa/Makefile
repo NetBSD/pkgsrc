@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2026/11/25 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2026/11/25 14:48:25 wiz Exp $
 
 DISTNAME=	mesa-26.2.7
 CATEGORIES=	graphics
@@ -25,6 +25,8 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 GALLIUM_DRIVERS=	softpipe
 VULKAN_DRIVERS=		#
 MESA_PLATFORMS=		#
+
+CONFLICTS+=	MesaLib-[0-9]*
 
 .include "../../mk/compiler.mk"
 .include "features.mk"
