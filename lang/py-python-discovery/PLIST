@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2026/09/02 14:14:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/25 09:16:09 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/sboms/python-discovery.cdx.json
 ${PYSITELIB}/python_discovery/__init__.py
 ${PYSITELIB}/python_discovery/__init__.pyc
 ${PYSITELIB}/python_discovery/__init__.pyo
+${PYSITELIB}/python_discovery/_about.py
+${PYSITELIB}/python_discovery/_about.pyc
+${PYSITELIB}/python_discovery/_about.pyo
 ${PYSITELIB}/python_discovery/_cache.py
 ${PYSITELIB}/python_discovery/_cache.pyc
 ${PYSITELIB}/python_discovery/_cache.pyo
@@ -33,6 +37,9 @@ ${PYSITELIB}/python_discovery/_specifier.pyo
 ${PYSITELIB}/python_discovery/_windows/__init__.py
 ${PYSITELIB}/python_discovery/_windows/__init__.pyc
 ${PYSITELIB}/python_discovery/_windows/__init__.pyo
+${PYSITELIB}/python_discovery/_windows/_cancel_io.py
+${PYSITELIB}/python_discovery/_windows/_cancel_io.pyc
+${PYSITELIB}/python_discovery/_windows/_cancel_io.pyo
 ${PYSITELIB}/python_discovery/_windows/_pep514.py
 ${PYSITELIB}/python_discovery/_windows/_pep514.pyc
 ${PYSITELIB}/python_discovery/_windows/_pep514.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2026/10/29 13:47:10 adam Exp $
+# $NetBSD: Makefile,v 1.15 2026/11/25 09:16:09 adam Exp $
 
-DISTNAME=	python_discovery-1.6.7
+DISTNAME=	python_discovery-1.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-discovery/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=25.1:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.28:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sbom>=0.1.2:../../devel/py-sbom
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.16.1:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.6.1:../../devel/py-coverage
