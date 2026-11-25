@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8380 2026/11/25 07:23:58 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8381 2026/11/25 07:30:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12398,3 +12398,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-urwid to 5.2.0 [adam 2026-11-25]
 	Updated www/py-django-admin-sortable2 to 2.4 [adam 2026-11-25]
 	Updated www/py-django-import-export to 4.4.6 [adam 2026-11-25]
+	Updated www/py-django-mptt to 0.22.0 [adam 2026-11-25]
+	Updated www/py-django-photologue to 3.21 [adam 2026-11-25]
