@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2026/11/23 10:29:51 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/25 13:46:46 wiz Exp $
 
 DISTNAME=	mesa-26.2.7
 CATEGORIES=	graphics
@@ -21,7 +21,7 @@ CXXFLAGS.SunOS+=	-Drestrict=__restrict__
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # Some of these get appended in options.mk.
-DRI_DRIVERS=		#
+#DRI_DRIVERS=		#
 GALLIUM_DRIVERS=	softpipe
 VULKAN_DRIVERS=		#
 MESA_PLATFORMS=		#
@@ -34,7 +34,7 @@ PLIST_SUBST+=	GLVER="1.2.0"
 PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
 
 # classic DRI drivers
-PLIST_VARS+=	i830 i915 i965 r100 r200 nouveau_dri
+#PLIST_VARS+=	i830 i915 i965 r100 r200 nouveau_dri
 
 # Gallium drivers
 PLIST_VARS+=	r300 svga nouveau
@@ -62,20 +62,20 @@ PLIST.arm=		yes
 .  endif
 .  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 GALLIUM_DRIVERS+=	svga
-DRI_DRIVERS+=		i915 i965
+#DRI_DRIVERS+=		i915 i965
 PLIST.svga=		yes
-PLIST.i830=		yes
-PLIST.i915=		yes
-PLIST.i965=		yes
+#PLIST.i830=		yes
+#PLIST.i915=		yes
+#PLIST.i965=		yes
 .  endif
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
 .  if ${OPSYS} != "FreeBSD"
 .    if !${MACHINE_PLATFORM:MNetBSD-*-powerpc}
 # nouveau not available on this platform
 PLIST.nouveau=		yes
-PLIST.nouveau_dri=	yes
+#PLIST.nouveau_dri=	yes
 GALLIUM_DRIVERS+=	nouveau
-DRI_DRIVERS+=		nouveau
+#DRI_DRIVERS+=		nouveau
 .    endif
 .  endif
 .  if ${MACHINE_PLATFORM:MLinux-*-x86_64}
@@ -87,10 +87,10 @@ DRI_DRIVERS+=		nouveau
 # theoretically cross platform PCI drivers
 .  if !${MACHINE_PLATFORM:MNetBSD-*-*arm*} && \
       !${MACHINE_PLATFORM:MNetBSD-*-mipsel}
-DRI_DRIVERS+=		r100 r200
+#DRI_DRIVERS+=		r100 r200
 GALLIUM_DRIVERS+=	r300
-PLIST.r100=		yes
-PLIST.r200=		yes
+#PLIST.r100=		yes
+#PLIST.r200=		yes
 PLIST.r300=		yes
 .  endif
 .  include "../../multimedia/libva/available.mk"

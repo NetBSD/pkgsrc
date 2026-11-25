@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2026/11/23 10:29:52 adam Exp $
+# $NetBSD: options.mk,v 1.2 2026/11/25 13:46:46 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mesa
 
@@ -74,7 +74,7 @@ MESON_ARGS+=		-Dllvm=enabled
 .  include "../../lang/llvm/buildlink3.mk"
 .  include "../../parallel/spirv-tools/buildlink3.mk"
 
-GALLIUM_DRIVERS+=	llvmpipe
+GALLIUM_DRIVERS+=		llvmpipe
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 # This is the latest libdrm requirement for amdgpu.
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.107
