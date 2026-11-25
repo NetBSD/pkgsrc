@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2026/06/29 11:28:41 adam Exp $
+$NetBSD: distinfo,v 1.17 2026/11/25 12:06:45 adam Exp $
 
-BLAKE2s (wand-0.7.2.tar.gz) = 90b67789dd79222b95e3d9025bfefe1644d968008893f8545203df6049a16e0e
-SHA512 (wand-0.7.2.tar.gz) = d7d8e226eb83f8737464fd45dc5924c40a3fc9a15c0a9a3c42394cf5d8cddcea1b747ca9b226786829fb4774fc6dd4f33f0ac04d05a1109cc353c87b35d8d8a6
-Size (wand-0.7.2.tar.gz) = 11889993 bytes
+BLAKE2s (wand-0.7.3.tar.gz) = 9d23e38f4789ed7b335934ec84b0546ffd1aba89188a6ca6184e42934ef87f90
+SHA512 (wand-0.7.3.tar.gz) = 5dc66ec14220136f8f77a2daa0cdbb102dc72303536ff6d76908dd3ca856bf33bcd8c4cd30bfdc11c6a1bee1b6ec1f396d28d4f067d8780cf86ee93953e2e579
+Size (wand-0.7.3.tar.gz) = 11893511 bytes
