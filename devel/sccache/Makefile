@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2026/11/23 08:35:54 adam Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/25 06:28:29 adam Exp $
 
-DISTNAME=	sccache-0.20.0
+DISTNAME=	sccache-0.20.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

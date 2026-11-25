@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2026/11/23 08:35:54 adam Exp $
+$NetBSD: distinfo,v 1.12 2026/11/25 06:28:29 adam Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -408,9 +408,6 @@ Size (ghac-0.3.0.crate) = 10510 bytes
 BLAKE2s (glob-0.3.4.crate) = 6d47a2c227681ee3348f4b24a340fc701aa9236398d806e4bb7be896435f49dc
 SHA512 (glob-0.3.4.crate) = aa836d52b772c6bbd2c2749995720aa50b3e8360d9c89c7f5ca29dafb21543647a4b21dec4d05a26611255073bd7fd560549a9b42f55e6b8cf562049254d2184
 Size (glob-0.3.4.crate) = 23511 bytes
-BLAKE2s (gloo-timers-0.3.0.crate) = 774b6f0f3ad61513c5fe4f43a65ee76f37806fb923e98558cbc2c290ca11aab4
-SHA512 (gloo-timers-0.3.0.crate) = 35b87a0fcdca230157c05cbe0c781c60128869c49c32d6aea90653e22dea9b996be1678181d999059dc300bbac4e8c046c51418b1c2edb1638a118742db4b2b1
-Size (gloo-timers-0.3.0.crate) = 5530 bytes
 BLAKE2s (gzp-2.0.4.crate) = 9ab4cddc4ae20f5ca445c26eb57b818a4357086efad9c35d539a0a8a27753ce7
 SHA512 (gzp-2.0.4.crate) = 9d1bff66da4d7c28938494d502bf123748c37fa127ed64f7994d4aeec8961d026176b61d4bd8691943086befa82c9813f73f550563718e0f2ff2596e32ce0fef
 Size (gzp-2.0.4.crate) = 2057094 bytes
@@ -696,9 +693,6 @@ Size (opendal-http-transport-reqwest-0.58.2.crate) = 25403 bytes
 BLAKE2s (opendal-layer-logging-0.58.2.crate) = 3b5059d940e9f49b270a39619cd7a717af59ed6412029ad2aa06605dcddd7e9a
 SHA512 (opendal-layer-logging-0.58.2.crate) = 57268e7e1fdf2043d11cf5d9f9c19fe9dab12bfb81161d64b3ca3acdb95c4b2d2cab20db8e0d6e7e10e143a855e90f67f8ee83ae9fd5c4ae50b6a45801e98180
 Size (opendal-layer-logging-0.58.2.crate) = 18022 bytes
-BLAKE2s (opendal-layer-retry-0.58.2.crate) = 8d814f346afd4950fd95d4f81c7cdc54cb5fd1a7eb99581a1e1ec05a74f79eca
-SHA512 (opendal-layer-retry-0.58.2.crate) = ceb2381db45b8544d5edf2871ea0d1d7384c180bdcad9e0b02aa6db0ad37ac0e8509dbbd970560730394fb1cc54f52dc56028825250b4b3d3598d241bf630e90
-Size (opendal-layer-retry-0.58.2.crate) = 21727 bytes
 BLAKE2s (opendal-layer-timeout-0.58.1.crate) = 5781d2b419afd3ccdbbdea753a8f5f3feb1a8737444e7359377c7972465501bd
 SHA512 (opendal-layer-timeout-0.58.1.crate) = eeb98c4be7418d775ae5eede5cfb62c938a39607637f995c82f04f4ddfc1e5ebc8814f1e7d9f62d0a731a467f601bb0c45c951f400cd43ab9f5d24d572972c13
 Size (opendal-layer-timeout-0.58.1.crate) = 17957 bytes
@@ -987,9 +981,9 @@ Size (salsa20-0.10.2.crate) = 12780 bytes
 BLAKE2s (same-file-1.0.6.crate) = 1a9b3bb2a767c4e3a7537b2fd8daaa2afc113e6bdaa27a25d2eefff59e7600d6
 SHA512 (same-file-1.0.6.crate) = 3ba35309742c8db63210d9ea78bff4ecd80471d69e6238eb96c7bf0673814f221e2d838fe6311bfc5a0e71b4a7ccba33e07859c0b9cff2171969ff08a4214a7c
 Size (same-file-1.0.6.crate) = 10183 bytes
-BLAKE2s (sccache-0.20.0.tar.gz) = 166b35e4fad2963e357834736defbe8441a622b5d3d1386f11c12839d6e6cefc
-SHA512 (sccache-0.20.0.tar.gz) = c28f67857ddfdba8ff75c757e39c007a391386f02dce2aabb96da776d62059e3c9abd5f392e359cc485146b3578f6525f4d763a1cb7ca5c575fec013ed362d40
-Size (sccache-0.20.0.tar.gz) = 616256 bytes
+BLAKE2s (sccache-0.20.1.tar.gz) = 5a4ee856bf5e0aa0df9d161e2f37d4cd874a25936f7888f2162c0282e90f454e
+SHA512 (sccache-0.20.1.tar.gz) = 25e78957626d2e8e0a2be5168cad423af6e5c2f2c9224e38a2e4c9bb1024954c0c6fb8380f29753be6423424a8bdf45526317e1cd007afd8b38aac8be5617926
+Size (sccache-0.20.1.tar.gz) = 616022 bytes
 BLAKE2s (schannel-0.1.30.crate) = bad04d28cf121d12d70383e5bb5ae765b1cffce0b2bdf09d3efdf8fead57e5b1
 SHA512 (schannel-0.1.30.crate) = 7ff492ec65b43ba6c5073a691a510744904faeeeb063f4edd10998d92b7f88795b78c8533ecec480cac570c156504383b8e612ac7b3ebbd3b76d3afc3c6390f3
 Size (schannel-0.1.30.crate) = 34744 bytes

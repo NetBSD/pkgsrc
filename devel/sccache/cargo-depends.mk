@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2026/11/23 08:35:54 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2026/11/25 06:28:29 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aes-0.8.4
@@ -136,7 +136,6 @@ CARGO_CRATE_DEPENDS+=	getrandom-0.2.17
 CARGO_CRATE_DEPENDS+=	getrandom-0.4.3
 CARGO_CRATE_DEPENDS+=	ghac-0.3.0
 CARGO_CRATE_DEPENDS+=	glob-0.3.4
-CARGO_CRATE_DEPENDS+=	gloo-timers-0.3.0
 CARGO_CRATE_DEPENDS+=	gzp-2.0.4
 CARGO_CRATE_DEPENDS+=	h2-0.4.20
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
@@ -232,7 +231,6 @@ CARGO_CRATE_DEPENDS+=	opendal-0.58.2
 CARGO_CRATE_DEPENDS+=	opendal-core-0.58.2
 CARGO_CRATE_DEPENDS+=	opendal-http-transport-reqwest-0.58.2
 CARGO_CRATE_DEPENDS+=	opendal-layer-logging-0.58.2
-CARGO_CRATE_DEPENDS+=	opendal-layer-retry-0.58.2
 CARGO_CRATE_DEPENDS+=	opendal-layer-timeout-0.58.1
 CARGO_CRATE_DEPENDS+=	opendal-service-azblob-0.58.2
 CARGO_CRATE_DEPENDS+=	opendal-service-azure-common-0.58.2
