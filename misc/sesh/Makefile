@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2026/11/10 18:55:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2026/11/26 15:20:09 kim Exp $
 
-DISTNAME=		sesh-2.33.0
-PKGREVISION=		2
+DISTNAME=		sesh-2.34.0
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=joshmedeski/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/10/15 20:40:45 kim Exp $
+$NetBSD: distinfo,v 1.7 2026/11/26 15:20:09 kim Exp $
 
 BLAKE2s (charm.land_bubbles_v2_@v_v2.2.1.mod) = 08fb3dc3374fb8e5d09b8e5837b5e2eb05a682ea27d767bc70858f0b17975850
 SHA512 (charm.land_bubbles_v2_@v_v2.2.1.mod) = 0da6db5abf748f21db8eef5558fe09b1916c3a30535c0401cc0ba8038928d291c55b3f888e6463e353f3ffcb52d9c4524a27409e019e60392f64cae69e399f0c
@@ -459,6 +459,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (sesh-2.33.0.tar.gz) = 2084e6d6e9e8d2a5a7f9f48d368761faa7c903ae9d1a89f9295afe41478bec26
-SHA512 (sesh-2.33.0.tar.gz) = 1fd60354ce8a05212dddbe3c526015226ffabf7a6b98abeb7ae863d10a283ffa6842fd95256f730897af481e4978033f71b2c481272dc22086fd4a7f4fcd46a7
-Size (sesh-2.33.0.tar.gz) = 4004387 bytes
+BLAKE2s (sesh-2.34.0.tar.gz) = 58fd96cd89da857bdf1451f95e6a4791ee1fa7aa6d1e22c3961a2e7f83a9fe5c
+SHA512 (sesh-2.34.0.tar.gz) = 74cde4374666b9dbad3a6f789c93f76f4267e95e8547fa025324907d339d5616b265aef81704e9e178bb6650953bb33b6af3277ca1b8ff9ceceda75e00c03bfe
+Size (sesh-2.34.0.tar.gz) = 4025429 bytes
