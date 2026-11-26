@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8423 2026/11/26 15:09:01 drixter Exp $
+$NetBSD: CHANGES-2026,v 1.8424 2026/11/26 15:18:59 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12480,3 +12480,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated shells/brush-shell to 0.5.0 [drixter 2026-11-26]
 	Updated archivers/upx to 5.3.1 [drixter 2026-11-26]
 	Updated net/dnsdist to 2.1.4 [drixter 2026-11-26]
+	Updated net/powerdns to 5.1.7nb2 [drixter 2026-11-26]
