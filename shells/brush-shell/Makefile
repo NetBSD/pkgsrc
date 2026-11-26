@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/06/11 15:19:44 drixter Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/26 14:54:02 drixter Exp $
 
-DISTNAME=	brush-shell-v0.4.0
+DISTNAME=	brush-shell-v0.5.0
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=reubeno/}
