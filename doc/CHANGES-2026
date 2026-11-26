@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8415 2026/11/26 10:50:35 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8416 2026/11/26 12:22:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12468,3 +12468,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-celery to 5.7.0 [adam 2026-11-26]
 	Updated textproc/py-css-parser to 1.1.2 [adam 2026-11-26]
 	Updated textproc/py-markdown to 3.11.4 [adam 2026-11-26]
+	Updated textproc/py-rebulk to 6.0.3 [adam 2026-11-26]
+	Updated textproc/py-guessit to 4.5.5 [adam 2026-11-26]
