@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/04/28 20:37:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2026/11/26 08:44:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -46,9 +46,9 @@ ${PYSITELIB}/kombu/asynchronous/http/__init__.pyo
 ${PYSITELIB}/kombu/asynchronous/http/base.py
 ${PYSITELIB}/kombu/asynchronous/http/base.pyc
 ${PYSITELIB}/kombu/asynchronous/http/base.pyo
-${PYSITELIB}/kombu/asynchronous/http/urllib3_client.py
-${PYSITELIB}/kombu/asynchronous/http/urllib3_client.pyc
-${PYSITELIB}/kombu/asynchronous/http/urllib3_client.pyo
+${PYSITELIB}/kombu/asynchronous/http/curl.py
+${PYSITELIB}/kombu/asynchronous/http/curl.pyc
+${PYSITELIB}/kombu/asynchronous/http/curl.pyo
 ${PYSITELIB}/kombu/asynchronous/hub.py
 ${PYSITELIB}/kombu/asynchronous/hub.pyc
 ${PYSITELIB}/kombu/asynchronous/hub.pyo
@@ -100,6 +100,7 @@ ${PYSITELIB}/kombu/pidbox.pyo
 ${PYSITELIB}/kombu/pools.py
 ${PYSITELIB}/kombu/pools.pyc
 ${PYSITELIB}/kombu/pools.pyo
+${PYSITELIB}/kombu/py.typed
 ${PYSITELIB}/kombu/resource.py
 ${PYSITELIB}/kombu/resource.pyc
 ${PYSITELIB}/kombu/resource.pyo
@@ -112,9 +113,15 @@ ${PYSITELIB}/kombu/simple.pyo
 ${PYSITELIB}/kombu/transport/SLMQ.py
 ${PYSITELIB}/kombu/transport/SLMQ.pyc
 ${PYSITELIB}/kombu/transport/SLMQ.pyo
-${PYSITELIB}/kombu/transport/SQS.py
-${PYSITELIB}/kombu/transport/SQS.pyc
-${PYSITELIB}/kombu/transport/SQS.pyo
+${PYSITELIB}/kombu/transport/SQS/SNS.py
+${PYSITELIB}/kombu/transport/SQS/SNS.pyc
+${PYSITELIB}/kombu/transport/SQS/SNS.pyo
+${PYSITELIB}/kombu/transport/SQS/__init__.py
+${PYSITELIB}/kombu/transport/SQS/__init__.pyc
+${PYSITELIB}/kombu/transport/SQS/__init__.pyo
+${PYSITELIB}/kombu/transport/SQS/exceptions.py
+${PYSITELIB}/kombu/transport/SQS/exceptions.pyc
+${PYSITELIB}/kombu/transport/SQS/exceptions.pyo
 ${PYSITELIB}/kombu/transport/__init__.py
 ${PYSITELIB}/kombu/transport/__init__.pyc
 ${PYSITELIB}/kombu/transport/__init__.pyo
@@ -154,6 +161,9 @@ ${PYSITELIB}/kombu/transport/mongodb.pyo
 ${PYSITELIB}/kombu/transport/native_delayed_delivery.py
 ${PYSITELIB}/kombu/transport/native_delayed_delivery.pyc
 ${PYSITELIB}/kombu/transport/native_delayed_delivery.pyo
+${PYSITELIB}/kombu/transport/pgmq.py
+${PYSITELIB}/kombu/transport/pgmq.pyc
+${PYSITELIB}/kombu/transport/pgmq.pyo
 ${PYSITELIB}/kombu/transport/pyamqp.py
 ${PYSITELIB}/kombu/transport/pyamqp.pyc
 ${PYSITELIB}/kombu/transport/pyamqp.pyo
