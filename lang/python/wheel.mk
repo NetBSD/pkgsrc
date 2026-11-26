@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.27 2026/11/08 12:39:58 ryoon Exp $
+# $NetBSD: wheel.mk,v 1.28 2026/11/26 12:21:18 adam Exp $
 #
 # Build and install Python wheels
 #
@@ -91,7 +91,7 @@ do-install:
 
 USE_PYTEST?=	yes
 .if !target(do-test) && ${USE_PYTEST:Myes}
-TEST_DEPENDS+= ${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+= ${PYPKGPREFIX}-test>=0:../../devel/py-test
 do-test:
 	${RUN} cd ${WRKSRC}/${PYSETUPSUBDIR} && \
 	${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
