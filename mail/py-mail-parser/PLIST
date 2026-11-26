@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2026/05/19 17:52:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/26 13:19:58 adam Exp $
 bin/mail-parser-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,15 +12,27 @@ ${PYSITELIB}/mailparser/__init__.pyo
 ${PYSITELIB}/mailparser/__main__.py
 ${PYSITELIB}/mailparser/__main__.pyc
 ${PYSITELIB}/mailparser/__main__.pyo
+${PYSITELIB}/mailparser/addresses.py
+${PYSITELIB}/mailparser/addresses.pyc
+${PYSITELIB}/mailparser/addresses.pyo
 ${PYSITELIB}/mailparser/const.py
 ${PYSITELIB}/mailparser/const.pyc
 ${PYSITELIB}/mailparser/const.pyo
 ${PYSITELIB}/mailparser/core.py
 ${PYSITELIB}/mailparser/core.pyc
 ${PYSITELIB}/mailparser/core.pyo
+${PYSITELIB}/mailparser/dates.py
+${PYSITELIB}/mailparser/dates.pyc
+${PYSITELIB}/mailparser/dates.pyo
 ${PYSITELIB}/mailparser/exceptions.py
 ${PYSITELIB}/mailparser/exceptions.pyc
 ${PYSITELIB}/mailparser/exceptions.pyo
+${PYSITELIB}/mailparser/received.py
+${PYSITELIB}/mailparser/received.pyc
+${PYSITELIB}/mailparser/received.pyo
+${PYSITELIB}/mailparser/serialization.py
+${PYSITELIB}/mailparser/serialization.pyc
+${PYSITELIB}/mailparser/serialization.pyo
 ${PYSITELIB}/mailparser/utils.py
 ${PYSITELIB}/mailparser/utils.pyc
 ${PYSITELIB}/mailparser/utils.pyo

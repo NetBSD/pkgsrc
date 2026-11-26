@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/09/08 12:09:50 adam Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/26 13:19:58 adam Exp $
 
-DISTNAME=	mail_parser-4.6.4
+DISTNAME=	mail_parser-4.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mail-parser/}
