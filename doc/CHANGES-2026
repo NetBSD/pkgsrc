@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8413 2026/11/26 07:43:06 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8414 2026/11/26 08:49:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12462,3 +12462,7 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/p5-PDF-API2 to 2.049 [wiz 2026-11-26]
 	Updated databases/py-lmdb to 3.0.0 [adam 2026-11-26]
 	Updated devel/py-rstr to 4.0.0 [adam 2026-11-26]
+	Updated parallel/py-billiard to 4.3.2 [adam 2026-11-26]
+	Updated net/py-amqp to 5.4.2 [adam 2026-11-26]
+	Updated net/py-kombu to 5.7.0 [adam 2026-11-26]
+	Updated net/py-celery to 5.7.0 [adam 2026-11-26]
