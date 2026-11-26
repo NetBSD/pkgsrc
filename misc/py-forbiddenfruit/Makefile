@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2026/09/06 16:59:48 adam Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/26 06:17:50 adam Exp $
 
-DISTNAME=	forbiddenfruit-0.1.4
+DISTNAME=	forbiddenfruit-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/forbiddenfruit/}

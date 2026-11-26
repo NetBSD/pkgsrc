@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2026/09/06 16:59:48 adam Exp $
+$NetBSD: distinfo,v 1.2 2026/11/26 06:17:50 adam Exp $
 
-BLAKE2s (forbiddenfruit-0.1.4.tar.gz) = 53e91a1922bc5757814f871d052c16b4eb2d4fbd740e6f5ff86ff65b78ebe61b
-SHA512 (forbiddenfruit-0.1.4.tar.gz) = 88f8751a9ca1d475eb74114787a7aeda02973e9bc2c4bbb08de8a4d6fe05c6fb82db093aace8f718caaaeb8b06c89112e5f418b8ee4d903cc6183ddfa2cdb087
-Size (forbiddenfruit-0.1.4.tar.gz) = 43756 bytes
+BLAKE2s (forbiddenfruit-0.1.5.tar.gz) = 65775ea4ce3a19397a36f31bba904983d67d1dec1736a44c772f3313b55d1259
+SHA512 (forbiddenfruit-0.1.5.tar.gz) = 2b3e6d9ebd5576104b693e885f6cbfeb464c368610688f98b75c820810ce7ca5e078249e6c868e282403206fa306680baf0a68bfc4ce127c20829a9cc30b20e0
+Size (forbiddenfruit-0.1.5.tar.gz) = 25483 bytes
