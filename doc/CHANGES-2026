@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8416 2026/11/26 12:22:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8417 2026/11/26 12:46:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12470,3 +12470,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated textproc/py-markdown to 3.11.4 [adam 2026-11-26]
 	Updated textproc/py-rebulk to 6.0.3 [adam 2026-11-26]
 	Updated textproc/py-guessit to 4.5.5 [adam 2026-11-26]
+	Updated devel/tevent to 0.17.3 [adam 2026-11-26]
+	Updated devel/py-sybil to 10.2.0 [adam 2026-11-26]
+	Updated devel/py-typer to 0.29.3 [adam 2026-11-26]
