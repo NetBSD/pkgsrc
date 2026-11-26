@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2026/10/26 15:43:33 adam Exp $
+# $NetBSD: Makefile,v 1.18 2026/11/26 13:18:16 adam Exp $
 
-DISTNAME=	lxml_html_clean-0.4.6
+DISTNAME=	lxml_html_clean-0.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml-html-clean/}
