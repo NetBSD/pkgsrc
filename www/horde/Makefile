@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2026/11/25 17:16:36 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2026/11/26 06:46:17 wiz Exp $
 
 DISTNAME=	horde-3.3.13
 PKGREVISION=	6
@@ -124,5 +124,4 @@ do-install:
 	${FIND} ${DESTDIR}${HORDEDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DESTDIR}${HORDEDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
-.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
