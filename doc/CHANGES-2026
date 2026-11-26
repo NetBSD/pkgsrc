@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8430 2026/11/26 22:44:15 kim Exp $
+$NetBSD: CHANGES-2026,v 1.8431 2026/11/26 22:49:29 kim Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12488,3 +12488,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Added devel/py-shtab version 1.13.0 [kim 2026-11-26]
 	Updated devel/lua-penlight to 1.15.0 [wiz 2026-11-26]
 	Updated misc/py-libtmux to 0.68.0 [kim 2026-11-26]
+	Updated misc/py-tmuxp to 1.82.0 [kim 2026-11-26]
