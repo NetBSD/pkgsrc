@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/07/03 11:04:00 adam Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/26 12:19:53 adam Exp $
 
-DISTNAME=	rebulk-6.0.1
+DISTNAME=	rebulk-6.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rebulk/}
