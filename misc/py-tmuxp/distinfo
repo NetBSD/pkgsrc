@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2026/08/18 14:51:28 kim Exp $
+$NetBSD: distinfo,v 1.3 2026/11/26 22:49:18 kim Exp $
 
-BLAKE2s (tmuxp-1.74.0.tar.gz) = 93b57fcb1db5c79e2f3ca1268c503ea83ce2938c2f9ae97d3a1ebe877dd566dc
-SHA512 (tmuxp-1.74.0.tar.gz) = 3124c7da4d36730594dde5ce2a2bc4d5501eee52213e44279a8a5b533cbb123083c42f25ccec49d7186d8c1680b47955806ac49ee5f299d8f64886b3283cea39
-Size (tmuxp-1.74.0.tar.gz) = 1114617 bytes
+BLAKE2s (tmuxp-1.82.0.tar.gz) = 16492eca88561db5e9847e53bd5afb519d6362d64542dea682f9fb3d121ae2af
+SHA512 (tmuxp-1.82.0.tar.gz) = fd3cdf58d1c84903063e56386259b69de7798523348329f77f1f4894db9de046e663501098dff043dde6c3e9361177504bcdb15995df2d5b38fbc07c58e898e5
+Size (tmuxp-1.82.0.tar.gz) = 1163024 bytes
