@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8428 2026/11/26 21:05:20 kim Exp $
+$NetBSD: CHANGES-2026,v 1.8429 2026/11/26 22:43:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12486,3 +12486,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Removed databases/ipa_sdb [wiz 2026-11-26]
 	Removed sysutils/ipa [wiz 2026-11-26]
 	Added devel/py-shtab version 1.13.0 [kim 2026-11-26]
+	Updated devel/lua-penlight to 1.15.0 [wiz 2026-11-26]
