@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2026/07/02 07:24:57 adam Exp $
+$NetBSD: distinfo,v 1.10 2026/11/26 10:48:48 adam Exp $
 
-BLAKE2s (css_parser-1.1.1.tar.gz) = 9a020ea442247c94bc11b670d3144a6f52d202e6f6a28cbc1035ef5c9b09a60e
-SHA512 (css_parser-1.1.1.tar.gz) = ba7877cfff7066c9b15ef85e28795fe3c6051a97805c2ac70348cf8612cc53e28d9e421060d5ce31a207d3a1e3ec55ba9daf7691788379d9ecf72607e09a6d23
-Size (css_parser-1.1.1.tar.gz) = 349706 bytes
+BLAKE2s (css_parser-1.1.2.tar.gz) = e95c159ca691fa07d31cf440ad7933d56b4415eaaac4fbe92faae600e9920db6
+SHA512 (css_parser-1.1.2.tar.gz) = 82de49722d56b7cbdcafa4e42b5ff914d4ff13a8c069d5072495d264b0c000654760e15354cdb625d76a1ec3202f6ad634bc8730948d18b788fa8a60e86ccc42
+Size (css_parser-1.1.2.tar.gz) = 348161 bytes
