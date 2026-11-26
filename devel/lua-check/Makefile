@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/03/29 15:29:41 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/26 17:46:00 riastradh Exp $
 
 DISTNAME=	luacheck-0.23.0
 PKGNAME=	${DISTNAME:S/luacheck/${LUA_PKGPREFIX}-check/}
+PKGREVISION=	1
 CATEGORIES=	devel lua
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpeterv/}
@@ -10,7 +11,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://github.com/mpeterv/luacheck
-COMMENT=	Liner and static analyzer for Lua
+COMMENT=	Linter and static analyzer for Lua
 LICENSE=	mit
 
 DEPENDS+=	${LUA_PKGPREFIX}-argparse>=0.6.0:../../devel/lua-argparse
@@ -20,7 +21,7 @@ INSTALLATION_DIRS+=	bin ${LUA_LDIR}/luacheck/stages
 
 REPLACE_LUA+=	bin/luacheck.lua
 
-LUA_VERSIONS_INCOMPATIBLE+=	64
+LUA_VERSIONS_INCOMPATIBLE+=	54 55
 
 PLIST_SUBST+=		LUADOTVER=${_LUA_DOT_VERSION}
 FILES_SUBST+=		LUADOTVER=${_LUA_DOT_VERSION}
