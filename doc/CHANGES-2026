@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8410 2026/11/26 06:18:24 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8411 2026/11/26 07:05:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12454,3 +12454,8 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/vulkan-tools to 1.4.363.0nb1 [wiz 2026-11-25]
 	Updated devel/libffi to 3.8.2 [adam 2026-11-26]
 	Updated misc/py-forbiddenfruit to 0.1.5 [adam 2026-11-26]
+	Updated devel/glib2 to 2.90.2 [adam 2026-11-26]
+	Updated devel/glib2-introspection to 2.90.2 [adam 2026-11-26]
+	Updated devel/glib2-tools to 2.90.2 [adam 2026-11-26]
+	Updated devel/gdbus-codegen to 2.90.2 [adam 2026-11-26]
+	Updated archivers/file-roller to 44.8 [adam 2026-11-26]
