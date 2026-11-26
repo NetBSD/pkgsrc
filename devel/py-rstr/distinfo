@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/10/20 11:25:38 adam Exp $
+$NetBSD: distinfo,v 1.4 2026/11/26 07:42:49 adam Exp $
 
-BLAKE2s (rstr-3.2.2.tar.gz) = 8ae9c8502f78003b598d2fc601ffd7b46115cd2e33ad4893fe2806c1827130c7
-SHA512 (rstr-3.2.2.tar.gz) = a7fe59cac3382a7ce4dea97b97aae607f6820a0aabf445426e0bedb127a053ed70990ac5137c52a78c2356089e0b474eac05c3cc794f705dc30a1f4ffa6c35ac
-Size (rstr-3.2.2.tar.gz) = 13560 bytes
+BLAKE2s (rstr-4.0.0.tar.gz) = 4b1906a663821d2e445de4edf1de371c26aad8b84743423277e17941bfd4515f
+SHA512 (rstr-4.0.0.tar.gz) = f01611753dc4e2123542473fd527f9e72b5678d08a5c28d60c40a7e9f3d73c8206914b6800d0b5ea67176c856f770d5909e8413afd7c71d3dfe0fe8eb7143387
+Size (rstr-4.0.0.tar.gz) = 14576 bytes

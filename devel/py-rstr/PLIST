@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/24 07:06:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2026/11/26 07:42:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/rstr/__init__.py
 ${PYSITELIB}/rstr/__init__.pyc
 ${PYSITELIB}/rstr/__init__.pyo
 ${PYSITELIB}/rstr/py.typed
-${PYSITELIB}/rstr/rstr_base.py
-${PYSITELIB}/rstr/rstr_base.pyc
-${PYSITELIB}/rstr/rstr_base.pyo
+${PYSITELIB}/rstr/rstr.py
+${PYSITELIB}/rstr/rstr.pyc
+${PYSITELIB}/rstr/rstr.pyo
 ${PYSITELIB}/rstr/xeger.py
 ${PYSITELIB}/rstr/xeger.pyc
 ${PYSITELIB}/rstr/xeger.pyo
