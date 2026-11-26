@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2026/06/24 17:53:57 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2026/11/26 22:44:02 kim Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,12 +25,21 @@ ${PYSITELIB}/libtmux/_internal/control_mode.pyo
 ${PYSITELIB}/libtmux/_internal/dataclasses.py
 ${PYSITELIB}/libtmux/_internal/dataclasses.pyc
 ${PYSITELIB}/libtmux/_internal/dataclasses.pyo
+${PYSITELIB}/libtmux/_internal/env.py
+${PYSITELIB}/libtmux/_internal/env.pyc
+${PYSITELIB}/libtmux/_internal/env.pyo
 ${PYSITELIB}/libtmux/_internal/query_list.py
 ${PYSITELIB}/libtmux/_internal/query_list.pyc
 ${PYSITELIB}/libtmux/_internal/query_list.pyo
 ${PYSITELIB}/libtmux/_internal/sparse_array.py
 ${PYSITELIB}/libtmux/_internal/sparse_array.pyc
 ${PYSITELIB}/libtmux/_internal/sparse_array.pyo
+${PYSITELIB}/libtmux/_internal/support/__init__.py
+${PYSITELIB}/libtmux/_internal/support/__init__.pyc
+${PYSITELIB}/libtmux/_internal/support/__init__.pyo
+${PYSITELIB}/libtmux/_internal/support/capabilities.py
+${PYSITELIB}/libtmux/_internal/support/capabilities.pyc
+${PYSITELIB}/libtmux/_internal/support/capabilities.pyo
 ${PYSITELIB}/libtmux/_internal/types.py
 ${PYSITELIB}/libtmux/_internal/types.pyc
 ${PYSITELIB}/libtmux/_internal/types.pyo
