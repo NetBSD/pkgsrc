@@ -1,0 +1,1 @@
+bin/shtab @PREFIX@/bin/shtab-@PYVERSSUFFIX@

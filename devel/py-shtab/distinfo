@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2026/11/26 21:05:04 kim Exp $
+
+BLAKE2s (shtab-1.13.0.tar.gz) = c240a9b37c153d77faca84286587fe7810d36bf373e4ed1ccfe407969be12405
+SHA512 (shtab-1.13.0.tar.gz) = 21b241a07d0bdc7c3a89ae45bc0ab53fc6d5c9515cd14bcfb1167e6d8349d8ccd7027b519d3ee85c4c4ec5a6f8f0db7eed436c145832c2fe86e75926441379df
+Size (shtab-1.13.0.tar.gz) = 67655 bytes

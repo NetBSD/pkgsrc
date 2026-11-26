@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2026/11/26 21:05:04 kim Exp $
+bin/shtab-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/shtab/__init__.py
+${PYSITELIB}/shtab/__init__.pyc
+${PYSITELIB}/shtab/__init__.pyo
+${PYSITELIB}/shtab/__main__.py
+${PYSITELIB}/shtab/__main__.pyc
+${PYSITELIB}/shtab/__main__.pyo
+${PYSITELIB}/shtab/click.py
+${PYSITELIB}/shtab/click.pyc
+${PYSITELIB}/shtab/click.pyo
+${PYSITELIB}/shtab/main.py
+${PYSITELIB}/shtab/main.pyc
+${PYSITELIB}/shtab/main.pyo
+${PYSITELIB}/shtab/py.typed

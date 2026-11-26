@@ -1,0 +1,12 @@
+shtab automatically generates shell tab completion scripts for Python
+CLI applications.  It takes an argparse.ArgumentParser object and
+writes a static completion script for bash, zsh, tcsh, fish, or
+PowerShell.
+
+Because the script is generated ahead of time, completion normally
+does not need to start the Python application on every key press,
+unlike argcomplete.
+
+shtab can be used as a library, to add a --print-completion option to
+an application, or through the shtab command, which works on any
+importable parser (also click based ones, and docopt via argopt).

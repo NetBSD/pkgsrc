@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4742 2026/11/25 14:25:04 leot Exp $
+# $NetBSD: Makefile,v 1.4743 2026/11/26 21:05:04 kim Exp $
 #
 
 COMMENT=	Development utilities
@@ -3159,6 +3159,7 @@ SUBDIR+=	py-setuptools-rust
 SUBDIR+=	py-setuptools44
 SUBDIR+=	py-setuptools_scm
 SUBDIR+=	py-setuptools_trial
+SUBDIR+=	py-shtab
 SUBDIR+=	py-slugify
 SUBDIR+=	py-smmap
 SUBDIR+=	py-snappy
