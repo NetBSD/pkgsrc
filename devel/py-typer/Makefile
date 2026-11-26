@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2026/11/23 07:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2026/11/26 12:46:35 adam Exp $
 
-DISTNAME=	typer-0.29.2
+DISTNAME=	typer-0.29.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typer/}
