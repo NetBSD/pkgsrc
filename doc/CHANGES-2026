@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8420 2026/11/26 14:36:47 kim Exp $
+$NetBSD: CHANGES-2026,v 1.8421 2026/11/26 14:54:19 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12477,3 +12477,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-mail-parser to 4.11.0 [adam 2026-11-26]
 	Updated math/ggml to 1.1.1 [wiz 2026-11-26]
 	Updated net/gh to 2.106.0 [kim 2026-11-26]
+	Updated shells/brush-shell to 0.5.0 [drixter 2026-11-26]
