@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8418 2026/11/26 13:20:15 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8419 2026/11/26 14:13:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12475,3 +12475,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/py-typer to 0.29.3 [adam 2026-11-26]
 	Updated textproc/py-lxml-html-clean to 0.4.7 [adam 2026-11-26]
 	Updated mail/py-mail-parser to 4.11.0 [adam 2026-11-26]
+	Updated math/ggml to 1.1.1 [wiz 2026-11-26]
