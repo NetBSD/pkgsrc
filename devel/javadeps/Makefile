@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/08/16 20:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2026/11/26 00:57:15 gdt Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.vet.com.au/java/javadeps/
 COMMENT=	Automatic dependency tracking for Java
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -28,9 +29,9 @@ do-build:
 	done
 
 do-install:
-	${CP} ${WRKSRC}/jdeps ${DESTDIR}${PREFIX}/bin
-	${CP} ${WRKSRC}/jdeps.jar ${DESTDIR}${PREFIX}/share/jdeps/jdeps.jar
-	cd ${WRKSRC}/doc && pax -rw -pe . ${DESTDIR}${PREFIX}/share/doc/jdeps
+	${INSTALL} ${WRKSRC}/jdeps ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/jdeps.jar ${DESTDIR}${PREFIX}/share/jdeps/jdeps.jar
+	cd ${WRKSRC}/doc && pax -rw -pp . ${DESTDIR}${PREFIX}/share/doc/jdeps
 	${CHOWN} -R ${BINOWN}:${BINGRP} \
 		${DESTDIR}${PREFIX}/share/jdeps ${DESTDIR}${PREFIX}/share/doc/jdeps
 
