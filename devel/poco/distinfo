@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2026/07/24 12:15:52 adam Exp $
+$NetBSD: distinfo,v 1.20 2026/11/26 10:25:52 nros Exp $
 
 BLAKE2s (poco-1.15.3-all.tar.bz2) = 98ecd62974bf032f7c8b82e36769ffefafe386b528018e1857419a0f7c8f703f
 SHA512 (poco-1.15.3-all.tar.bz2) = 7a0cfe9bb2706c127c39d6650a4fc41804328342f51c120194baff1f3254716a027c1342581d60ac91fb1f83ba086e03ec4166cdf7b6f288ffe2fa036f5123b5
@@ -11,5 +11,6 @@ SHA1 (patch-Foundation_src_BinaryWriter.cpp) = aa8f1a90199782d8d9f28fd92c8c8ba70
 SHA1 (patch-Foundation_src_File__UNIX.cpp) = 662bd74de2242193cc9b98515e158648a3b59b8a
 SHA1 (patch-Foundation_src_NamedEvent__UNIX.cpp) = b09557656f42d935ac0ece434816d2c74e7af284
 SHA1 (patch-Foundation_src_NamedMutex__UNIX.cpp) = 95bca211ef52b036066bb0742a8a8f8cccaa4b0e
+SHA1 (patch-Foundation_src_Path__UNIX.cpp) = c4204cacd915503c72c2d91e2c9de76be20a9968
 SHA1 (patch-Foundation_src_SharedMemory__POSIX.cpp) = a1a543d5ab4e64a76a6373053965c4629470b6a3
-SHA1 (patch-Foundation_src_Thread__POSIX.cpp) = d7fcca04a05411d4896b518c554f32caafe4ebe0
+SHA1 (patch-Foundation_src_Thread__POSIX.cpp) = d4551597a2102289b0320377940884c004c0d8b4
