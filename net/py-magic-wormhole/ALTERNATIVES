@@ -1,1 +1,2 @@
 bin/wormhole @PREFIX@/bin/wormhole-@PYVERSSUFFIX@
+bin/magic-wormhole @PREFIX@/bin/magic-wormhole-@PYVERSSUFFIX@
