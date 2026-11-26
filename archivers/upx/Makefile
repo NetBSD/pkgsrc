@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2026/10/28 19:11:59 drixter Exp $
+# $NetBSD: Makefile,v 1.41 2026/11/26 14:58:35 drixter Exp $
 
-DISTNAME=		upx-5.3.0
+DISTNAME=		upx-5.3.1
 CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_GITHUB:=upx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
