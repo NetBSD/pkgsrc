@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8414 2026/11/26 08:49:01 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8415 2026/11/26 10:50:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12466,3 +12466,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-amqp to 5.4.2 [adam 2026-11-26]
 	Updated net/py-kombu to 5.7.0 [adam 2026-11-26]
 	Updated net/py-celery to 5.7.0 [adam 2026-11-26]
+	Updated textproc/py-css-parser to 1.1.2 [adam 2026-11-26]
+	Updated textproc/py-markdown to 3.11.4 [adam 2026-11-26]
