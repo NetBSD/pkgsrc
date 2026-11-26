@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.61 2026/10/12 14:28:47 adam Exp $
+$NetBSD: distinfo,v 1.62 2026/11/26 07:04:32 adam Exp $
 
-BLAKE2s (file-roller-44.7.tar.xz) = b5dc99f5481e489fdee12aee17ad470906e8b64df2bd9ede1d93c5c7d7ca4927
-SHA512 (file-roller-44.7.tar.xz) = a7c8a270772ec4d4b454917f1e574124db901cab96cfd4bb87668d6d2f32ba53048206e3c5dc69e9effb0fbec5cab928e84587cd4e78f3d883221eee2ec1b0cc
-Size (file-roller-44.7.tar.xz) = 1064616 bytes
+BLAKE2s (file-roller-44.8.tar.xz) = 9d90327648ef2c9f5d5b1de45e1d9d5b9a472a263df813eff7593f703f6b8d4a
+SHA512 (file-roller-44.8.tar.xz) = 3025ca1df9482b21f2ac7e2634f91d0b7f6dee0bbb024f91d3826b6dfa0ed848bfbcff37911dbd8e324f45f1c85af5fbf60214e8587c4a811b64162dd121fff0
+Size (file-roller-44.8.tar.xz) = 1068324 bytes
