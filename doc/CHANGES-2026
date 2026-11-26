@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8411 2026/11/26 07:05:05 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8412 2026/11/26 07:25:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12459,3 +12459,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/glib2-tools to 2.90.2 [adam 2026-11-26]
 	Updated devel/gdbus-codegen to 2.90.2 [adam 2026-11-26]
 	Updated archivers/file-roller to 44.8 [adam 2026-11-26]
+	Updated textproc/p5-PDF-API2 to 2.049 [wiz 2026-11-26]
