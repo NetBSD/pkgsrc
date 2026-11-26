@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8426 2026/11/26 17:14:09 gdt Exp $
+$NetBSD: CHANGES-2026,v 1.8427 2026/11/26 19:43:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12483,3 +12483,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/powerdns to 5.1.7nb2 [drixter 2026-11-26]
 	Updated misc/sesh to 2.34.0 [kim 2026-11-26]
 	Updated net/py-magic-wormhole to 0.25.0 [gdt 2026-11-26]
+	Removed databases/ipa_sdb [wiz 2026-11-26]
+	Removed sysutils/ipa [wiz 2026-11-26]

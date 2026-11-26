@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1209 2026/11/09 08:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.1210 2026/11/26 19:43:03 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -390,7 +390,6 @@ SUBDIR+=	intel-backlight
 SUBDIR+=	intel-microcode-netbsd
 SUBDIR+=	intellij-fsnotifier
 SUBDIR+=	ioping
-SUBDIR+=	ipa
 SUBDIR+=	ipmitool
 SUBDIR+=	ipw-firmware
 SUBDIR+=	ir-account

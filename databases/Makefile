@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.763 2026/11/25 10:50:13 adam Exp $
+# $NetBSD: Makefile,v 1.764 2026/11/26 19:43:04 wiz Exp $
 
 COMMENT=	Databases
 
@@ -61,7 +61,6 @@ SUBDIR+=	idzebra
 SUBDIR+=	influxdb
 SUBDIR+=	innotop
 SUBDIR+=	iodbc
-SUBDIR+=	ipa_sdb
 SUBDIR+=	java-db3
 SUBDIR+=	java-qdbm
 SUBDIR+=	java-tokyocabinet
