@@ -1,0 +1,37 @@
+$NetBSD: patch-clients_meson.build,v 1.1 2026/11/27 17:17:17 kikadf Exp $
+
+* Add NetBSD support
+https://github.com/labwc/labwc/pull/3810
+
+--- clients/meson.build.orig	2026-10-30 18:33:17.000000000 +0000
++++ clients/meson.build
+@@ -31,13 +31,20 @@ if get_option('labnag').allowed()
+     )
+   endforeach
+ 
+-  if host_machine.system() in ['freebsd', 'openbsd']
++  if host_machine.system() in ['freebsd', 'openbsd', 'netbsd']
+     # For signalfd()
+     epoll_dep = dependency('epoll-shim')
+   else
+     epoll_dep = []
+   endif
+ 
++  if host_machine.system() == 'netbsd'
++    # For shm_open(), shm_unlink()
++    rt_dep = cc.find_library('rt', required: true)
++  else
++    rt_dep = []
++  endif
++
+   executable(
+     'labnag',
+     nag_sources,
+@@ -50,6 +57,7 @@ if get_option('labnag').allowed()
+       wlroots,
+       server_protos,
+       epoll_dep,
++      rt_dep,
+       xkbcommon,
+     ],
+     include_directories: [labwc_inc],
