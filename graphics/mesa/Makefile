@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2026/11/27 08:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2026/11/27 08:28:12 wiz Exp $
 
-DISTNAME=	mesa-26.2.7
+DISTNAME=	mesa-26.2.8
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 MASTER_SITES+=	https://mesa3d.org/archive/
