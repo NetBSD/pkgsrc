@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2026/01/05 17:05:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2026/11/27 13:38:03 adam Exp $
 include/OpenColorIO/OpenColorABI.h
 include/OpenColorIO/OpenColorAppHelpers.h
 include/OpenColorIO/OpenColorIO.h
 include/OpenColorIO/OpenColorTransforms.h
 include/OpenColorIO/OpenColorTypes.h
 include/OpenColorIO/oglapphelpers/glsl.h
+include/OpenColorIO/oglapphelpers/graphicalapp.h
 include/OpenColorIO/oglapphelpers/oglapp.h
 lib/cmake/OpenColorIO/OpenColorIOConfig.cmake
 lib/cmake/OpenColorIO/OpenColorIOConfigVersion.cmake
@@ -12,7 +13,7 @@ lib/cmake/OpenColorIO/OpenColorIOTargets-release.cmake
 lib/cmake/OpenColorIO/OpenColorIOTargets.cmake
 lib/libOpenColorIO.so
 lib/libOpenColorIO.so.${PKGVERSION}
-lib/libOpenColorIO.so.2.5
+lib/libOpenColorIO.so.2.6
 lib/libOpenColorIOoglapphelpers.a
 lib/pkgconfig/OpenColorIO.pc
 ${PYSITELIB}/PyOpenColorIO/PyOpenColorIO.so
