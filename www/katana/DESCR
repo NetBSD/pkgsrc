@@ -1,0 +1,12 @@
+Katana is a next-generation crawling and spidering framework.
+
+Featurs:
+* Fast And fully configurable web crawling
+* Standard and Headless mode
+* JavaScript parsing / crawling
+* Customizable automatic form filling
+* Scope control - Preconfigured field / Regex
+* Knowledge base - ML page-type / form classification (auto-downloaded model)
+* Customizable output - Preconfigured fields
+* INPUT - STDIN, URL and LIST
+* OUTPUT - STDOUT, FILE and JSON

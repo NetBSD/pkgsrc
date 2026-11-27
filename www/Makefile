@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1956 2026/11/25 10:32:44 adam Exp $
+# $NetBSD: Makefile,v 1.1957 2026/11/27 11:49:31 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -230,6 +230,7 @@ SUBDIR+=	jira-cli
 SUBDIR+=	kahua
 SUBDIR+=	kannel
 SUBDIR+=	kaput-cli
+SUBDIR+=	katana
 SUBDIR+=	kf6-syndication
 SUBDIR+=	khtml
 SUBDIR+=	kimagemapeditor
