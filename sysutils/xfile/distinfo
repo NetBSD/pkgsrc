@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2026/11/16 20:15:31 vins Exp $
+$NetBSD: distinfo,v 1.11 2026/11/27 08:07:53 wiz Exp $
 
 BLAKE2s (xfile-1.2.1/xfile-addon.tar.xz) = e4c5d932d5ec82286ed30a46a19e5ed692956dc9edc09e65c58da0ea072632c8
 SHA512 (xfile-1.2.1/xfile-addon.tar.xz) = ccae3b105007b17cd2c04f5cf441a9defb99481731b4f2883dabf38df3711fa0ac9b53b40dd65f56f0b769902d693eb18118666d664808be47122a9eb7b21cbf
@@ -17,4 +17,3 @@ SHA1 (patch-mf_Makefile.pkgsrc) = 1be35b7c590b81366b22871883f783c5fa559cce
 SHA1 (patch-src_common.mf) = 94f5a845a35227490e933adef3924054792996bc
 SHA1 (patch-src_res_prefs.ad) = 5046e54572835754a4572001eefa8bd077ade04f
 SHA1 (patch-src_xdgsvc.mf) = 776de35bc93df1b63345a542bf712f328642e6c6
-SHA1 (patch-src_xfile-xdg.c) = cf160a9368f224a7fca5b8f2cb76bcaa75abdde0
