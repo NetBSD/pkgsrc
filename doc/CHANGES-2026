@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8434 2026/11/27 07:17:14 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8435 2026/11/27 07:29:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12493,3 +12493,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/exim to 4.100.2 [adam 2026-11-27]
 	Updated mail/exim-html to 4.100.2 [adam 2026-11-27]
 	Updated devel/lua-busted to 2.3.0 [wiz 2026-11-27]
+	Updated textproc/lua-utf8 to 0.3.0 [wiz 2026-11-27]
