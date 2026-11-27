@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2026/11/22 21:06:58 drixter Exp $
+# $NetBSD: Makefile,v 1.12 2026/11/27 08:14:32 wiz Exp $
 #
 DISTNAME=	asn1c-0.9.29
 CATEGORIES=	lang
@@ -12,6 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoreconf automake autoconf flex gmake perl:run
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 REPLACE_PERL+=	examples/crfc2asn1.pl
