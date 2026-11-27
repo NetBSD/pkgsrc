@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8450 2026/11/27 14:10:03 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8451 2026/11/27 20:10:18 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12518,3 +12518,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/openimageio to 3.2.2.0 [adam 2026-11-27]
 	Updated graphics/blender-lts to 4.5.17 [adam 2026-11-27]
 	Updated textproc/rumdl to 0.3.7 [wiz 2026-11-27]
+	Updated www/chawan to 0.5.3 [bsiegert 2026-11-27]
