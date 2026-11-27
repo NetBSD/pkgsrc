@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/10/24 19:02:21 drixter Exp $
+$NetBSD: distinfo,v 1.28 2026/11/27 07:47:31 drixter Exp $
 
-BLAKE2s (logswan-2.1.17.tar.gz) = ba8ecda24241392ae61934f6f0a629382f7fe19b912dd665b256e5eed991f343
-SHA512 (logswan-2.1.17.tar.gz) = 00d086ea14ff9c868b6dd96531652f9a9c4e39820b468350a0c8c7a1fda2ed49612c06f8e340c704bfe87de9b602b35a8656b6e1b5072bcd82ed0a6ec2eb199f
-Size (logswan-2.1.17.tar.gz) = 26057 bytes
+BLAKE2s (logswan-2.1.18.tar.gz) = 24c31cdb360cb2aff955a20443cd18876ce715b9d3fe77f1dd82f94bf668d232
+SHA512 (logswan-2.1.18.tar.gz) = d6b663aebc6a30229bfad324905a96b712afa99054cc062812361180fb4f4e10e92b73b72686b34896447b9fa7e1ecb188d9c3c479a05e0293a075a12b3ae50a
+Size (logswan-2.1.18.tar.gz) = 26175 bytes
