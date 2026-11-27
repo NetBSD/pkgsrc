@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8443 2026/11/27 10:25:57 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8444 2026/11/27 10:32:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12504,3 +12504,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated mail/py-mail-parser to 4.12.0 [adam 2026-11-27]
 	Updated graphics/py-pillow_heif to 1.9.0 [adam 2026-11-27]
 	Updated graphics/py-tifffile to 2026.11.26 [adam 2026-11-27]
+	Updated www/py-httpx to 0.29.0 [adam 2026-11-27]
+	Updated net/py-geventhttpclient to 2.6.2 [adam 2026-11-27]
