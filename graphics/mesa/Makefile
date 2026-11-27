@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2026/11/25 14:48:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2026/11/27 08:19:08 wiz Exp $
 
 DISTNAME=	mesa-26.2.7
 CATEGORIES=	graphics
@@ -15,6 +15,8 @@ USE_FEATURES+=	strnlen
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex pkg-config xgettext
 FORCE_CXX_STD+=	gnu++17 # mixed designated initializers
+
+USE_CC_FEATURES=	c23
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 CXXFLAGS.SunOS+=	-Drestrict=__restrict__
