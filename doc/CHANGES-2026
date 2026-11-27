@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8446 2026/11/27 11:06:52 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8447 2026/11/27 11:49:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12510,3 +12510,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-pyrate-limiter to 4.6.0 [adam 2026-11-27]
 	Updated sysutils/syslog-ng to 4.13.0 [adam 2026-11-27]
 	Moved sysutils/syslog-ng-curl to sysutils/syslog-ng-http [adam 2026-11-27]
+	Updated graphics/tesseract to 5.5.5 [adam 2026-11-27]
+	Added www/katana version 1.8.0 [adam 2026-11-27]
