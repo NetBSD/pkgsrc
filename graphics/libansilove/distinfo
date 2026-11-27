@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2026/11/17 13:38:26 adam Exp $
+$NetBSD: distinfo,v 1.28 2026/11/27 12:09:11 adam Exp $
 
-BLAKE2s (libansilove-1.4.6.tar.gz) = a2af799747bd442570fd0fb2c53c7445dec42aaca782c7a4434301714524cef1
-SHA512 (libansilove-1.4.6.tar.gz) = 42a02a937b455de572e89f5f8cd7c874370b389cee1fcc422270a6e0b4f2f5bfdfe0aa8d4aa654c3fd9a9dfc699e0e1ffdd03f6eb4a3e4890a42a7c45992237e
-Size (libansilove-1.4.6.tar.gz) = 64173 bytes
+BLAKE2s (libansilove-1.4.7.tar.gz) = 0c79fa0987fe98b449d705e85d3439279618f7164667fec650cfeb7be91b981e
+SHA512 (libansilove-1.4.7.tar.gz) = 7fc4b9df3701b9beaba3144a996503474b2ac37799a2ed3198aef95be164236c793c95a9a87b88fb4df2f6073b08446a1310378186227b3e4022feedc99985bb
+Size (libansilove-1.4.7.tar.gz) = 67091 bytes
