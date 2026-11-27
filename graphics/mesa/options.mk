@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2026/11/25 13:46:46 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2026/11/27 20:18:09 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mesa
 
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS+=		wayland
 .  endif
 .endif
 
-PKG_SUGGESTED_OPTIONS+=		x11
+PKG_SUGGESTED_OPTIONS+=		vulkan x11
 
 .include "../../mk/bsd.fast.prefs.mk"
 
