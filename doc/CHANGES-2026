@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8448 2026/11/27 12:13:03 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8449 2026/11/27 13:47:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12514,3 +12514,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Added www/katana version 1.8.0 [adam 2026-11-27]
 	Updated graphics/libansilove to 1.4.7 [adam 2026-11-27]
 	Updated devel/libgsf to 1.14.61 [adam 2026-11-27]
+	Updated graphics/opencolorio to 2.6.0 [adam 2026-11-27]
+	Updated graphics/openimageio to 3.2.2.0 [adam 2026-11-27]
+	Updated graphics/blender-lts to 4.5.17 [adam 2026-11-27]
