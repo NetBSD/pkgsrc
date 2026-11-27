@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2026/06/04 17:04:20 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2026/11/27 15:24:37 wiz Exp $
 #
 
 DISTNAME=	fuse-2.9.9
@@ -48,8 +48,7 @@ INSTALLATION_DIRS+=	sbin ${EGDIR}
 
 pre-configure:
 	${RUN}${CP} ${FILESDIR}/config.rpath ${WRKSRC}
-	${RUN}cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} ${SH} ./makeconf.sh
+	${RUN}cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -fiv
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/fuse_kernel.h	\
