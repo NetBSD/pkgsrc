@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.23 2022/12/16 11:56:20 wiz Exp $
+$NetBSD: distinfo,v 1.24 2026/11/27 11:01:43 adam Exp $
 
-BLAKE2s (syslog-ng-3.38.1.tar.gz) = bfd89e26655c086a503f954116cbd2a07b437f22a1cf77e51d5be145e71e2374
-SHA512 (syslog-ng-3.38.1.tar.gz) = 3a3ef5c72d8c211ed2914791380061dcd48ea1ea95f636a1a8649dc5dee731a11e9ae000a37cbeeba624f4053b623b697e6c7f945a81153106c2365f4f09a847
-Size (syslog-ng-3.38.1.tar.gz) = 5405048 bytes
+BLAKE2s (syslog-ng-4.13.0.tar.gz) = 0acd22126095c0b2467ba40dcb27f703317bc44047e0bc0d7a54f51e39039879
+SHA512 (syslog-ng-4.13.0.tar.gz) = 7ca70332d09b9400fab73eb65f984c974ca2337fe317590f4572305538273f488eee120c3b97b24664c4af88c5b9a5bd36ad2c1ba6e3b2dbc99b627d8eb5c94a
+Size (syslog-ng-4.13.0.tar.gz) = 7329249 bytes
+SHA1 (patch-lib_thread-utils.h) = b3f4f6ee590bb5b2ae75104a65c2c31867070cb9

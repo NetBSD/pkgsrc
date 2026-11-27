@@ -1,27 +1,26 @@
-# $NetBSD: Makefile.common,v 1.25 2026/02/10 08:15:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2026/11/27 11:01:43 adam Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/module.mk
 
-DISTNAME=	syslog-ng-3.38.1
+DISTNAME=	syslog-ng-4.13.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syslog-ng/}
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.syslog-ng.com/
 COMMENT?=	Highly portable log management solution
 LICENSE=	gnu-gpl-v2
 
-GITHUB_RELEASE=	${DISTNAME}
-
 PATCHDIR=	${.CURDIR}/../../sysutils/syslog-ng/patches
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/syslog-ng/distinfo
 
-USE_LANGUAGES=		c
-USE_CC_FEATURES+=	c99
+USE_CC_FEATURES=	c99
+USE_FEATURES+=		strnlen
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		flex pkg-config gmake awk:run bison
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_FEATURES+=		strnlen
 
 CHECK_PORTABILITY_SKIP+=	debian/syslog-ng.init
 
@@ -39,6 +38,7 @@ CONFIGURE_ARGS+=	--disable-stomp
 CONFIGURE_ARGS+=	--disable-sun-streams
 CONFIGURE_ARGS+=	--disable-systemd
 CONFIGURE_ARGS+=	--disable-tcp-wrapper
+CONFIGURE_ARGS+=	--enable-manpages
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ivykis=system
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_inotify_init=no
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	312
 
 REPLACE_AWK+=		contrib/syslog2ng
 REPLACE_PYTHON+=	lib/merge-grammar.py

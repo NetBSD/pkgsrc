@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2026/11/27 11:01:43 adam Exp $
+lib/syslog-ng/libdarwinosl.la

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.51 2026/09/29 06:07:43 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2026/11/27 11:01:43 adam Exp $
 
-PKGREVISION= 6
 .include "../../sysutils/syslog-ng/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-stomp
@@ -22,7 +21,6 @@ EGDIR=			${PREFIX}/share/examples/syslog-ng
 DOCDIR=			${PREFIX}/share/doc/syslog-ng
 
 OWN_DIRS+=		${VARBASE}/db/syslog-ng
-CONF_FILES+=		${EGDIR}/scl.conf ${PKG_SYSCONFDIR}/scl.conf
 CONF_FILES+=		${EGDIR}/syslog-ng.conf ${PKG_SYSCONFDIR}/syslog-ng.conf
 
 RCD_SCRIPTS=		syslogng
