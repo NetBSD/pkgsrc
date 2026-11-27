@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8442 2026/11/27 08:37:09 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8443 2026/11/27 10:25:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12501,3 +12501,6 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated security/cargo-auditable to 0.7.8 [pin 2026-11-27]
 	Updated shells/oh-my-posh to 33.4.1 [pin 2026-11-27]
 	Updated www/wikid to 3.2.3 [pin 2026-11-27]
+	Updated mail/py-mail-parser to 4.12.0 [adam 2026-11-27]
+	Updated graphics/py-pillow_heif to 1.9.0 [adam 2026-11-27]
+	Updated graphics/py-tifffile to 2026.11.26 [adam 2026-11-27]

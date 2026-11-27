@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28463 2026/11/27 06:20:18 adam Exp $
+$NetBSD: TODO,v 1.28464 2026/11/27 10:25:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -1135,7 +1135,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
-	o py-pillow_heif-1.9.0
 	o py-postgresql-5.1.2
 	o py-simpletal-5.1
 	o py-sphinx-9.2.0 [wip; drops Python 3.12 support]
