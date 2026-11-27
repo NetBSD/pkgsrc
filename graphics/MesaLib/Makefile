@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2026/11/25 14:48:25 wiz Exp $
+# $NetBSD: Makefile,v 1.222 2026/11/27 08:16:47 wiz Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mesa3d.org/
+HOMEPAGE=	https://docs.mesa3d.org/amber.html
 COMMENT=	Open source OpenGL implementation (amber branch)
 LICENSE=	mit
 
