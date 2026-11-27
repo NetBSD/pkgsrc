@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2026/10/27 08:16:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/27 10:58:36 adam Exp $
 
-DISTNAME=	pyrate_limiter-4.5.1
+DISTNAME=	pyrate_limiter-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrate-limiter/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-uv-dynamic-versioning>=0:../../devel/py-uv-dynamic-versioning
 # filelock
-DEPENDS+=	${PYPKGPREFIX}-filelock>=0:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=0:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=1.1.0:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6.2.1:../../devel/py-test-cov
