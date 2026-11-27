@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2026/11/25 14:24:30 leot Exp $
+# $NetBSD: Makefile,v 1.2 2026/11/27 05:58:14 adam Exp $
 
 DISTNAME=	lazy_importer-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazy_importer/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lazy-importer/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/lazy_importer/
+HOMEPAGE=	https://github.com/pganssle/lazy_importer
 COMMENT=	Context manager for portable, opt-in lazy imports
 LICENSE=	apache-2.0
 
