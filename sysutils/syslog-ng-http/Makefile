@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2026/11/27 11:01:43 adam Exp $
+# $NetBSD: Makefile,v 1.1 2026/11/27 11:05:23 adam Exp $
 
 SYSLOG_MOD=		http
 COMMENT=		Syslog-ng curl module

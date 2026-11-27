@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/31 12:53:50 fhajny Exp $
-lib/syslog-ng/libhttp.la
