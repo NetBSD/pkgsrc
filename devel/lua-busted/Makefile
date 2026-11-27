@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/01/21 11:00:10 nia Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/27 07:17:03 wiz Exp $
 
-DISTNAME=	busted-2.1.1
+DISTNAME=	busted-2.3.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Olivine-Labs/}
@@ -13,6 +13,7 @@ COMMENT=	Elegant Lua unit testing
 LICENSE=	mit
 
 DEPENDS+=	${LUA_PKGPREFIX}-cliargs-[0-9]*:../../devel/lua-cliargs
+DEPENDS+=	${LUA_PKGPREFIX}-cov-[0-9]*:../../devel/lua-cov
 DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
 DEPENDS+=	${LUA_PKGPREFIX}-system-[0-9]*:../../devel/lua-system
 DEPENDS+=	${LUA_PKGPREFIX}-dkjson-[0-9]*:../../textproc/lua-dkjson
@@ -50,6 +51,11 @@ do-install:
 		${DESTDIR}${PREFIX}/${LUA_LDIR}/busted/outputHandlers
 	${INSTALL_DATA} ${WRKSRC}/busted/languages/*.lua \
 	    	${DESTDIR}${PREFIX}/${LUA_LDIR}/busted/languages
+
+# as of 2.3.0
+# 1659 successes / 11 failures / 0 errors / 7 pending
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} bin/busted -c
 
 .include "../../lang/lua/application.mk"
 .include "../../lang/lua/module.mk"

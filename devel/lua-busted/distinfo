@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/02/07 10:30:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2026/11/27 07:17:03 wiz Exp $
 
-BLAKE2s (busted-2.1.1.tar.gz) = 72a86c938ee89626e069cfbd6eba21128a5c9f894966b144a36b74f59fb51c76
-SHA512 (busted-2.1.1.tar.gz) = 80a362094398b85f2783ca11adfae1f7ead38b9de7d11d2c2f8234f2d8f1289dc853f58c11c375b8edd6ea87807a65cc8bce01ebcf7cdf75701796ee528a75a0
-Size (busted-2.1.1.tar.gz) = 62594 bytes
+BLAKE2s (busted-2.3.0.tar.gz) = 355a33db31c5527ba59110a38641276c4f2dd47a7f73dd5f2675e4429ada9c19
+SHA512 (busted-2.3.0.tar.gz) = 5d2079881ea77d4d722016adf0b47937c9304e89924fcb27a4537010a27c1b0bab7c9e30298b1a73f2228a91df32b99089e4dd672c72d80ce3d95fc1f9c3ab05
+Size (busted-2.3.0.tar.gz) = 67008 bytes
