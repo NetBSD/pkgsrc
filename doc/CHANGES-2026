@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8445 2026/11/27 10:58:53 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8446 2026/11/27 11:06:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12508,3 +12508,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated net/py-geventhttpclient to 2.6.2 [adam 2026-11-27]
 	Updated graphics/py-imageio to 2.38.2 [adam 2026-11-27]
 	Updated net/py-pyrate-limiter to 4.6.0 [adam 2026-11-27]
+	Updated sysutils/syslog-ng to 4.13.0 [adam 2026-11-27]
+	Moved sysutils/syslog-ng-curl to sysutils/syslog-ng-http [adam 2026-11-27]
