@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8441 2026/11/27 08:36:17 pin Exp $
+$NetBSD: CHANGES-2026,v 1.8442 2026/11/27 08:37:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12500,3 +12500,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated graphics/mesa to 26.2.8 [wiz 2026-11-27]
 	Updated security/cargo-auditable to 0.7.8 [pin 2026-11-27]
 	Updated shells/oh-my-posh to 33.4.1 [pin 2026-11-27]
+	Updated www/wikid to 3.2.3 [pin 2026-11-27]
