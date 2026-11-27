@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8447 2026/11/27 11:49:55 adam Exp $
+$NetBSD: CHANGES-2026,v 1.8448 2026/11/27 12:13:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12512,3 +12512,5 @@ Changes to the packages collection and infrastructure in 2026:
 	Moved sysutils/syslog-ng-curl to sysutils/syslog-ng-http [adam 2026-11-27]
 	Updated graphics/tesseract to 5.5.5 [adam 2026-11-27]
 	Added www/katana version 1.8.0 [adam 2026-11-27]
+	Updated graphics/libansilove to 1.4.7 [adam 2026-11-27]
+	Updated devel/libgsf to 1.14.61 [adam 2026-11-27]
