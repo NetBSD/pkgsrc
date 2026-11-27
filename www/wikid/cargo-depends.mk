@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2026/09/18 10:16:10 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2026/11/27 08:36:49 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
@@ -108,7 +108,7 @@ CARGO_CRATE_DEPENDS+=	url-2.5.8
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
 CARGO_CRATE_DEPENDS+=	wasi-0.11.1+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	webpki-roots-0.26.11
-CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.9
+CARGO_CRATE_DEPENDS+=	webpki-roots-1.0.11
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0

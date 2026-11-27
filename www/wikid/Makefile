@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2026/09/18 10:16:10 pin Exp $
+# $NetBSD: Makefile,v 1.8 2026/11/27 08:36:49 pin Exp $
 
-DISTNAME=	wikid-3.2.2
+DISTNAME=	wikid-3.2.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkthakftw/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,9 +15,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.99.0-beta.5
+#RUST_REQ=	1.101.0-beta.3
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.99.0-beta.5 on amd64
+#This package is confirmed to build with Rust 1.101.0-beta.3 on amd64
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

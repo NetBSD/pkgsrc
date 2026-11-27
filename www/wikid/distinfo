@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2026/09/18 10:16:10 pin Exp $
+$NetBSD: distinfo,v 1.7 2026/11/27 08:36:49 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -324,12 +324,12 @@ Size (wasi-0.11.1+wasi-snapshot-preview1.crate) = 28477 bytes
 BLAKE2s (webpki-roots-0.26.11.crate) = 92fd4fbe06b643caccdfafb39b6d5b64b2cd0f58295ac4ec31aa920d5285b04d
 SHA512 (webpki-roots-0.26.11.crate) = c567d8167d0f61ea52667e5afc5fa002cd173b69b3392463abaa82a68d38ed2872f9b596fa8a5cf82d891a1f75b5cc0fceba623a56b1f1ad2525045c0c94b4a4
 Size (webpki-roots-0.26.11.crate) = 15557 bytes
-BLAKE2s (webpki-roots-1.0.9.crate) = 8d3fbefa7ee83729f8c00bafad8c1fe9c305c8170cc46643509f0f4c792f3bf7
-SHA512 (webpki-roots-1.0.9.crate) = 4e518fb376704cee9f9691d3abf23bd19d181c018063996d6d83bcb5c05ab80967ee995a5a21eccac4b1765a6f7f7005f9f584d66029c3d17284f7156af48d0f
-Size (webpki-roots-1.0.9.crate) = 217462 bytes
-BLAKE2s (wikid-3.2.2.tar.gz) = 0782f7da69497ca2f96481522fb9d53d2011241f8fc3498f4967beb76e060206
-SHA512 (wikid-3.2.2.tar.gz) = 499db4fe1bd11bbecbd2f66d188b245a272c2405c08ff189345fcfdfafd501d486c11337f26ce11691f8aeb9da353aa1cdfb715ebc65690f58c01a4b70ec5cd6
-Size (wikid-3.2.2.tar.gz) = 158262 bytes
+BLAKE2s (webpki-roots-1.0.11.crate) = ff4e6251186f48f5377aa795565e66edc592bad56271df4a6373a5db4944029a
+SHA512 (webpki-roots-1.0.11.crate) = ebda24320e64801fec89638b10983c728b2eb24f7abf5ddb0c991ea23efa87fa596b3d364927b3ff60488ef89e533c26cccd635eae34ad79da5592b947a9d673
+Size (webpki-roots-1.0.11.crate) = 214596 bytes
+BLAKE2s (wikid-3.2.3.tar.gz) = e0e073cb365a46c6739429d38e2127c58b677e82b71f99517d2246f3ebe92589
+SHA512 (wikid-3.2.3.tar.gz) = f10122ae6e013d85245cfbcea0b3c04ef3f73566430a141fa5fe6c635d1eb15464a4441e98c9f6bc765675dd567bef15758e9495a436ca42b0e37c7c53c00733
+Size (wikid-3.2.3.tar.gz) = 171842 bytes
 BLAKE2s (winapi-0.3.9.crate) = 295083bd8c53c7decc4187da324a1284ad05cbccc9198d31facb6a42e34867ce
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
 Size (winapi-0.3.9.crate) = 1200382 bytes
