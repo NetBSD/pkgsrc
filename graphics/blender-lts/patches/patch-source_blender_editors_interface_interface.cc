@@ -1,8 +1,8 @@
-$NetBSD: patch-source_blender_editors_interface_interface.cc,v 1.1 2024/02/11 15:29:59 ryoon Exp $
+$NetBSD: patch-source_blender_editors_interface_interface.cc,v 1.2 2026/11/27 13:46:28 adam Exp $
 
---- source/blender/editors/interface/interface.cc.orig	2022-11-04 00:33:07.000000000 +0000
+--- source/blender/editors/interface/interface.cc.orig	2024-06-05 11:47:57.000000000 +0000
 +++ source/blender/editors/interface/interface.cc
-@@ -3370,7 +3370,7 @@ void ui_but_range_set_soft(uiBut *but)
+@@ -3351,7 +3351,7 @@ void ui_but_range_set_soft(uiBut *but)
    }
    else if (but->poin && (but->pointype & UI_BUT_POIN_TYPES)) {
      float value = ui_but_value_get(but);

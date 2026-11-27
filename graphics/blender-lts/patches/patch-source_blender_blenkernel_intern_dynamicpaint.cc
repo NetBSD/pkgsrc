@@ -1,8 +1,8 @@
-$NetBSD: patch-source_blender_blenkernel_intern_dynamicpaint.cc,v 1.1 2024/07/25 06:00:38 ryoon Exp $
+$NetBSD: patch-source_blender_blenkernel_intern_dynamicpaint.cc,v 1.2 2026/11/27 13:46:27 adam Exp $
 
---- source/blender/blenkernel/intern/dynamicpaint.cc.orig	2024-07-02 09:50:56.955643689 +0000
+--- source/blender/blenkernel/intern/dynamicpaint.cc.orig	2024-06-05 11:47:56.000000000 +0000
 +++ source/blender/blenkernel/intern/dynamicpaint.cc
-@@ -4609,7 +4609,7 @@ static bool dynamicPaint_paintParticles(
+@@ -4634,7 +4634,7 @@ static bool dynamicPaint_paintParticles(
  
      /* for debug purposes check if any NAN particle proceeds
       * For some reason they get past activity check, this should rule most of them out */

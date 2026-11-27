@@ -1,10 +1,8 @@
-$NetBSD: patch-source_blender_gpu_intern_gpu_matrix.cc,v 1.1 2024/02/11 15:29:59 ryoon Exp $
+$NetBSD: patch-source_blender_gpu_intern_gpu__matrix.cc,v 1.1 2026/11/27 13:46:28 adam Exp $
 
-Fix wrong namespace issues.
-
---- source/blender/gpu/intern/gpu_matrix.cc.orig	2022-11-04 00:33:07.000000000 +0000
+--- source/blender/gpu/intern/gpu_matrix.cc.orig	2026-08-26 11:30:36.088508416 +0000
 +++ source/blender/gpu/intern/gpu_matrix.cc
-@@ -103,7 +103,7 @@ static void checkmat(cosnt float *m)
+@@ -104,7 +104,7 @@ static void checkmat(cosnt float *m)
  #  if _MSC_VER
      BLI_assert(_finite(m[i]));
  #  else
@@ -13,7 +11,7 @@ Fix wrong namespace issues.
  #  endif
    }
  }
-@@ -528,7 +528,7 @@ bool GPU_matrix_unproject_3fv(const floa
+@@ -529,7 +529,7 @@ bool GPU_matrix_unproject_3fv(const float win[3],
    const bool is_persp = proj[3][3] == 0.0f;
    if (is_persp) {
      out[2] = proj[3][2] / (proj[2][2] + in[2]);

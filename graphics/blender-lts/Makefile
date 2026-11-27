@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2026/11/25 14:42:11 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2026/11/27 13:46:27 adam Exp $
 
-DISTNAME=	blender-3.6.18
-PKGREVISION=	23
+DISTNAME=	blender-4.5.17
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -11,19 +10,19 @@ HOMEPAGE=	https://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-
-BROKEN=		"Does not build due to -Werror problems, despite all the BUILDLINK_TRANSFORMS."
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+MESA_ACCEPTED=		mesa
 
 # GCC 11.0.0 or later is required.
 GCC_REQD+=	12
 
-CXXFLAGS+=	-fpermissive # return value type for __builtin_popcount()
-
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+# uses alloca() but sets -std=c++17
+FORCE_CXX_STD=	gnu++17
+.endif
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_MEM_JEMALLOC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL=OFF
@@ -44,6 +43,8 @@ CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SWSCALE_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg6/lib
 CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SWRESAMPLE_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg6/libswresample.so
 CMAKE_CONFIGURE_ARGS+=	-D_ffmpeg_INCLUDE_DIR=${BUILDLINK_DIR}/include/ffmpeg6
 CMAKE_CONFIGURE_ARGS+=	-DWITH_CODEC_SNDFILE=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_EIGEN=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_FREETYPE=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_GLEW=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_CYCLES_EMBREE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_POTRACE=OFF
@@ -52,35 +53,12 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_VERSION=${PYVERSSUFFIX}
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_NUMPY=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
-BUILDLINK_TRANSFORM+=	rm:-Wall
-BUILDLINK_TRANSFORM+=	rm:-Werror=conversion
-BUILDLINK_TRANSFORM+=	rm:-Werror=double-conversion
-BUILDLINK_TRANSFORM+=	rm:-Werror=double-promotion
-BUILDLINK_TRANSFORM+=	rm:-Werror=float-conversion
-BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-function-declaration
-BUILDLINK_TRANSFORM+=	rm:-Werror=return-type
-BUILDLINK_TRANSFORM+=	rm:-Werror=vla
+PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:R}
 
-.include "../../mk/mesa.buildlink3.mk"
-.if ${MESALIB_SUPPORTS_EGL} == "yes"
-#CMAKE_CONFIGURE_ARGS+=	-DWITH_GL_EGL=ON
-.endif
+REPLACE_PYTHON+=	scripts/modules/bl_i18n_utils/merge_po.py
+REPLACE_PYTHON+=	scripts/modules/blend_render_info.py
 
-PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:C/[a-z]//}
-
-REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		\
-			release/scripts/addons/io_curve_svg/svg_util_test.py \
-			release/scripts/addons/io_scene_fbx/fbx2json.py	\
-			release/scripts/addons/io_scene_fbx/json2fbx.py	\
-			release/scripts/modules/bl_i18n_utils/merge_po.py \
-			release/scripts/modules/blend_render_info.py
-
-INSTALLATION_DIRS=	bin share/blender
-
-#PYTHON_VERSIONS_ACCEPTED=	# 311 but also py-numpy, which does not support 311
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
+PYTHON_VERSIONS_INCOMPATIBLE=	311 314 315 # RETURN_CONST
 
 .include "options.mk"
 .include "../../archivers/minizip-ng/buildlink3.mk"
@@ -89,25 +67,28 @@ pre-configure:
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/pystring/buildlink3.mk"
-BUILDLINK_API_DEPENDS.freetype2+=       freetype2>=2.12.1nb1
+BUILDLINK_API_DEPENDS.freetype2+=       freetype2>=2.13.0
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
-.include "../../graphics/openexr/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/opencolorio/buildlink3.mk"
+.include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/openimageio/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/potrace/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics//libwebp/buildlink3.mk"
+.include "../../graphics/shaderc/buildlink3.mk"
+.include "../../graphics/vulkan-loader/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
@@ -118,5 +99,4 @@ BUILDLINK_API_DEPENDS.freetype2+=       freetype2>=2.12.1nb1
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

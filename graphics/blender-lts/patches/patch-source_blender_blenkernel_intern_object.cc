@@ -1,8 +1,8 @@
-$NetBSD: patch-source_blender_blenkernel_intern_object.cc,v 1.1 2024/02/11 15:29:59 ryoon Exp $
+$NetBSD: patch-source_blender_blenkernel_intern_object.cc,v 1.2 2026/11/27 13:46:27 adam Exp $
 
---- source/blender/blenkernel/intern/object.cc.orig	2022-11-04 03:58:17.000000000 +0000
+--- source/blender/blenkernel/intern/object.cc.orig	2024-08-06 17:21:03.000000000 +0000
 +++ source/blender/blenkernel/intern/object.cc
-@@ -3844,13 +3844,13 @@ void BKE_object_dimensions_set_ex(Object
+@@ -3657,13 +3657,13 @@ void BKE_object_dimensions_set_ex(Object
  
          if (ob_scale_orig != nullptr) {
            const float scale_delta = len_v3(ob_obmat_orig[i]) / ob_scale_orig[i];
