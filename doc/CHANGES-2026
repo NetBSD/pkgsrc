@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8436 2026/11/27 07:41:07 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8437 2026/11/27 07:47:52 drixter Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12495,3 +12495,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated devel/lua-busted to 2.3.0 [wiz 2026-11-27]
 	Updated textproc/lua-utf8 to 0.3.0 [wiz 2026-11-27]
 	Updated devel/lua-check to 0.23.0nb2 [wiz 2026-11-27]
+	Updated www/logswan to 2.1.18 [drixter 2026-11-27]
