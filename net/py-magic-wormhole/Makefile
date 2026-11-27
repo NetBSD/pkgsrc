@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2026/11/26 17:14:03 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2026/11/27 02:18:28 gdt Exp $
 
 # Work around setuptools insisting that distfiles not match the (pypi)
 # package name.
@@ -55,12 +55,11 @@ AUTO_MKDIRS=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	311
 
+PY_RENAME_BINARIES+=	magic-wormhole wormhole
+
 PYTHON_SELF_CONFLICT=	yes # completion files
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	(${MV} magic-wormhole magic-wormhole-${PYVERSSUFFIX} || ${TRUE}) && \
-	(${MV} wormhole wormhole-${PYVERSSUFFIX} || ${TRUE})
 	${INSTALL_DATA} ${WRKSRC}/wormhole_complete.bash \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/wormhole
 	${INSTALL_DATA} ${WRKSRC}/wormhole_complete.fish \
