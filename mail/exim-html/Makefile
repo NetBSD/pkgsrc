@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2026/09/22 07:12:51 adam Exp $
+# $NetBSD: Makefile,v 1.58 2026/11/27 06:19:50 adam Exp $
 
-DISTNAME=	exim-html-4.100.1
+DISTNAME=	exim-html-4.100.2
 CATEGORIES=	mail net
 MASTER_SITES=	https://downloads.exim.org/exim4/
 EXTRACT_SUFX=	.tar.xz
