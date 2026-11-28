@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2026/11/16 19:17:58 vins Exp $
+# $NetBSD: Makefile,v 1.10 2026/11/28 07:01:07 vins Exp $
 
-DISTNAME=	calcurse-4.9.0
+DISTNAME=	calcurse-4.9.1
 CATEGORIES=	time
 MASTER_SITES=	http://calcurse.org/files/
 
@@ -16,9 +16,6 @@ GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	gmake intltool pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
-
-USE_CURSES=	getmouse wide
-FAKE_NCURSES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -37,7 +34,7 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
