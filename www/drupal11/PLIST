@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2026/11/19 15:18:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2026/11/28 04:30:22 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -23387,6 +23387,7 @@ share/drupal/vendor/symfony/routing/Loader/Configurator/RouteConfigurator.php
 share/drupal/vendor/symfony/routing/Loader/Configurator/RoutesReference.php
 share/drupal/vendor/symfony/routing/Loader/Configurator/RoutingConfigurator.php
 share/drupal/vendor/symfony/routing/Loader/Configurator/Traits/AddTrait.php
+share/drupal/vendor/symfony/routing/Loader/Configurator/Traits/GlobResourceTrait.php
 share/drupal/vendor/symfony/routing/Loader/Configurator/Traits/HostTrait.php
 share/drupal/vendor/symfony/routing/Loader/Configurator/Traits/LocalizedRouteTrait.php
 share/drupal/vendor/symfony/routing/Loader/Configurator/Traits/PrefixTrait.php
@@ -24064,6 +24065,7 @@ share/drupal/vendor/twig/twig/src/ExpressionParser/InfixExpressionParserInterfac
 share/drupal/vendor/twig/twig/src/ExpressionParser/PrecedenceChange.php
 share/drupal/vendor/twig/twig/src/ExpressionParser/Prefix/GroupingExpressionParser.php
 share/drupal/vendor/twig/twig/src/ExpressionParser/Prefix/LiteralExpressionParser.php
+share/drupal/vendor/twig/twig/src/ExpressionParser/Prefix/SpreadExpressionParser.php
 share/drupal/vendor/twig/twig/src/ExpressionParser/Prefix/UnaryOperatorExpressionParser.php
 share/drupal/vendor/twig/twig/src/ExpressionParser/PrefixExpressionParserInterface.php
 share/drupal/vendor/twig/twig/src/Extension/AbstractExtension.php
@@ -24183,6 +24185,7 @@ share/drupal/vendor/twig/twig/src/Node/Expression/Test/ConstantTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/DefinedTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/DivisiblebyTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/EvenTest.php
+share/drupal/vendor/twig/twig/src/Node/Expression/Test/NonStringCoercingInputTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/NullTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/OddTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/SameasTest.php
