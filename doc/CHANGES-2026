@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8458 2026/11/28 07:12:22 vins Exp $
+$NetBSD: CHANGES-2026,v 1.8459 2026/11/28 07:57:15 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12526,3 +12526,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/drupal11 to 11.4.14 [taca 2026-11-28]
 	Updated time/calcurse to 4.9.1 [vins 2026-11-28]
 	Updated sysutils/fastfetch to 2.72.0 [vins 2026-11-28]
+	Updated editors/nano to 9.3 [schwarz 2026-11-28]
