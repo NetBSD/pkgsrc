@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2026/11/27 08:28:12 wiz Exp $
+$NetBSD: distinfo,v 1.5 2026/11/28 09:09:02 wiz Exp $
 
 BLAKE2s (mesa-26.2.8.tar.xz) = 871dbcf659f4db65b092714c840b1a0afd81541ceaf00e073ad35c91d77c4250
 SHA512 (mesa-26.2.8.tar.xz) = 5161492b96fcc2085a50d8a62db4e0ff5c2aeb9d50fdf9ffb4950052078dbea3d1e1bd0e17dd692dc93ec9645e18d0949fec52b2d5c6a0d1fe4ed39f813b409b
@@ -16,3 +16,4 @@ SHA1 (patch-src_util_futex.c) = 4ad0d60e008fe8b5a4bb600e32e8f155d6c95b37
 SHA1 (patch-src_util_futex.h) = a4a2827406102d855bb8afadecb7ce5a42fd5ecd
 SHA1 (patch-src_util_os__file.c) = c80d88255a8f800d1e36fc199f3869ecdb61d203
 SHA1 (patch-src_vulkan_wsi_wsi__common__wayland.c) = 1b8017f21855e01183a2343af64cf7fc8ca13ebe
+SHA1 (patch-src_x11_x11__display.c) = 79f70b5e8096c5e76871eb2d42ad3ad05ddff992

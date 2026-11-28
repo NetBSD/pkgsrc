@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2026/11/27 20:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2026/11/28 09:09:02 wiz Exp $
 #
 # needs recursive bumps for _every_ update due to
 # lib/libgallium-${PKGVERSION}.so
 
 DISTNAME=	mesa-26.2.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 MASTER_SITES+=	https://mesa3d.org/archive/
