@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2026/08/17 08:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2026/11/28 04:20:49 taca Exp $
 #
 # when updating this, run 'make upload'
 
-DISTNAME=	jpgraph-4.4.3
+DISTNAME=	jpgraph-4.4.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	graphics www
-#MASTER_SITES=	https://jpgraph.net/download/download.php?p=60
+#MASTER_SITES=	https://jpgraph.net/download/download.php?p=61
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jpgraph.net/
