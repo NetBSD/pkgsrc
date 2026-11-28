@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8453 2026/11/28 04:18:26 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8454 2026/11/28 04:21:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12521,3 +12521,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated www/chawan to 0.5.3 [bsiegert 2026-11-27]
 	Updated graphics/mesa to 26.2.8nb1 [wiz 2026-11-27]
 	Updated databases/php-mongodb to 1.21.15 [taca 2026-11-28]
+	Updated graphics/php-jpgraph to 4.4.4 [taca 2026-11-28]
