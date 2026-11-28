@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2026/11/15 20:28:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2026/11/28 04:27:52 taca Exp $
 bin/mapstats
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
@@ -199,6 +199,11 @@ share/rspamd/lualib/lua_content/xlsx.lua
 share/rspamd/lualib/lua_crypto_addresses.lua
 share/rspamd/lualib/lua_cta.lua
 share/rspamd/lualib/lua_dkim_tools.lua
+share/rspamd/lualib/lua_dynconf.lua
+share/rspamd/lualib/lua_dynconf/file.lua
+share/rspamd/lualib/lua_dynconf/json.lua
+share/rspamd/lualib/lua_dynconf/legacy.lua
+share/rspamd/lualib/lua_dynconf/redis.lua
 share/rspamd/lualib/lua_extras.lua
 share/rspamd/lualib/lua_feedback_parsers.lua
 share/rspamd/lualib/lua_ffi/common.lua
@@ -258,6 +263,7 @@ share/rspamd/lualib/lua_shape/plugin_schema.lua
 share/rspamd/lualib/lua_shape/registry.lua
 share/rspamd/lualib/lua_smtp.lua
 share/rspamd/lualib/lua_stat.lua
+share/rspamd/lualib/lua_task_profile.lua
 share/rspamd/lualib/lua_tcp_sync.lua
 share/rspamd/lualib/lua_url_filter.lua
 share/rspamd/lualib/lua_urls_compose.lua
@@ -378,6 +384,7 @@ share/rspamd/plugins/whitelist.lua
 share/rspamd/rules/archives.lua
 share/rspamd/rules/bounce.lua
 share/rspamd/rules/content.lua
+share/rspamd/rules/controller/dynconf.lua
 share/rspamd/rules/controller/fuzzy.lua
 share/rspamd/rules/controller/init.lua
 share/rspamd/rules/controller/maps.lua
