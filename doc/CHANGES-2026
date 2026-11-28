@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8455 2026/11/28 04:28:03 taca Exp $
+$NetBSD: CHANGES-2026,v 1.8456 2026/11/28 04:30:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12523,3 +12523,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated databases/php-mongodb to 1.21.15 [taca 2026-11-28]
 	Updated graphics/php-jpgraph to 4.4.4 [taca 2026-11-28]
 	Updated mail/rspamd to 4.3.1 [taca 2026-11-28]
+	Updated www/drupal11 to 11.4.14 [taca 2026-11-28]
