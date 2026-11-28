@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2026,v 1.8460 2026/11/28 09:09:15 wiz Exp $
+$NetBSD: CHANGES-2026,v 1.8461 2026/11/28 09:24:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2026:
 
@@ -12528,3 +12528,4 @@ Changes to the packages collection and infrastructure in 2026:
 	Updated sysutils/fastfetch to 2.72.0 [vins 2026-11-28]
 	Updated editors/nano to 9.3 [schwarz 2026-11-28]
 	Updated graphics/mesa to 26.2.8nb2 [wiz 2026-11-28]
+	Updated textproc/rumdl to 0.3.8 [wiz 2026-11-28]
